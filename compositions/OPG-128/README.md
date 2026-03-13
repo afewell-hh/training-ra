@@ -10,7 +10,7 @@ Variants
 
 - clos-rail-optimized/
   - What it is: Multi‑homed back‑end (L3MH) with 4×400G per leaf per server to reduce cross‑rail traffic; frontend is identical to the single‑homed variant.
-  - Why choose it: All hosts remain available at ~50% capacity during a leaf failure; typically fewer spine hops for intra‑OPG collectives.
+  - Why choose it: All hosts remain available at ~50% capacity during a leaf failure; when tenants are placed within a common first‑hop rail domain, most scale‑out exchanges remain leaf‑local, dramatically reducing spine traffic and associated congestion.
   - Considerations: Benefits are strongest when scheduling keeps tenants inside an OPG.
 
 Common attributes

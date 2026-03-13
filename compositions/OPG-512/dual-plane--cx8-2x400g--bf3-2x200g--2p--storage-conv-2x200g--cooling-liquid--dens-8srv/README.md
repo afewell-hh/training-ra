@@ -7,6 +7,6 @@ Attributes and assets
 - Frontend: BF3 2×200G per server (L3MH)
 - Storage: converged, 2×200G per server
 - Cooling/Density: liquid‑cooled; ~8 servers/rack (placeholder)
-- Assets to be generated: connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/
+- Assets: placeholders to be populated — connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/
 
 Related plan
