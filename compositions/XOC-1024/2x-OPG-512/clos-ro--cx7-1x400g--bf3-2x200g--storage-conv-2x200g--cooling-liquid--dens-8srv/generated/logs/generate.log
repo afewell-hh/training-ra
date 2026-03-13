@@ -1,0 +1,10 @@
+GENERATION FAILED: Port exhaustion
+
+XOC-1024 (128 servers) saturates the single-plane clos topology.
+Rail-optimized distribution with 8 rails (rails 0-7) creates 8 rail-leaf switches.
+Each leaf receives 128 server connections but only has 64 logical ports (32 phys × b_2x400).
+
+OPG-512 (64 servers, 8 rails) is the ceiling for this port zone configuration.
+XOC-1024 would require: 16 rails (doubling NICs per server) or a wider port zone.
+
+Error: Requested 1 ports but only 0 remain in zone 'be-server-ports'.
