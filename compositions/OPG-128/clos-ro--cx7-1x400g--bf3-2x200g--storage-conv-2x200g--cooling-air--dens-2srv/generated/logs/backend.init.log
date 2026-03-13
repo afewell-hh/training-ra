@@ -1,0 +1,5 @@
+09:09:25 INF Hedgehog Fabricator version=v0.43.1 workdir=/tmp/hhfab-opg128-backend
+09:09:25 INF Using custom registry config repo=m.l.hhdev.io:30000 prefix=githedgehog
+09:09:25 INF Generated initial config
+09:09:25 INF Adjust configs (incl. credentials, modes, subnets, etc.) file=fab.yaml
+09:09:25 INF Include wiring (fabric/gateway) files (.yaml) or adjust imported ones dir=include

@@ -1,0 +1,3 @@
+10:09:28 INF Hedgehog Fabricator version=v0.43.1 workdir=/tmp/hhfab-opg256-dual-plane-b
+10:09:28 INF Wiring hydrated successfully mode=if-not-present
+10:09:29 INF Fabricator config and wiring are valid

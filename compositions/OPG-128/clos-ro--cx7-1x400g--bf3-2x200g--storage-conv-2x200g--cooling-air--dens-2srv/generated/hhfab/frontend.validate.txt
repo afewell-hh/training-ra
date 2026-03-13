@@ -1,0 +1,3 @@
+09:09:26 INF Hedgehog Fabricator version=v0.43.1 workdir=/tmp/hhfab-opg128-frontend
+09:09:26 INF Wiring hydrated successfully mode=if-not-present
+09:09:26 ERR validating: loading wiring and hydrating: validating wiring after hydrate: validating switches: validating *v1beta1.Switch "fe-leaf-01": MCLAG is not supported on switch profile celestica-ds5000

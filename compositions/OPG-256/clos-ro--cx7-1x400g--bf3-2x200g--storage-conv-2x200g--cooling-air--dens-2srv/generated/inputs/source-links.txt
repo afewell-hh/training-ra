@@ -1,0 +1,4 @@
+RA source files for training-opg256-clos-ro-air-2srv:
+
+- https://github.com/afewell-hh/training-ra/tree/main/compositions/OPG-256/README.md
+- https://github.com/afewell-hh/training-ra/tree/main/compositions/OPG-256/clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md

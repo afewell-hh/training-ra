@@ -1,0 +1,3 @@
+frontend.drawio not generated.
+Reason: hhfab validation failed for fabric-frontend.yaml because switch profile celestica-ds5000 does not support MCLAG/ESLAG semantics emitted by the current DIET exporter workaround.
+Fast follow: remove temporary switch-group shim and export true unbundled L3MH semantics.
