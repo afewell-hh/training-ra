@@ -1,0 +1,2570 @@
+# Hedgehog VPC CRDs -- OPG-256 Clos Rail-Optimized (Air-Cooled)
+# Generated: 2026-03-12
+# Frontend fabric VPC definitions for converged SO-C/storage/management
+#
+# VPCs:
+#   vpc-compute    -- VLAN 100/101 -- GPU server SO-C and job services
+#   vpc-storage    -- VLAN 200/201 -- NVMe-oF data + metadata
+#   vpc-management -- VLAN 300/301 -- in-band mgmt + controllers
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPC
+metadata:
+  name: vpc-compute
+  labels:
+    fabric.githedgehog.com/composition: opg-256-air
+spec:
+  description: Compute network -- GPU server SO-C traffic, NCCL/collective operations
+  subnets:
+    compute-primary:
+      cidr: 10.100.0.0/20
+      gateway: 10.100.0.1
+      vlanId: 100
+      description: Primary compute subnet -- GPU servers
+    compute-services:
+      cidr: 10.100.16.0/24
+      gateway: 10.100.16.1
+      vlanId: 101
+      description: Compute services subnet -- job schedulers, orchestration
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPC
+metadata:
+  name: vpc-storage
+  labels:
+    fabric.githedgehog.com/composition: opg-256-air
+spec:
+  description: Storage network -- NVMe-oF/RDMA data plane between compute and storage servers
+  subnets:
+    storage-data:
+      cidr: 10.101.0.0/20
+      gateway: 10.101.0.1
+      vlanId: 200
+      description: Storage data subnet -- NVMe-oF/RoCEv2 traffic
+    storage-metadata:
+      cidr: 10.101.16.0/24
+      gateway: 10.101.16.1
+      vlanId: 201
+      description: Storage metadata subnet -- metadata servers
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPC
+metadata:
+  name: vpc-management
+  labels:
+    fabric.githedgehog.com/composition: opg-256-air
+spec:
+  description: In-band management network -- provisioning, monitoring, telemetry
+  subnets:
+    mgmt-primary:
+      cidr: 10.102.0.0/24
+      gateway: 10.102.0.1
+      vlanId: 300
+      description: Management subnet -- all servers and gateways
+    mgmt-controllers:
+      cidr: 10.102.1.0/24
+      gateway: 10.102.1.1
+      vlanId: 301
+      description: Controller subnet -- Hedgehog controllers
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-01--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-01--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-02--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-02--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-03--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-03--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-03--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-03--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-04--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-04--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-04--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-04--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-05--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-05--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-05--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-05--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-06--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-06--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-06--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-06--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-07--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-07--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-07--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-07--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-08--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-08--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-08--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-08--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-09--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-09--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-09--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-09--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-10--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-10--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-10--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-10--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-11--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-11--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-11--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-11--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-12--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-12--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-12--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-12--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-13--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-13--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-13--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-13--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-14--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-14--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-14--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-14--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-15--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-15--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-15--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-15--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-16--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-16--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-16--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-16--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-17--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-17--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-17--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-17--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-18--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-18--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-18--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-18--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-19--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-19--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-19--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-19--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-20--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-20--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-20--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-20--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-21--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-21--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-21--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-21--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-22--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-22--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-22--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-22--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-23--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-23--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-23--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-23--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-24--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-24--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-24--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-24--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-25--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-25--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-25--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-25--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-26--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-26--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-26--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-26--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-27--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-27--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-27--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-27--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-28--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-28--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-28--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-28--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-29--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-29--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-29--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-29--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-30--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-30--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-30--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-30--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-31--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-31--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-31--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-31--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-32--vpc-compute--fe-leaf-01
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-01--gpu-srv-32--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-32--vpc-compute--fe-leaf-02
+spec:
+  vpc: vpc-compute
+  subnet: compute-primary
+  connection: fe-leaf-02--gpu-srv-32--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-01--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-01--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-02--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-02--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-03--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-03--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-03--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-03--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-04--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-04--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-04--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-04--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-05--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-05--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-05--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-05--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-06--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-06--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-06--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-06--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-07--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-07--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-07--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-07--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-08--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-08--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-08--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-08--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-09--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-09--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-09--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-09--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-10--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--stor-srv-10--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-10--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--stor-srv-10--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-01--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-01--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-02--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-02--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-03--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-03--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-03--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-03--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-04--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-04--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-04--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-04--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-05--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-05--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-05--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-05--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-06--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-06--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-06--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-06--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-07--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-07--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-07--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-07--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-08--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-08--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-08--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-08--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-09--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-09--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-09--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-09--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-10--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-01--meta-srv-10--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-10--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-metadata
+  connection: fe-leaf-02--meta-srv-10--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: hh-gw-01--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--hh-gw-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: hh-gw-01--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--hh-gw-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: hh-gw-02--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--hh-gw-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: hh-gw-02--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--hh-gw-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: hh-ctrl-fe--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-controllers
+  connection: fe-leaf-01--hh-ctrl-fe--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: hh-ctrl-fe--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-controllers
+  connection: fe-leaf-02--hh-ctrl-fe--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-01--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-01--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-02--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-02--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-03--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-03--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-03--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-03--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-04--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-04--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-04--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-04--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-05--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-05--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-05--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-05--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-06--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-06--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-06--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-06--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-07--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-07--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-07--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-07--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-08--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-08--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-08--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-08--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-09--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-09--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-09--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-09--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-10--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-10--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-10--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-10--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-11--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-11--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-11--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-11--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-12--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-12--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-12--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-12--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-13--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-13--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-13--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-13--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-14--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-14--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-14--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-14--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-15--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-15--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-15--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-15--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-16--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-16--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-16--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-16--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-17--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-17--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-17--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-17--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-18--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-18--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-18--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-18--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-19--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-19--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-19--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-19--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-20--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-20--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-20--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-20--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-21--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-21--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-21--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-21--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-22--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-22--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-22--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-22--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-23--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-23--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-23--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-23--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-24--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-24--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-24--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-24--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-25--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-25--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-25--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-25--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-26--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-26--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-26--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-26--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-27--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-27--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-27--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-27--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-28--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-28--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-28--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-28--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-29--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-29--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-29--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-29--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-30--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-30--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-30--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-30--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-31--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-31--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-31--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-31--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-32--vpc-storage--fe-leaf-01
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-01--gpu-srv-32--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-32--vpc-storage--fe-leaf-02
+spec:
+  vpc: vpc-storage
+  subnet: storage-data
+  connection: fe-leaf-02--gpu-srv-32--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-01--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-01--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-02--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-02--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-03--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-03--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-03--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-03--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-04--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-04--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-04--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-04--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-05--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-05--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-05--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-05--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-06--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-06--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-06--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-06--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-07--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-07--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-07--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-07--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-08--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-08--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-08--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-08--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-09--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-09--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-09--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-09--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-10--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-10--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-10--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-10--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-11--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-11--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-11--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-11--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-12--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-12--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-12--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-12--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-13--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-13--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-13--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-13--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-14--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-14--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-14--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-14--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-15--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-15--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-15--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-15--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-16--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-16--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-16--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-16--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-17--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-17--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-17--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-17--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-18--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-18--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-18--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-18--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-19--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-19--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-19--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-19--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-20--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-20--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-20--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-20--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-21--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-21--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-21--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-21--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-22--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-22--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-22--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-22--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-23--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-23--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-23--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-23--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-24--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-24--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-24--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-24--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-25--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-25--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-25--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-25--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-26--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-26--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-26--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-26--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-27--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-27--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-27--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-27--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-28--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-28--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-28--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-28--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-29--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-29--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-29--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-29--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-30--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-30--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-30--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-30--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-31--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-31--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-31--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-31--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-32--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--gpu-srv-32--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: gpu-srv-32--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--gpu-srv-32--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-01--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-01--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-02--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-02--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-03--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-03--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-03--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-03--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-04--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-04--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-04--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-04--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-05--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-05--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-05--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-05--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-06--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-06--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-06--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-06--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-07--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-07--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-07--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-07--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-08--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-08--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-08--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-08--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-09--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-09--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-09--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-09--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-10--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--stor-srv-10--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: stor-srv-10--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--stor-srv-10--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-01--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-01--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-01--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-01--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-02--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-02--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-02--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-02--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-03--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-03--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-03--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-03--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-04--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-04--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-04--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-04--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-05--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-05--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-05--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-05--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-06--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-06--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-06--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-06--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-07--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-07--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-07--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-07--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-08--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-08--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-08--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-08--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-09--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-09--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-09--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-09--bf3-p2
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-10--vpc-management--fe-leaf-01
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-01--meta-srv-10--bf3-p1
+---
+apiVersion: vpc.githedgehog.com/v1beta1
+kind: VPCAttachment
+metadata:
+  name: meta-srv-10--vpc-management--fe-leaf-02
+spec:
+  vpc: vpc-management
+  subnet: mgmt-primary
+  connection: fe-leaf-02--meta-srv-10--bf3-p2

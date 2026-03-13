@@ -1,0 +1,205 @@
+# BOM — OPG-256 Clos Rail-Optimized (CX7 1×400G; BF3 2×200G; Air; 2 srv/rack)
+# Generated: 2026-03-12
+# All counts reconciled against connectivity-map.csv
+
+switches:
+  - model: Celestica DS5000
+    role: server-leaf
+    network: backend
+    count: 4
+    notes: "be-leaf-01 through be-leaf-04; ports 1-32 2×400G breakout (server downlinks), ports 33-64 800G uplinks (port 33 on leaf-01/02 reconfigured for controller)"
+
+  - model: Celestica DS5000
+    role: spine
+    network: backend
+    count: 4
+    notes: "be-spine-01 through be-spine-04; 32 ports each at 800G"
+
+  - model: Celestica DS5000
+    role: server-leaf
+    network: frontend
+    count: 2
+    notes: "fe-leaf-01, fe-leaf-02; odd ports 1-27 4×200G breakout (56 logical downlinks), ports 33-64 800G uplinks"
+
+  - model: Celestica DS5000
+    role: spine
+    network: frontend
+    count: 2
+    notes: "fe-spine-01, fe-spine-02; 32 leaf-facing ports at 800G + 3 OOB peering ports (10G SFP+)"
+
+  - model: Celestica DS1000-48
+    role: oob
+    network: oob
+    count: 3
+    notes: "oob-sw-01 through oob-sw-03; 48×1G copper + 6 SFP+ uplinks each"
+
+optics:
+  # ------------------------------------------------------------------
+  # Backend leaf downlinks (server-facing, 2×400G breakout)
+  # ------------------------------------------------------------------
+  # 4 leaves × 32 physical ports = 128 OSFP transceivers (leaf side)
+  # + 1 extra port on be-leaf-01 and be-leaf-02 for controller = 130 leaf-side
+  # Server side: 32 servers × 8 CX7 NICs = 256 transceivers
+  # Controller: 2 transceivers (1 per link)
+  # Total for BE downlinks: 130 (leaf) + 258 (endpoint) = 388
+  # But OSFP-2x400G-DR4 carries 2×400G on one transceiver. Each physical port
+  # uses 1 transceiver at each end. So:
+  #   Leaf side: 128 + 2 = 130 transceivers
+  #   Server side: each CX7 NIC needs its own transceiver = 256 + 2 = 258
+  # However, 2×400G DR4 means one transceiver does 2 lanes. A single CX7 NIC
+  # at 400G needs a 400G transceiver, NOT a 2×400G. The 2×400G is the leaf
+  # breakout optic. Server side uses QSFP112-400G-DR4 (single 400G per NIC).
+  # Correction: leaf side = OSFP-2x400G-DR4 (one per physical port, serves 2 NICs)
+  #             server side = QSFP112-400G-DR4 (one per NIC)
+  - type: OSFP-2x400G-DR4
+    speed: "2×400G (breakout)"
+    count: 130
+    notes: "Backend leaf downlink ports — 1 per physical port; 128 for servers + 2 for controller (leaf side only)"
+
+  - type: QSFP112-400G-DR4
+    speed: 400G
+    count: 258
+    notes: "Server/controller CX7 NIC transceivers — 256 GPU server NICs + 2 controller ports"
+
+  # ------------------------------------------------------------------
+  # Backend leaf-spine uplinks (800G)
+  # ------------------------------------------------------------------
+  # 4 leaves × (32 - adjustment) uplinks:
+  #   be-leaf-01: 31 uplinks (port 33 used for controller)
+  #   be-leaf-02: 31 uplinks (port 33 used for controller)
+  #   be-leaf-03: 32 uplinks
+  #   be-leaf-04: 32 uplinks
+  # Total: 126 links. Each link needs 1 transceiver per end = 252
+  - type: OSFP-2x400G-DR4
+    speed: "800G (2×400G)"
+    count: 252
+    notes: "Backend leaf-spine uplinks — 126 links × 2 ends; be-leaf-01/02 have 31 uplinks each, be-leaf-03/04 have 32"
+
+  # ------------------------------------------------------------------
+  # Frontend leaf downlinks (4×200G breakout)
+  # ------------------------------------------------------------------
+  # 2 leaves × 14 odd physical ports = 28 OSFP transceivers (leaf side)
+  # Server side: 55 endpoints × 2 links (1 per leaf) = 110 transceivers
+  # Leaf optic = OSFP-4x200G-DR4 (1 per physical port, serves 4 endpoints)
+  # Endpoint optic = QSFP56/112-200G-DR4 (1 per BF3 port)
+  - type: OSFP-4x200G-DR4
+    speed: "4×200G (breakout)"
+    count: 28
+    notes: "Frontend leaf downlink ports — 14 odd ports per leaf × 2 leaves (leaf side only)"
+
+  - type: QSFP56-200G-DR4
+    speed: 200G
+    count: 110
+    notes: "Endpoint BF3 NIC transceivers — 55 endpoints × 2 ports (1 per FE leaf)"
+
+  # ------------------------------------------------------------------
+  # Frontend leaf-spine uplinks (800G)
+  # ------------------------------------------------------------------
+  # 2 leaves × 32 uplinks = 64 links × 2 ends = 128
+  - type: OSFP-2x400G-DR4
+    speed: "800G (2×400G)"
+    count: 128
+    notes: "Frontend leaf-spine uplinks — 64 links × 2 ends"
+
+  # ------------------------------------------------------------------
+  # OOB uplinks (10G SFP+)
+  # ------------------------------------------------------------------
+  # 3 OOB switches × 2 uplinks = 6 links × 2 ends = 12
+  - type: SFP+-10G-LR
+    speed: 10G
+    count: 12
+    notes: "OOB switch uplinks to FE spines — 6 links × 2 ends (LC duplex SMF)"
+
+cables:
+  # ------------------------------------------------------------------
+  # Backend server downlinks — MPO-8 trunk
+  # ------------------------------------------------------------------
+  # 256 server NIC links + 2 controller links = 258 cables
+  # (leaf-side uses dual MPO-8 OSFP breakout; one MPO-8 trunk per 400G lane)
+  - type: MPO-8 trunk (OM4/OS2)
+    length: "5-15m (intra-rack/adjacent)"
+    count: 258
+    notes: "Backend leaf-to-server/controller 400G links; 1 MPO-8 per 400G lane"
+
+  # ------------------------------------------------------------------
+  # Backend leaf-spine — MPO-8 trunk (dual per 800G link)
+  # ------------------------------------------------------------------
+  # 126 links × 2 MPO-8 per 800G = 252 MPO-8 trunks
+  - type: MPO-8 trunk (OS2 SMF)
+    length: "10-50m (inter-rack)"
+    count: 252
+    notes: "Backend leaf-spine 800G uplinks; dual MPO-8 per link"
+
+  # ------------------------------------------------------------------
+  # Frontend server downlinks — MPO-8/12
+  # ------------------------------------------------------------------
+  # 110 links (55 endpoints × 2 leaves)
+  - type: MPO-8/12 (OS2 SMF)
+    length: "5-30m"
+    count: 110
+    notes: "Frontend leaf-to-endpoint 200G links"
+
+  # ------------------------------------------------------------------
+  # Frontend leaf-spine — MPO-8 trunk (dual per 800G)
+  # ------------------------------------------------------------------
+  # 64 links × 2 = 128 MPO-8 trunks
+  - type: MPO-8 trunk (OS2 SMF)
+    length: "10-50m (inter-rack)"
+    count: 128
+    notes: "Frontend leaf-spine 800G uplinks; dual MPO-8 per link"
+
+  # ------------------------------------------------------------------
+  # OOB uplinks — LC duplex SMF
+  # ------------------------------------------------------------------
+  - type: LC duplex (OS2 SMF)
+    length: "10-50m"
+    count: 6
+    notes: "OOB switch to FE spine 10G uplinks"
+
+  # ------------------------------------------------------------------
+  # OOB endpoint — Cat6a copper
+  # ------------------------------------------------------------------
+  - type: Cat6a copper
+    length: "1-5m"
+    count: 120
+    notes: "OOB 1G connections — 56 server/gateway/controller BMCs + 64 PDU management"
+
+gateways:
+  - model: Hedgehog Gateway (x86 appliance)
+    count: 2
+    notes: "hh-gw-01, hh-gw-02; BF3 2×200G frontend; provides north-south routing and external peering"
+
+servers:
+  - model: GPU server (8× NVIDIA B200 + 8× CX7 + 1× BF3)
+    role: compute
+    count: 32
+    notes: "gpu-srv-01 through gpu-srv-32; air-cooled; 2 per rack across 16 racks"
+
+  - model: Storage server (BF3 2×200G frontend)
+    role: storage
+    count: 10
+    notes: "stor-srv-01 through stor-srv-10"
+
+  - model: Metadata server (BF3 2×200G frontend)
+    role: metadata
+    count: 10
+    notes: "meta-srv-01 through meta-srv-10"
+
+controllers:
+  - model: Hedgehog Fabric Controller
+    role: backend-controller
+    count: 1
+    notes: "hh-ctrl-be; manages backend fabric; 2×400G to be-leaf-01 and be-leaf-02"
+
+  - model: Hedgehog Fabric Controller
+    role: frontend-controller
+    count: 1
+    notes: "hh-ctrl-fe; manages frontend fabric; BF3 2×200G to fe-leaf-01 and fe-leaf-02"
+
+notes: |
+  OPG-256 air-cooled composition: 32 GPU servers × 8 xPUs = 256 xPUs.
+  Air cooling limits density to 2 servers per rack, yielding 16 compute racks.
+  64 PDUs at 4 per rack. Backend rail-optimized Clos with CX7 1×400G per GPU.
+  Converged frontend with BF3 2×200G per server (storage, SO-C, in-band management).
+  All high-speed optics are OS2 single-mode DR-class.
+  NVIDIA B200/CX7/BF3 used as reference; design is vendor-neutral at equivalent speeds.

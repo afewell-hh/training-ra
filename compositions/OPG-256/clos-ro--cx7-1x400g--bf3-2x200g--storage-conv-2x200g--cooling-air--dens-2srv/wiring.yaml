@@ -1,0 +1,8070 @@
+# Hedgehog Wiring CRDs — OPG-256 Clos Rail-Optimized (Air-Cooled)
+# Generated: 2026-03-12
+# IDs match connectivity-map.csv node_id values
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-leaf-01
+  labels:
+    fabric.githedgehog.com/rack: be-rack-01
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  description: "Backend leaf 1 \u2014 rails 1,2"
+  groups:
+    backend:
+      fabric: opg-256-backend
+  portBreakouts:
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/17: 2x400G
+    E1/18: 2x400G
+    E1/19: 2x400G
+    E1/20: 2x400G
+    E1/21: 2x400G
+    E1/22: 2x400G
+    E1/23: 2x400G
+    E1/24: 2x400G
+    E1/25: 2x400G
+    E1/26: 2x400G
+    E1/27: 2x400G
+    E1/28: 2x400G
+    E1/29: 2x400G
+    E1/30: 2x400G
+    E1/31: 2x400G
+    E1/32: 2x400G
+    E1/33: 2x400G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-leaf-02
+  labels:
+    fabric.githedgehog.com/rack: be-rack-02
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  description: "Backend leaf 2 \u2014 rails 3,4"
+  groups:
+    backend:
+      fabric: opg-256-backend
+  portBreakouts:
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/17: 2x400G
+    E1/18: 2x400G
+    E1/19: 2x400G
+    E1/20: 2x400G
+    E1/21: 2x400G
+    E1/22: 2x400G
+    E1/23: 2x400G
+    E1/24: 2x400G
+    E1/25: 2x400G
+    E1/26: 2x400G
+    E1/27: 2x400G
+    E1/28: 2x400G
+    E1/29: 2x400G
+    E1/30: 2x400G
+    E1/31: 2x400G
+    E1/32: 2x400G
+    E1/33: 2x400G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-leaf-03
+  labels:
+    fabric.githedgehog.com/rack: be-rack-03
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  description: "Backend leaf 3 \u2014 rails 5,6"
+  groups:
+    backend:
+      fabric: opg-256-backend
+  portBreakouts:
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/17: 2x400G
+    E1/18: 2x400G
+    E1/19: 2x400G
+    E1/20: 2x400G
+    E1/21: 2x400G
+    E1/22: 2x400G
+    E1/23: 2x400G
+    E1/24: 2x400G
+    E1/25: 2x400G
+    E1/26: 2x400G
+    E1/27: 2x400G
+    E1/28: 2x400G
+    E1/29: 2x400G
+    E1/30: 2x400G
+    E1/31: 2x400G
+    E1/32: 2x400G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-leaf-04
+  labels:
+    fabric.githedgehog.com/rack: be-rack-04
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  description: "Backend leaf 4 \u2014 rails 7,8"
+  groups:
+    backend:
+      fabric: opg-256-backend
+  portBreakouts:
+    E1/1: 2x400G
+    E1/2: 2x400G
+    E1/3: 2x400G
+    E1/4: 2x400G
+    E1/5: 2x400G
+    E1/6: 2x400G
+    E1/7: 2x400G
+    E1/8: 2x400G
+    E1/9: 2x400G
+    E1/10: 2x400G
+    E1/11: 2x400G
+    E1/12: 2x400G
+    E1/13: 2x400G
+    E1/14: 2x400G
+    E1/15: 2x400G
+    E1/16: 2x400G
+    E1/17: 2x400G
+    E1/18: 2x400G
+    E1/19: 2x400G
+    E1/20: 2x400G
+    E1/21: 2x400G
+    E1/22: 2x400G
+    E1/23: 2x400G
+    E1/24: 2x400G
+    E1/25: 2x400G
+    E1/26: 2x400G
+    E1/27: 2x400G
+    E1/28: 2x400G
+    E1/29: 2x400G
+    E1/30: 2x400G
+    E1/31: 2x400G
+    E1/32: 2x400G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-spine-01
+  labels:
+    fabric.githedgehog.com/rack: spine-rack-01
+spec:
+  role: spine
+  profile: celestica-ds5000
+  description: Backend spine 1
+  groups:
+    backend:
+      fabric: opg-256-backend
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-spine-02
+  labels:
+    fabric.githedgehog.com/rack: spine-rack-02
+spec:
+  role: spine
+  profile: celestica-ds5000
+  description: Backend spine 2
+  groups:
+    backend:
+      fabric: opg-256-backend
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-spine-03
+  labels:
+    fabric.githedgehog.com/rack: spine-rack-03
+spec:
+  role: spine
+  profile: celestica-ds5000
+  description: Backend spine 3
+  groups:
+    backend:
+      fabric: opg-256-backend
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: be-spine-04
+  labels:
+    fabric.githedgehog.com/rack: spine-rack-04
+spec:
+  role: spine
+  profile: celestica-ds5000
+  description: Backend spine 4
+  groups:
+    backend:
+      fabric: opg-256-backend
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: fe-leaf-01
+  labels:
+    fabric.githedgehog.com/rack: fe-rack-01
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  description: "Frontend leaf 1 \u2014 converged SO-C/storage/in-band"
+  groups:
+    frontend:
+      fabric: opg-256-frontend
+  portBreakouts:
+    E1/1: 4x200G
+    E1/3: 4x200G
+    E1/5: 4x200G
+    E1/7: 4x200G
+    E1/9: 4x200G
+    E1/11: 4x200G
+    E1/13: 4x200G
+    E1/15: 4x200G
+    E1/17: 4x200G
+    E1/19: 4x200G
+    E1/21: 4x200G
+    E1/23: 4x200G
+    E1/25: 4x200G
+    E1/27: 4x200G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: fe-leaf-02
+  labels:
+    fabric.githedgehog.com/rack: fe-rack-02
+spec:
+  role: server-leaf
+  profile: celestica-ds5000
+  description: "Frontend leaf 2 \u2014 converged SO-C/storage/in-band"
+  groups:
+    frontend:
+      fabric: opg-256-frontend
+  portBreakouts:
+    E1/1: 4x200G
+    E1/3: 4x200G
+    E1/5: 4x200G
+    E1/7: 4x200G
+    E1/9: 4x200G
+    E1/11: 4x200G
+    E1/13: 4x200G
+    E1/15: 4x200G
+    E1/17: 4x200G
+    E1/19: 4x200G
+    E1/21: 4x200G
+    E1/23: 4x200G
+    E1/25: 4x200G
+    E1/27: 4x200G
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: fe-spine-01
+  labels:
+    fabric.githedgehog.com/rack: fe-spine-rack-01
+spec:
+  role: spine
+  profile: celestica-ds5000
+  description: Frontend spine 1
+  groups:
+    frontend:
+      fabric: opg-256-frontend
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: fe-spine-02
+  labels:
+    fabric.githedgehog.com/rack: fe-spine-rack-02
+spec:
+  role: spine
+  profile: celestica-ds5000
+  description: Frontend spine 2
+  groups:
+    frontend:
+      fabric: opg-256-frontend
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: oob-sw-01
+  labels:
+    fabric.githedgehog.com/rack: oob-rack-01
+spec:
+  role: oob
+  profile: celestica-ds1000-48
+  description: OOB management switch 1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: oob-sw-02
+  labels:
+    fabric.githedgehog.com/rack: oob-rack-02
+spec:
+  role: oob
+  profile: celestica-ds1000-48
+  description: OOB management switch 2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Switch
+metadata:
+  name: oob-sw-03
+  labels:
+    fabric.githedgehog.com/rack: oob-rack-03
+spec:
+  role: oob
+  profile: celestica-ds1000-48
+  description: OOB management switch 3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-01
+spec:
+  description: "GPU compute server 1 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-02
+spec:
+  description: "GPU compute server 2 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-03
+spec:
+  description: "GPU compute server 3 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-04
+spec:
+  description: "GPU compute server 4 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-05
+spec:
+  description: "GPU compute server 5 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-06
+spec:
+  description: "GPU compute server 6 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-07
+spec:
+  description: "GPU compute server 7 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-08
+spec:
+  description: "GPU compute server 8 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-09
+spec:
+  description: "GPU compute server 9 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-10
+spec:
+  description: "GPU compute server 10 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-11
+spec:
+  description: "GPU compute server 11 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-12
+spec:
+  description: "GPU compute server 12 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-13
+spec:
+  description: "GPU compute server 13 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-14
+spec:
+  description: "GPU compute server 14 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-15
+spec:
+  description: "GPU compute server 15 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-16
+spec:
+  description: "GPU compute server 16 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-17
+spec:
+  description: "GPU compute server 17 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-18
+spec:
+  description: "GPU compute server 18 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-19
+spec:
+  description: "GPU compute server 19 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-20
+spec:
+  description: "GPU compute server 20 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-21
+spec:
+  description: "GPU compute server 21 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-22
+spec:
+  description: "GPU compute server 22 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-23
+spec:
+  description: "GPU compute server 23 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-24
+spec:
+  description: "GPU compute server 24 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-25
+spec:
+  description: "GPU compute server 25 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-26
+spec:
+  description: "GPU compute server 26 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-27
+spec:
+  description: "GPU compute server 27 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-28
+spec:
+  description: "GPU compute server 28 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-29
+spec:
+  description: "GPU compute server 29 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-30
+spec:
+  description: "GPU compute server 30 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-31
+spec:
+  description: "GPU compute server 31 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: gpu-srv-32
+spec:
+  description: "GPU compute server 32 \u2014 8\xD7 B200 + 8\xD7 CX7 + BF3"
+  profile: nvidia-hgx-b200-8gpu
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-01
+spec:
+  description: "Storage server 1 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-02
+spec:
+  description: "Storage server 2 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-03
+spec:
+  description: "Storage server 3 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-04
+spec:
+  description: "Storage server 4 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-05
+spec:
+  description: "Storage server 5 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-06
+spec:
+  description: "Storage server 6 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-07
+spec:
+  description: "Storage server 7 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-08
+spec:
+  description: "Storage server 8 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-09
+spec:
+  description: "Storage server 9 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: stor-srv-10
+spec:
+  description: "Storage server 10 \u2014 BF3 2\xD7200G"
+  profile: storage-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-01
+spec:
+  description: "Metadata server 1 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-02
+spec:
+  description: "Metadata server 2 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-03
+spec:
+  description: "Metadata server 3 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-04
+spec:
+  description: "Metadata server 4 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-05
+spec:
+  description: "Metadata server 5 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-06
+spec:
+  description: "Metadata server 6 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-07
+spec:
+  description: "Metadata server 7 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-08
+spec:
+  description: "Metadata server 8 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-09
+spec:
+  description: "Metadata server 9 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: meta-srv-10
+spec:
+  description: "Metadata server 10 \u2014 BF3 2\xD7200G"
+  profile: metadata-server-bf3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: hh-gw-01
+spec:
+  description: "Hedgehog gateway 1 \u2014 north-south routing"
+  profile: hedgehog-gateway
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: hh-gw-02
+spec:
+  description: "Hedgehog gateway 2 \u2014 north-south routing"
+  profile: hedgehog-gateway
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: hh-ctrl-fe
+spec:
+  description: Hedgehog frontend fabric controller
+  profile: hedgehog-controller
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Server
+metadata:
+  name: hh-ctrl-be
+spec:
+  description: Hedgehog backend fabric controller
+  profile: hedgehog-controller
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p34
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/34
+      peer:
+        port: be-spine-01/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p35
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/35
+      peer:
+        port: be-spine-02/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p36
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/36
+      peer:
+        port: be-spine-03/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-04--p37
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/37
+      peer:
+        port: be-spine-04/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p38
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/38
+      peer:
+        port: be-spine-01/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p39
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/39
+      peer:
+        port: be-spine-02/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p40
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/40
+      peer:
+        port: be-spine-03/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-04--p41
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/41
+      peer:
+        port: be-spine-04/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p42
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/42
+      peer:
+        port: be-spine-01/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p43
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/43
+      peer:
+        port: be-spine-02/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p44
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/44
+      peer:
+        port: be-spine-03/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-04--p45
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/45
+      peer:
+        port: be-spine-04/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p46
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/46
+      peer:
+        port: be-spine-01/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p47
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/47
+      peer:
+        port: be-spine-02/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p48
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/48
+      peer:
+        port: be-spine-03/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-04--p49
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/49
+      peer:
+        port: be-spine-04/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p50
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/50
+      peer:
+        port: be-spine-01/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p51
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/51
+      peer:
+        port: be-spine-02/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p52
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/52
+      peer:
+        port: be-spine-03/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-04--p53
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/53
+      peer:
+        port: be-spine-04/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p54
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/54
+      peer:
+        port: be-spine-01/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p55
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/55
+      peer:
+        port: be-spine-02/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p56
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/56
+      peer:
+        port: be-spine-03/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-04--p57
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/57
+      peer:
+        port: be-spine-04/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p58
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/58
+      peer:
+        port: be-spine-01/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p59
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/59
+      peer:
+        port: be-spine-02/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p60
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/60
+      peer:
+        port: be-spine-03/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-04--p61
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/61
+      peer:
+        port: be-spine-04/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-01--p62
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/62
+      peer:
+        port: be-spine-01/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-02--p63
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/63
+      peer:
+        port: be-spine-02/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--be-spine-03--p64
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-01/E1/64
+      peer:
+        port: be-spine-03/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p34
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/34
+      peer:
+        port: be-spine-01/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p35
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/35
+      peer:
+        port: be-spine-02/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p36
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/36
+      peer:
+        port: be-spine-03/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-04--p37
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/37
+      peer:
+        port: be-spine-04/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p38
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/38
+      peer:
+        port: be-spine-01/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p39
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/39
+      peer:
+        port: be-spine-02/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p40
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/40
+      peer:
+        port: be-spine-03/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-04--p41
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/41
+      peer:
+        port: be-spine-04/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p42
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/42
+      peer:
+        port: be-spine-01/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p43
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/43
+      peer:
+        port: be-spine-02/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p44
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/44
+      peer:
+        port: be-spine-03/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-04--p45
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/45
+      peer:
+        port: be-spine-04/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p46
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/46
+      peer:
+        port: be-spine-01/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p47
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/47
+      peer:
+        port: be-spine-02/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p48
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/48
+      peer:
+        port: be-spine-03/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-04--p49
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/49
+      peer:
+        port: be-spine-04/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p50
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/50
+      peer:
+        port: be-spine-01/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p51
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/51
+      peer:
+        port: be-spine-02/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p52
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/52
+      peer:
+        port: be-spine-03/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-04--p53
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/53
+      peer:
+        port: be-spine-04/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p54
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/54
+      peer:
+        port: be-spine-01/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p55
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/55
+      peer:
+        port: be-spine-02/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p56
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/56
+      peer:
+        port: be-spine-03/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-04--p57
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/57
+      peer:
+        port: be-spine-04/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p58
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/58
+      peer:
+        port: be-spine-01/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p59
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/59
+      peer:
+        port: be-spine-02/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p60
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/60
+      peer:
+        port: be-spine-03/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-04--p61
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/61
+      peer:
+        port: be-spine-04/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-01--p62
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/62
+      peer:
+        port: be-spine-01/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-02--p63
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/63
+      peer:
+        port: be-spine-02/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--be-spine-03--p64
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-02/E1/64
+      peer:
+        port: be-spine-03/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p33
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/33
+      peer:
+        port: be-spine-01/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p34
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/34
+      peer:
+        port: be-spine-02/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p35
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/35
+      peer:
+        port: be-spine-03/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p36
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/36
+      peer:
+        port: be-spine-04/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p37
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/37
+      peer:
+        port: be-spine-01/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p38
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/38
+      peer:
+        port: be-spine-02/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p39
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/39
+      peer:
+        port: be-spine-03/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p40
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/40
+      peer:
+        port: be-spine-04/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p41
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/41
+      peer:
+        port: be-spine-01/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p42
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/42
+      peer:
+        port: be-spine-02/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p43
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/43
+      peer:
+        port: be-spine-03/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p44
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/44
+      peer:
+        port: be-spine-04/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p45
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/45
+      peer:
+        port: be-spine-01/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p46
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/46
+      peer:
+        port: be-spine-02/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p47
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/47
+      peer:
+        port: be-spine-03/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p48
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/48
+      peer:
+        port: be-spine-04/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p49
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/49
+      peer:
+        port: be-spine-01/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p50
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/50
+      peer:
+        port: be-spine-02/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p51
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/51
+      peer:
+        port: be-spine-03/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p52
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/52
+      peer:
+        port: be-spine-04/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p53
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/53
+      peer:
+        port: be-spine-01/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p54
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/54
+      peer:
+        port: be-spine-02/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p55
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/55
+      peer:
+        port: be-spine-03/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p56
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/56
+      peer:
+        port: be-spine-04/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p57
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/57
+      peer:
+        port: be-spine-01/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p58
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/58
+      peer:
+        port: be-spine-02/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p59
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/59
+      peer:
+        port: be-spine-03/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p60
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/60
+      peer:
+        port: be-spine-04/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-01--p61
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/61
+      peer:
+        port: be-spine-01/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-02--p62
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/62
+      peer:
+        port: be-spine-02/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-03--p63
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/63
+      peer:
+        port: be-spine-03/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--be-spine-04--p64
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-03/E1/64
+      peer:
+        port: be-spine-04/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p33
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/33
+      peer:
+        port: be-spine-01/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p34
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/34
+      peer:
+        port: be-spine-02/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p35
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/35
+      peer:
+        port: be-spine-03/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p36
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/36
+      peer:
+        port: be-spine-04/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p37
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/37
+      peer:
+        port: be-spine-01/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p38
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/38
+      peer:
+        port: be-spine-02/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p39
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/39
+      peer:
+        port: be-spine-03/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p40
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/40
+      peer:
+        port: be-spine-04/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p41
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/41
+      peer:
+        port: be-spine-01/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p42
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/42
+      peer:
+        port: be-spine-02/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p43
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/43
+      peer:
+        port: be-spine-03/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p44
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/44
+      peer:
+        port: be-spine-04/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p45
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/45
+      peer:
+        port: be-spine-01/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p46
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/46
+      peer:
+        port: be-spine-02/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p47
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/47
+      peer:
+        port: be-spine-03/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p48
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/48
+      peer:
+        port: be-spine-04/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p49
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/49
+      peer:
+        port: be-spine-01/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p50
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/50
+      peer:
+        port: be-spine-02/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p51
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/51
+      peer:
+        port: be-spine-03/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p52
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/52
+      peer:
+        port: be-spine-04/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p53
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/53
+      peer:
+        port: be-spine-01/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p54
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/54
+      peer:
+        port: be-spine-02/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p55
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/55
+      peer:
+        port: be-spine-03/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p56
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/56
+      peer:
+        port: be-spine-04/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p57
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/57
+      peer:
+        port: be-spine-01/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p58
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/58
+      peer:
+        port: be-spine-02/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p59
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/59
+      peer:
+        port: be-spine-03/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p60
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/60
+      peer:
+        port: be-spine-04/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-01--p61
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/61
+      peer:
+        port: be-spine-01/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-02--p62
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/62
+      peer:
+        port: be-spine-02/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-03--p63
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/63
+      peer:
+        port: be-spine-03/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--be-spine-04--p64
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: be-leaf-04/E1/64
+      peer:
+        port: be-spine-04/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-01--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/1/1
+      server:
+        port: gpu-srv-01/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-01--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/1/2
+      server:
+        port: gpu-srv-01/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-01--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/1/1
+      server:
+        port: gpu-srv-01/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-01--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/1/2
+      server:
+        port: gpu-srv-01/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-01--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/1/1
+      server:
+        port: gpu-srv-01/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-01--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/1/2
+      server:
+        port: gpu-srv-01/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-01--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/1/1
+      server:
+        port: gpu-srv-01/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-01--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/1/2
+      server:
+        port: gpu-srv-01/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-02--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/2/1
+      server:
+        port: gpu-srv-02/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-02--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/2/2
+      server:
+        port: gpu-srv-02/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-02--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/2/1
+      server:
+        port: gpu-srv-02/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-02--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/2/2
+      server:
+        port: gpu-srv-02/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-02--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/2/1
+      server:
+        port: gpu-srv-02/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-02--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/2/2
+      server:
+        port: gpu-srv-02/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-02--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/2/1
+      server:
+        port: gpu-srv-02/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-02--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/2/2
+      server:
+        port: gpu-srv-02/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-03--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/3/1
+      server:
+        port: gpu-srv-03/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-03--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/3/2
+      server:
+        port: gpu-srv-03/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-03--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/3/1
+      server:
+        port: gpu-srv-03/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-03--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/3/2
+      server:
+        port: gpu-srv-03/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-03--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/3/1
+      server:
+        port: gpu-srv-03/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-03--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/3/2
+      server:
+        port: gpu-srv-03/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-03--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/3/1
+      server:
+        port: gpu-srv-03/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-03--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/3/2
+      server:
+        port: gpu-srv-03/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-04--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/4/1
+      server:
+        port: gpu-srv-04/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-04--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/4/2
+      server:
+        port: gpu-srv-04/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-04--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/4/1
+      server:
+        port: gpu-srv-04/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-04--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/4/2
+      server:
+        port: gpu-srv-04/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-04--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/4/1
+      server:
+        port: gpu-srv-04/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-04--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/4/2
+      server:
+        port: gpu-srv-04/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-04--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/4/1
+      server:
+        port: gpu-srv-04/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-04--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/4/2
+      server:
+        port: gpu-srv-04/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-05--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/5/1
+      server:
+        port: gpu-srv-05/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-05--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/5/2
+      server:
+        port: gpu-srv-05/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-05--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/5/1
+      server:
+        port: gpu-srv-05/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-05--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/5/2
+      server:
+        port: gpu-srv-05/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-05--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/5/1
+      server:
+        port: gpu-srv-05/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-05--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/5/2
+      server:
+        port: gpu-srv-05/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-05--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/5/1
+      server:
+        port: gpu-srv-05/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-05--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/5/2
+      server:
+        port: gpu-srv-05/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-06--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/6/1
+      server:
+        port: gpu-srv-06/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-06--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/6/2
+      server:
+        port: gpu-srv-06/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-06--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/6/1
+      server:
+        port: gpu-srv-06/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-06--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/6/2
+      server:
+        port: gpu-srv-06/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-06--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/6/1
+      server:
+        port: gpu-srv-06/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-06--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/6/2
+      server:
+        port: gpu-srv-06/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-06--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/6/1
+      server:
+        port: gpu-srv-06/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-06--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/6/2
+      server:
+        port: gpu-srv-06/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-07--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/7/1
+      server:
+        port: gpu-srv-07/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-07--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/7/2
+      server:
+        port: gpu-srv-07/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-07--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/7/1
+      server:
+        port: gpu-srv-07/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-07--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/7/2
+      server:
+        port: gpu-srv-07/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-07--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/7/1
+      server:
+        port: gpu-srv-07/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-07--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/7/2
+      server:
+        port: gpu-srv-07/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-07--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/7/1
+      server:
+        port: gpu-srv-07/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-07--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/7/2
+      server:
+        port: gpu-srv-07/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-08--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/8/1
+      server:
+        port: gpu-srv-08/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-08--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/8/2
+      server:
+        port: gpu-srv-08/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-08--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/8/1
+      server:
+        port: gpu-srv-08/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-08--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/8/2
+      server:
+        port: gpu-srv-08/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-08--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/8/1
+      server:
+        port: gpu-srv-08/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-08--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/8/2
+      server:
+        port: gpu-srv-08/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-08--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/8/1
+      server:
+        port: gpu-srv-08/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-08--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/8/2
+      server:
+        port: gpu-srv-08/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-09--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/9/1
+      server:
+        port: gpu-srv-09/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-09--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/9/2
+      server:
+        port: gpu-srv-09/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-09--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/9/1
+      server:
+        port: gpu-srv-09/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-09--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/9/2
+      server:
+        port: gpu-srv-09/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-09--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/9/1
+      server:
+        port: gpu-srv-09/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-09--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/9/2
+      server:
+        port: gpu-srv-09/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-09--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/9/1
+      server:
+        port: gpu-srv-09/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-09--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/9/2
+      server:
+        port: gpu-srv-09/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-10--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/10/1
+      server:
+        port: gpu-srv-10/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-10--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/10/2
+      server:
+        port: gpu-srv-10/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-10--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/10/1
+      server:
+        port: gpu-srv-10/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-10--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/10/2
+      server:
+        port: gpu-srv-10/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-10--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/10/1
+      server:
+        port: gpu-srv-10/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-10--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/10/2
+      server:
+        port: gpu-srv-10/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-10--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/10/1
+      server:
+        port: gpu-srv-10/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-10--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/10/2
+      server:
+        port: gpu-srv-10/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-11--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/11/1
+      server:
+        port: gpu-srv-11/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-11--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/11/2
+      server:
+        port: gpu-srv-11/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-11--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/11/1
+      server:
+        port: gpu-srv-11/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-11--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/11/2
+      server:
+        port: gpu-srv-11/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-11--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/11/1
+      server:
+        port: gpu-srv-11/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-11--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/11/2
+      server:
+        port: gpu-srv-11/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-11--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/11/1
+      server:
+        port: gpu-srv-11/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-11--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/11/2
+      server:
+        port: gpu-srv-11/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-12--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/12/1
+      server:
+        port: gpu-srv-12/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-12--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/12/2
+      server:
+        port: gpu-srv-12/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-12--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/12/1
+      server:
+        port: gpu-srv-12/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-12--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/12/2
+      server:
+        port: gpu-srv-12/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-12--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/12/1
+      server:
+        port: gpu-srv-12/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-12--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/12/2
+      server:
+        port: gpu-srv-12/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-12--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/12/1
+      server:
+        port: gpu-srv-12/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-12--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/12/2
+      server:
+        port: gpu-srv-12/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-13--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/13/1
+      server:
+        port: gpu-srv-13/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-13--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/13/2
+      server:
+        port: gpu-srv-13/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-13--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/13/1
+      server:
+        port: gpu-srv-13/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-13--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/13/2
+      server:
+        port: gpu-srv-13/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-13--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/13/1
+      server:
+        port: gpu-srv-13/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-13--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/13/2
+      server:
+        port: gpu-srv-13/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-13--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/13/1
+      server:
+        port: gpu-srv-13/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-13--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/13/2
+      server:
+        port: gpu-srv-13/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-14--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/14/1
+      server:
+        port: gpu-srv-14/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-14--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/14/2
+      server:
+        port: gpu-srv-14/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-14--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/14/1
+      server:
+        port: gpu-srv-14/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-14--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/14/2
+      server:
+        port: gpu-srv-14/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-14--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/14/1
+      server:
+        port: gpu-srv-14/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-14--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/14/2
+      server:
+        port: gpu-srv-14/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-14--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/14/1
+      server:
+        port: gpu-srv-14/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-14--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/14/2
+      server:
+        port: gpu-srv-14/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-15--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/15/1
+      server:
+        port: gpu-srv-15/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-15--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/15/2
+      server:
+        port: gpu-srv-15/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-15--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/15/1
+      server:
+        port: gpu-srv-15/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-15--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/15/2
+      server:
+        port: gpu-srv-15/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-15--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/15/1
+      server:
+        port: gpu-srv-15/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-15--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/15/2
+      server:
+        port: gpu-srv-15/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-15--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/15/1
+      server:
+        port: gpu-srv-15/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-15--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/15/2
+      server:
+        port: gpu-srv-15/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-16--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/16/1
+      server:
+        port: gpu-srv-16/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-16--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/16/2
+      server:
+        port: gpu-srv-16/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-16--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/16/1
+      server:
+        port: gpu-srv-16/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-16--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/16/2
+      server:
+        port: gpu-srv-16/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-16--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/16/1
+      server:
+        port: gpu-srv-16/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-16--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/16/2
+      server:
+        port: gpu-srv-16/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-16--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/16/1
+      server:
+        port: gpu-srv-16/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-16--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/16/2
+      server:
+        port: gpu-srv-16/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-17--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/17/1
+      server:
+        port: gpu-srv-17/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-17--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/17/2
+      server:
+        port: gpu-srv-17/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-17--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/17/1
+      server:
+        port: gpu-srv-17/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-17--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/17/2
+      server:
+        port: gpu-srv-17/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-17--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/17/1
+      server:
+        port: gpu-srv-17/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-17--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/17/2
+      server:
+        port: gpu-srv-17/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-17--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/17/1
+      server:
+        port: gpu-srv-17/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-17--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/17/2
+      server:
+        port: gpu-srv-17/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-18--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/18/1
+      server:
+        port: gpu-srv-18/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-18--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/18/2
+      server:
+        port: gpu-srv-18/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-18--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/18/1
+      server:
+        port: gpu-srv-18/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-18--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/18/2
+      server:
+        port: gpu-srv-18/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-18--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/18/1
+      server:
+        port: gpu-srv-18/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-18--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/18/2
+      server:
+        port: gpu-srv-18/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-18--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/18/1
+      server:
+        port: gpu-srv-18/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-18--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/18/2
+      server:
+        port: gpu-srv-18/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-19--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/19/1
+      server:
+        port: gpu-srv-19/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-19--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/19/2
+      server:
+        port: gpu-srv-19/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-19--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/19/1
+      server:
+        port: gpu-srv-19/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-19--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/19/2
+      server:
+        port: gpu-srv-19/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-19--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/19/1
+      server:
+        port: gpu-srv-19/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-19--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/19/2
+      server:
+        port: gpu-srv-19/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-19--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/19/1
+      server:
+        port: gpu-srv-19/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-19--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/19/2
+      server:
+        port: gpu-srv-19/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-20--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/20/1
+      server:
+        port: gpu-srv-20/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-20--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/20/2
+      server:
+        port: gpu-srv-20/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-20--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/20/1
+      server:
+        port: gpu-srv-20/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-20--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/20/2
+      server:
+        port: gpu-srv-20/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-20--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/20/1
+      server:
+        port: gpu-srv-20/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-20--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/20/2
+      server:
+        port: gpu-srv-20/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-20--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/20/1
+      server:
+        port: gpu-srv-20/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-20--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/20/2
+      server:
+        port: gpu-srv-20/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-21--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/21/1
+      server:
+        port: gpu-srv-21/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-21--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/21/2
+      server:
+        port: gpu-srv-21/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-21--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/21/1
+      server:
+        port: gpu-srv-21/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-21--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/21/2
+      server:
+        port: gpu-srv-21/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-21--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/21/1
+      server:
+        port: gpu-srv-21/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-21--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/21/2
+      server:
+        port: gpu-srv-21/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-21--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/21/1
+      server:
+        port: gpu-srv-21/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-21--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/21/2
+      server:
+        port: gpu-srv-21/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-22--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/22/1
+      server:
+        port: gpu-srv-22/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-22--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/22/2
+      server:
+        port: gpu-srv-22/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-22--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/22/1
+      server:
+        port: gpu-srv-22/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-22--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/22/2
+      server:
+        port: gpu-srv-22/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-22--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/22/1
+      server:
+        port: gpu-srv-22/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-22--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/22/2
+      server:
+        port: gpu-srv-22/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-22--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/22/1
+      server:
+        port: gpu-srv-22/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-22--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/22/2
+      server:
+        port: gpu-srv-22/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-23--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/23/1
+      server:
+        port: gpu-srv-23/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-23--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/23/2
+      server:
+        port: gpu-srv-23/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-23--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/23/1
+      server:
+        port: gpu-srv-23/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-23--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/23/2
+      server:
+        port: gpu-srv-23/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-23--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/23/1
+      server:
+        port: gpu-srv-23/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-23--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/23/2
+      server:
+        port: gpu-srv-23/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-23--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/23/1
+      server:
+        port: gpu-srv-23/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-23--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/23/2
+      server:
+        port: gpu-srv-23/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-24--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/24/1
+      server:
+        port: gpu-srv-24/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-24--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/24/2
+      server:
+        port: gpu-srv-24/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-24--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/24/1
+      server:
+        port: gpu-srv-24/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-24--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/24/2
+      server:
+        port: gpu-srv-24/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-24--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/24/1
+      server:
+        port: gpu-srv-24/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-24--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/24/2
+      server:
+        port: gpu-srv-24/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-24--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/24/1
+      server:
+        port: gpu-srv-24/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-24--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/24/2
+      server:
+        port: gpu-srv-24/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-25--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/25/1
+      server:
+        port: gpu-srv-25/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-25--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/25/2
+      server:
+        port: gpu-srv-25/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-25--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/25/1
+      server:
+        port: gpu-srv-25/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-25--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/25/2
+      server:
+        port: gpu-srv-25/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-25--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/25/1
+      server:
+        port: gpu-srv-25/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-25--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/25/2
+      server:
+        port: gpu-srv-25/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-25--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/25/1
+      server:
+        port: gpu-srv-25/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-25--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/25/2
+      server:
+        port: gpu-srv-25/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-26--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/26/1
+      server:
+        port: gpu-srv-26/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-26--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/26/2
+      server:
+        port: gpu-srv-26/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-26--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/26/1
+      server:
+        port: gpu-srv-26/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-26--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/26/2
+      server:
+        port: gpu-srv-26/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-26--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/26/1
+      server:
+        port: gpu-srv-26/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-26--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/26/2
+      server:
+        port: gpu-srv-26/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-26--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/26/1
+      server:
+        port: gpu-srv-26/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-26--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/26/2
+      server:
+        port: gpu-srv-26/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-27--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/27/1
+      server:
+        port: gpu-srv-27/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-27--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/27/2
+      server:
+        port: gpu-srv-27/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-27--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/27/1
+      server:
+        port: gpu-srv-27/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-27--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/27/2
+      server:
+        port: gpu-srv-27/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-27--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/27/1
+      server:
+        port: gpu-srv-27/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-27--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/27/2
+      server:
+        port: gpu-srv-27/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-27--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/27/1
+      server:
+        port: gpu-srv-27/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-27--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/27/2
+      server:
+        port: gpu-srv-27/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-28--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/28/1
+      server:
+        port: gpu-srv-28/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-28--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/28/2
+      server:
+        port: gpu-srv-28/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-28--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/28/1
+      server:
+        port: gpu-srv-28/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-28--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/28/2
+      server:
+        port: gpu-srv-28/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-28--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/28/1
+      server:
+        port: gpu-srv-28/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-28--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/28/2
+      server:
+        port: gpu-srv-28/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-28--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/28/1
+      server:
+        port: gpu-srv-28/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-28--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/28/2
+      server:
+        port: gpu-srv-28/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-29--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/29/1
+      server:
+        port: gpu-srv-29/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-29--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/29/2
+      server:
+        port: gpu-srv-29/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-29--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/29/1
+      server:
+        port: gpu-srv-29/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-29--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/29/2
+      server:
+        port: gpu-srv-29/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-29--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/29/1
+      server:
+        port: gpu-srv-29/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-29--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/29/2
+      server:
+        port: gpu-srv-29/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-29--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/29/1
+      server:
+        port: gpu-srv-29/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-29--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/29/2
+      server:
+        port: gpu-srv-29/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-30--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/30/1
+      server:
+        port: gpu-srv-30/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-30--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/30/2
+      server:
+        port: gpu-srv-30/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-30--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/30/1
+      server:
+        port: gpu-srv-30/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-30--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/30/2
+      server:
+        port: gpu-srv-30/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-30--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/30/1
+      server:
+        port: gpu-srv-30/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-30--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/30/2
+      server:
+        port: gpu-srv-30/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-30--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/30/1
+      server:
+        port: gpu-srv-30/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-30--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/30/2
+      server:
+        port: gpu-srv-30/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-31--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/31/1
+      server:
+        port: gpu-srv-31/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-31--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/31/2
+      server:
+        port: gpu-srv-31/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-31--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/31/1
+      server:
+        port: gpu-srv-31/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-31--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/31/2
+      server:
+        port: gpu-srv-31/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-31--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/31/1
+      server:
+        port: gpu-srv-31/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-31--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/31/2
+      server:
+        port: gpu-srv-31/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-31--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/31/1
+      server:
+        port: gpu-srv-31/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-31--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/31/2
+      server:
+        port: gpu-srv-31/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-32--nic1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/32/1
+      server:
+        port: gpu-srv-32/cx7-nic1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--gpu-srv-32--nic2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/32/2
+      server:
+        port: gpu-srv-32/cx7-nic2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-32--nic3
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/32/1
+      server:
+        port: gpu-srv-32/cx7-nic3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--gpu-srv-32--nic4
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/32/2
+      server:
+        port: gpu-srv-32/cx7-nic4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-32--nic5
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/32/1
+      server:
+        port: gpu-srv-32/cx7-nic5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-03--gpu-srv-32--nic6
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-03/E1/32/2
+      server:
+        port: gpu-srv-32/cx7-nic6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-32--nic7
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/32/1
+      server:
+        port: gpu-srv-32/cx7-nic7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-04--gpu-srv-32--nic8
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-04/E1/32/2
+      server:
+        port: gpu-srv-32/cx7-nic8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-01--hh-ctrl-be--link1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-01/E1/33/1
+      server:
+        port: hh-ctrl-be/cx7-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: be-leaf-02--hh-ctrl-be--link2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: be-leaf-02/E1/33/1
+      server:
+        port: hh-ctrl-be/cx7-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p33
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/33
+      peer:
+        port: fe-spine-01/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p34
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/34
+      peer:
+        port: fe-spine-01/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p35
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/35
+      peer:
+        port: fe-spine-01/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p36
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/36
+      peer:
+        port: fe-spine-01/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p37
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/37
+      peer:
+        port: fe-spine-01/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p38
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/38
+      peer:
+        port: fe-spine-01/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p39
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/39
+      peer:
+        port: fe-spine-01/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p40
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/40
+      peer:
+        port: fe-spine-01/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p41
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/41
+      peer:
+        port: fe-spine-01/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p42
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/42
+      peer:
+        port: fe-spine-01/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p43
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/43
+      peer:
+        port: fe-spine-01/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p44
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/44
+      peer:
+        port: fe-spine-01/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p45
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/45
+      peer:
+        port: fe-spine-01/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p46
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/46
+      peer:
+        port: fe-spine-01/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p47
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/47
+      peer:
+        port: fe-spine-01/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-01--p48
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/48
+      peer:
+        port: fe-spine-01/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p49
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/49
+      peer:
+        port: fe-spine-02/E1/1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p50
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/50
+      peer:
+        port: fe-spine-02/E1/2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p51
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/51
+      peer:
+        port: fe-spine-02/E1/3
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p52
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/52
+      peer:
+        port: fe-spine-02/E1/4
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p53
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/53
+      peer:
+        port: fe-spine-02/E1/5
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p54
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/54
+      peer:
+        port: fe-spine-02/E1/6
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p55
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/55
+      peer:
+        port: fe-spine-02/E1/7
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p56
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/56
+      peer:
+        port: fe-spine-02/E1/8
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p57
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/57
+      peer:
+        port: fe-spine-02/E1/9
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p58
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/58
+      peer:
+        port: fe-spine-02/E1/10
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p59
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/59
+      peer:
+        port: fe-spine-02/E1/11
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p60
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/60
+      peer:
+        port: fe-spine-02/E1/12
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p61
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/61
+      peer:
+        port: fe-spine-02/E1/13
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p62
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/62
+      peer:
+        port: fe-spine-02/E1/14
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p63
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/63
+      peer:
+        port: fe-spine-02/E1/15
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--fe-spine-02--p64
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-01/E1/64
+      peer:
+        port: fe-spine-02/E1/16
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p33
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/33
+      peer:
+        port: fe-spine-01/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p34
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/34
+      peer:
+        port: fe-spine-01/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p35
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/35
+      peer:
+        port: fe-spine-01/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p36
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/36
+      peer:
+        port: fe-spine-01/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p37
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/37
+      peer:
+        port: fe-spine-01/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p38
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/38
+      peer:
+        port: fe-spine-01/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p39
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/39
+      peer:
+        port: fe-spine-01/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p40
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/40
+      peer:
+        port: fe-spine-01/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p41
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/41
+      peer:
+        port: fe-spine-01/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p42
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/42
+      peer:
+        port: fe-spine-01/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p43
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/43
+      peer:
+        port: fe-spine-01/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p44
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/44
+      peer:
+        port: fe-spine-01/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p45
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/45
+      peer:
+        port: fe-spine-01/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p46
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/46
+      peer:
+        port: fe-spine-01/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p47
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/47
+      peer:
+        port: fe-spine-01/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-01--p48
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/48
+      peer:
+        port: fe-spine-01/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p49
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/49
+      peer:
+        port: fe-spine-02/E1/17
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p50
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/50
+      peer:
+        port: fe-spine-02/E1/18
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p51
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/51
+      peer:
+        port: fe-spine-02/E1/19
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p52
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/52
+      peer:
+        port: fe-spine-02/E1/20
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p53
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/53
+      peer:
+        port: fe-spine-02/E1/21
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p54
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/54
+      peer:
+        port: fe-spine-02/E1/22
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p55
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/55
+      peer:
+        port: fe-spine-02/E1/23
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p56
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/56
+      peer:
+        port: fe-spine-02/E1/24
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p57
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/57
+      peer:
+        port: fe-spine-02/E1/25
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p58
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/58
+      peer:
+        port: fe-spine-02/E1/26
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p59
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/59
+      peer:
+        port: fe-spine-02/E1/27
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p60
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/60
+      peer:
+        port: fe-spine-02/E1/28
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p61
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/61
+      peer:
+        port: fe-spine-02/E1/29
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p62
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/62
+      peer:
+        port: fe-spine-02/E1/30
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p63
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/63
+      peer:
+        port: fe-spine-02/E1/31
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--fe-spine-02--p64
+spec:
+  type: fabric
+  fabric:
+    links:
+    - switch:
+        port: fe-leaf-02/E1/64
+      peer:
+        port: fe-spine-02/E1/32
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-01--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/1/1
+      server:
+        port: gpu-srv-01/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-02--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/1/2
+      server:
+        port: gpu-srv-02/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-03--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/1/3
+      server:
+        port: gpu-srv-03/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-04--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/1/4
+      server:
+        port: gpu-srv-04/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-05--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/3/1
+      server:
+        port: gpu-srv-05/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-06--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/3/2
+      server:
+        port: gpu-srv-06/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-07--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/3/3
+      server:
+        port: gpu-srv-07/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-08--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/3/4
+      server:
+        port: gpu-srv-08/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-09--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/5/1
+      server:
+        port: gpu-srv-09/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-10--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/5/2
+      server:
+        port: gpu-srv-10/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-11--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/5/3
+      server:
+        port: gpu-srv-11/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-12--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/5/4
+      server:
+        port: gpu-srv-12/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-13--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/7/1
+      server:
+        port: gpu-srv-13/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-14--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/7/2
+      server:
+        port: gpu-srv-14/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-15--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/7/3
+      server:
+        port: gpu-srv-15/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-16--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/7/4
+      server:
+        port: gpu-srv-16/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-17--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/9/1
+      server:
+        port: gpu-srv-17/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-18--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/9/2
+      server:
+        port: gpu-srv-18/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-19--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/9/3
+      server:
+        port: gpu-srv-19/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-20--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/9/4
+      server:
+        port: gpu-srv-20/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-21--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/11/1
+      server:
+        port: gpu-srv-21/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-22--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/11/2
+      server:
+        port: gpu-srv-22/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-23--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/11/3
+      server:
+        port: gpu-srv-23/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-24--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/11/4
+      server:
+        port: gpu-srv-24/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-25--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/13/1
+      server:
+        port: gpu-srv-25/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-26--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/13/2
+      server:
+        port: gpu-srv-26/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-27--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/13/3
+      server:
+        port: gpu-srv-27/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-28--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/13/4
+      server:
+        port: gpu-srv-28/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-29--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/15/1
+      server:
+        port: gpu-srv-29/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-30--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/15/2
+      server:
+        port: gpu-srv-30/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-31--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/15/3
+      server:
+        port: gpu-srv-31/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--gpu-srv-32--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/15/4
+      server:
+        port: gpu-srv-32/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-01--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/17/1
+      server:
+        port: stor-srv-01/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-02--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/17/2
+      server:
+        port: stor-srv-02/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-03--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/17/3
+      server:
+        port: stor-srv-03/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-04--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/17/4
+      server:
+        port: stor-srv-04/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-05--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/19/1
+      server:
+        port: stor-srv-05/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-06--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/19/2
+      server:
+        port: stor-srv-06/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-07--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/19/3
+      server:
+        port: stor-srv-07/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-08--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/19/4
+      server:
+        port: stor-srv-08/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-09--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/21/1
+      server:
+        port: stor-srv-09/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--stor-srv-10--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/21/2
+      server:
+        port: stor-srv-10/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-01--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/21/3
+      server:
+        port: meta-srv-01/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-02--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/21/4
+      server:
+        port: meta-srv-02/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-03--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/23/1
+      server:
+        port: meta-srv-03/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-04--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/23/2
+      server:
+        port: meta-srv-04/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-05--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/23/3
+      server:
+        port: meta-srv-05/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-06--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/23/4
+      server:
+        port: meta-srv-06/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-07--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/25/1
+      server:
+        port: meta-srv-07/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-08--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/25/2
+      server:
+        port: meta-srv-08/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-09--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/25/3
+      server:
+        port: meta-srv-09/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--meta-srv-10--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/25/4
+      server:
+        port: meta-srv-10/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--hh-gw-01--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/27/1
+      server:
+        port: hh-gw-01/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--hh-gw-02--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/27/2
+      server:
+        port: hh-gw-02/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-01--hh-ctrl-fe--bf3-p1
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-01/E1/27/3
+      server:
+        port: hh-ctrl-fe/bf3-p1
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-01--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/1/1
+      server:
+        port: gpu-srv-01/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-02--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/1/2
+      server:
+        port: gpu-srv-02/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-03--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/1/3
+      server:
+        port: gpu-srv-03/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-04--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/1/4
+      server:
+        port: gpu-srv-04/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-05--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/3/1
+      server:
+        port: gpu-srv-05/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-06--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/3/2
+      server:
+        port: gpu-srv-06/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-07--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/3/3
+      server:
+        port: gpu-srv-07/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-08--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/3/4
+      server:
+        port: gpu-srv-08/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-09--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/5/1
+      server:
+        port: gpu-srv-09/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-10--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/5/2
+      server:
+        port: gpu-srv-10/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-11--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/5/3
+      server:
+        port: gpu-srv-11/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-12--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/5/4
+      server:
+        port: gpu-srv-12/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-13--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/7/1
+      server:
+        port: gpu-srv-13/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-14--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/7/2
+      server:
+        port: gpu-srv-14/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-15--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/7/3
+      server:
+        port: gpu-srv-15/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-16--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/7/4
+      server:
+        port: gpu-srv-16/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-17--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/9/1
+      server:
+        port: gpu-srv-17/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-18--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/9/2
+      server:
+        port: gpu-srv-18/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-19--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/9/3
+      server:
+        port: gpu-srv-19/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-20--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/9/4
+      server:
+        port: gpu-srv-20/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-21--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/11/1
+      server:
+        port: gpu-srv-21/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-22--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/11/2
+      server:
+        port: gpu-srv-22/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-23--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/11/3
+      server:
+        port: gpu-srv-23/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-24--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/11/4
+      server:
+        port: gpu-srv-24/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-25--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/13/1
+      server:
+        port: gpu-srv-25/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-26--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/13/2
+      server:
+        port: gpu-srv-26/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-27--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/13/3
+      server:
+        port: gpu-srv-27/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-28--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/13/4
+      server:
+        port: gpu-srv-28/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-29--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/15/1
+      server:
+        port: gpu-srv-29/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-30--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/15/2
+      server:
+        port: gpu-srv-30/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-31--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/15/3
+      server:
+        port: gpu-srv-31/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--gpu-srv-32--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/15/4
+      server:
+        port: gpu-srv-32/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-01--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/17/1
+      server:
+        port: stor-srv-01/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-02--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/17/2
+      server:
+        port: stor-srv-02/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-03--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/17/3
+      server:
+        port: stor-srv-03/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-04--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/17/4
+      server:
+        port: stor-srv-04/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-05--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/19/1
+      server:
+        port: stor-srv-05/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-06--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/19/2
+      server:
+        port: stor-srv-06/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-07--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/19/3
+      server:
+        port: stor-srv-07/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-08--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/19/4
+      server:
+        port: stor-srv-08/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-09--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/21/1
+      server:
+        port: stor-srv-09/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--stor-srv-10--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/21/2
+      server:
+        port: stor-srv-10/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-01--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/21/3
+      server:
+        port: meta-srv-01/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-02--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/21/4
+      server:
+        port: meta-srv-02/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-03--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/23/1
+      server:
+        port: meta-srv-03/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-04--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/23/2
+      server:
+        port: meta-srv-04/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-05--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/23/3
+      server:
+        port: meta-srv-05/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-06--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/23/4
+      server:
+        port: meta-srv-06/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-07--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/25/1
+      server:
+        port: meta-srv-07/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-08--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/25/2
+      server:
+        port: meta-srv-08/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-09--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/25/3
+      server:
+        port: meta-srv-09/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--meta-srv-10--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/25/4
+      server:
+        port: meta-srv-10/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--hh-gw-01--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/27/1
+      server:
+        port: hh-gw-01/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--hh-gw-02--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/27/2
+      server:
+        port: hh-gw-02/bf3-p2
+---
+apiVersion: wiring.githedgehog.com/v1beta1
+kind: Connection
+metadata:
+  name: fe-leaf-02--hh-ctrl-fe--bf3-p2
+spec:
+  type: unbundled
+  unbundled:
+    link:
+      switch:
+        port: fe-leaf-02/E1/27/3
+      server:
+        port: hh-ctrl-fe/bf3-p2

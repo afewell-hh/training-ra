@@ -1,0 +1,685 @@
+node_type,node_id,port,peer_type,peer_id,peer_port,speed,media_type,network_type,lag_id,plane,comments
+switch,be-leaf-01,E1/34,switch,be-spine-01,E1/2,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/35,switch,be-spine-01,E1/3,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/36,switch,be-spine-01,E1/4,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/37,switch,be-spine-01,E1/5,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/38,switch,be-spine-01,E1/6,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/39,switch,be-spine-01,E1/7,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/40,switch,be-spine-01,E1/8,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/41,switch,be-spine-02,E1/1,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/42,switch,be-spine-02,E1/2,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/43,switch,be-spine-02,E1/3,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/44,switch,be-spine-02,E1/4,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/45,switch,be-spine-02,E1/5,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/46,switch,be-spine-02,E1/6,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/47,switch,be-spine-02,E1/7,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/48,switch,be-spine-02,E1/8,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/49,switch,be-spine-03,E1/1,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/50,switch,be-spine-03,E1/2,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/51,switch,be-spine-03,E1/3,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/52,switch,be-spine-03,E1/4,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/53,switch,be-spine-03,E1/5,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/54,switch,be-spine-03,E1/6,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/55,switch,be-spine-03,E1/7,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/56,switch,be-spine-03,E1/8,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/57,switch,be-spine-04,E1/1,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/58,switch,be-spine-04,E1/2,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/59,switch,be-spine-04,E1/3,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/60,switch,be-spine-04,E1/4,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/61,switch,be-spine-04,E1/5,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/62,switch,be-spine-04,E1/6,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/63,switch,be-spine-04,E1/7,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/64,switch,be-spine-04,E1/8,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/34,switch,be-spine-01,E1/10,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/35,switch,be-spine-01,E1/11,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/36,switch,be-spine-01,E1/12,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/37,switch,be-spine-01,E1/13,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/38,switch,be-spine-01,E1/14,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/39,switch,be-spine-01,E1/15,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/40,switch,be-spine-01,E1/16,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/41,switch,be-spine-02,E1/9,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/42,switch,be-spine-02,E1/10,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/43,switch,be-spine-02,E1/11,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/44,switch,be-spine-02,E1/12,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/45,switch,be-spine-02,E1/13,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/46,switch,be-spine-02,E1/14,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/47,switch,be-spine-02,E1/15,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/48,switch,be-spine-02,E1/16,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/49,switch,be-spine-03,E1/9,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/50,switch,be-spine-03,E1/10,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/51,switch,be-spine-03,E1/11,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/52,switch,be-spine-03,E1/12,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/53,switch,be-spine-03,E1/13,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/54,switch,be-spine-03,E1/14,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/55,switch,be-spine-03,E1/15,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/56,switch,be-spine-03,E1/16,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/57,switch,be-spine-04,E1/9,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/58,switch,be-spine-04,E1/10,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/59,switch,be-spine-04,E1/11,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/60,switch,be-spine-04,E1/12,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/61,switch,be-spine-04,E1/13,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/62,switch,be-spine-04,E1/14,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/63,switch,be-spine-04,E1/15,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-02,E1/64,switch,be-spine-04,E1/16,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/33,switch,be-spine-01,E1/17,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/34,switch,be-spine-01,E1/18,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/35,switch,be-spine-01,E1/19,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/36,switch,be-spine-01,E1/20,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/37,switch,be-spine-01,E1/21,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/38,switch,be-spine-01,E1/22,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/39,switch,be-spine-01,E1/23,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/40,switch,be-spine-01,E1/24,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/41,switch,be-spine-02,E1/17,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/42,switch,be-spine-02,E1/18,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/43,switch,be-spine-02,E1/19,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/44,switch,be-spine-02,E1/20,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/45,switch,be-spine-02,E1/21,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/46,switch,be-spine-02,E1/22,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/47,switch,be-spine-02,E1/23,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/48,switch,be-spine-02,E1/24,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/49,switch,be-spine-03,E1/17,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/50,switch,be-spine-03,E1/18,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/51,switch,be-spine-03,E1/19,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/52,switch,be-spine-03,E1/20,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/53,switch,be-spine-03,E1/21,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/54,switch,be-spine-03,E1/22,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/55,switch,be-spine-03,E1/23,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/56,switch,be-spine-03,E1/24,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/57,switch,be-spine-04,E1/17,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/58,switch,be-spine-04,E1/18,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/59,switch,be-spine-04,E1/19,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/60,switch,be-spine-04,E1/20,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/61,switch,be-spine-04,E1/21,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/62,switch,be-spine-04,E1/22,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/63,switch,be-spine-04,E1/23,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-03,E1/64,switch,be-spine-04,E1/24,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/33,switch,be-spine-01,E1/25,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/34,switch,be-spine-01,E1/26,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/35,switch,be-spine-01,E1/27,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/36,switch,be-spine-01,E1/28,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/37,switch,be-spine-01,E1/29,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/38,switch,be-spine-01,E1/30,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/39,switch,be-spine-01,E1/31,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/40,switch,be-spine-01,E1/32,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/41,switch,be-spine-02,E1/25,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/42,switch,be-spine-02,E1/26,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/43,switch,be-spine-02,E1/27,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/44,switch,be-spine-02,E1/28,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/45,switch,be-spine-02,E1/29,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/46,switch,be-spine-02,E1/30,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/47,switch,be-spine-02,E1/31,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/48,switch,be-spine-02,E1/32,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/49,switch,be-spine-03,E1/25,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/50,switch,be-spine-03,E1/26,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/51,switch,be-spine-03,E1/27,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/52,switch,be-spine-03,E1/28,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/53,switch,be-spine-03,E1/29,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/54,switch,be-spine-03,E1/30,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/55,switch,be-spine-03,E1/31,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/56,switch,be-spine-03,E1/32,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/57,switch,be-spine-04,E1/25,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/58,switch,be-spine-04,E1/26,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/59,switch,be-spine-04,E1/27,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/60,switch,be-spine-04,E1/28,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/61,switch,be-spine-04,E1/29,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/62,switch,be-spine-04,E1/30,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/63,switch,be-spine-04,E1/31,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-04,E1/64,switch,be-spine-04,E1/32,800G,OSFP-2x400G-DR4,backend,,single,leaf-spine uplink
+switch,be-leaf-01,E1/1/1,server,gpu-srv-01,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/1/2,server,gpu-srv-01,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/2/1,server,gpu-srv-02,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/2/2,server,gpu-srv-02,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/3/1,server,gpu-srv-03,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/3/2,server,gpu-srv-03,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/4/1,server,gpu-srv-04,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/4/2,server,gpu-srv-04,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/5/1,server,gpu-srv-05,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/5/2,server,gpu-srv-05,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/6/1,server,gpu-srv-06,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/6/2,server,gpu-srv-06,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/7/1,server,gpu-srv-07,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/7/2,server,gpu-srv-07,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/8/1,server,gpu-srv-08,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/8/2,server,gpu-srv-08,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/9/1,server,gpu-srv-09,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/9/2,server,gpu-srv-09,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/10/1,server,gpu-srv-10,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/10/2,server,gpu-srv-10,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/11/1,server,gpu-srv-11,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/11/2,server,gpu-srv-11,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/12/1,server,gpu-srv-12,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/12/2,server,gpu-srv-12,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/13/1,server,gpu-srv-13,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/13/2,server,gpu-srv-13,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/14/1,server,gpu-srv-14,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/14/2,server,gpu-srv-14,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/15/1,server,gpu-srv-15,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/15/2,server,gpu-srv-15,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/16/1,server,gpu-srv-16,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/16/2,server,gpu-srv-16,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/17/1,server,gpu-srv-17,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/17/2,server,gpu-srv-17,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/18/1,server,gpu-srv-18,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/18/2,server,gpu-srv-18,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/19/1,server,gpu-srv-19,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/19/2,server,gpu-srv-19,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/20/1,server,gpu-srv-20,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/20/2,server,gpu-srv-20,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/21/1,server,gpu-srv-21,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/21/2,server,gpu-srv-21,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/22/1,server,gpu-srv-22,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/22/2,server,gpu-srv-22,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/23/1,server,gpu-srv-23,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/23/2,server,gpu-srv-23,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/24/1,server,gpu-srv-24,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/24/2,server,gpu-srv-24,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/25/1,server,gpu-srv-25,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/25/2,server,gpu-srv-25,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/26/1,server,gpu-srv-26,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/26/2,server,gpu-srv-26,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/27/1,server,gpu-srv-27,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/27/2,server,gpu-srv-27,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/28/1,server,gpu-srv-28,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/28/2,server,gpu-srv-28,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/29/1,server,gpu-srv-29,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/29/2,server,gpu-srv-29,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/30/1,server,gpu-srv-30,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/30/2,server,gpu-srv-30,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/31/1,server,gpu-srv-31,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/31/2,server,gpu-srv-31,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-01,E1/32/1,server,gpu-srv-32,cx7-nic1,400G,OSFP-2x400G-DR4,backend,,single,rail 1
+switch,be-leaf-01,E1/32/2,server,gpu-srv-32,cx7-nic2,400G,OSFP-2x400G-DR4,backend,,single,rail 2
+switch,be-leaf-02,E1/1/1,server,gpu-srv-01,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/1/2,server,gpu-srv-01,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/2/1,server,gpu-srv-02,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/2/2,server,gpu-srv-02,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/3/1,server,gpu-srv-03,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/3/2,server,gpu-srv-03,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/4/1,server,gpu-srv-04,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/4/2,server,gpu-srv-04,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/5/1,server,gpu-srv-05,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/5/2,server,gpu-srv-05,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/6/1,server,gpu-srv-06,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/6/2,server,gpu-srv-06,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/7/1,server,gpu-srv-07,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/7/2,server,gpu-srv-07,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/8/1,server,gpu-srv-08,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/8/2,server,gpu-srv-08,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/9/1,server,gpu-srv-09,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/9/2,server,gpu-srv-09,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/10/1,server,gpu-srv-10,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/10/2,server,gpu-srv-10,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/11/1,server,gpu-srv-11,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/11/2,server,gpu-srv-11,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/12/1,server,gpu-srv-12,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/12/2,server,gpu-srv-12,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/13/1,server,gpu-srv-13,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/13/2,server,gpu-srv-13,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/14/1,server,gpu-srv-14,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/14/2,server,gpu-srv-14,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/15/1,server,gpu-srv-15,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/15/2,server,gpu-srv-15,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/16/1,server,gpu-srv-16,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/16/2,server,gpu-srv-16,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/17/1,server,gpu-srv-17,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/17/2,server,gpu-srv-17,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/18/1,server,gpu-srv-18,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/18/2,server,gpu-srv-18,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/19/1,server,gpu-srv-19,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/19/2,server,gpu-srv-19,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/20/1,server,gpu-srv-20,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/20/2,server,gpu-srv-20,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/21/1,server,gpu-srv-21,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/21/2,server,gpu-srv-21,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/22/1,server,gpu-srv-22,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/22/2,server,gpu-srv-22,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/23/1,server,gpu-srv-23,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/23/2,server,gpu-srv-23,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/24/1,server,gpu-srv-24,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/24/2,server,gpu-srv-24,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/25/1,server,gpu-srv-25,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/25/2,server,gpu-srv-25,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/26/1,server,gpu-srv-26,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/26/2,server,gpu-srv-26,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/27/1,server,gpu-srv-27,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/27/2,server,gpu-srv-27,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/28/1,server,gpu-srv-28,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/28/2,server,gpu-srv-28,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/29/1,server,gpu-srv-29,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/29/2,server,gpu-srv-29,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/30/1,server,gpu-srv-30,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/30/2,server,gpu-srv-30,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/31/1,server,gpu-srv-31,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/31/2,server,gpu-srv-31,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-02,E1/32/1,server,gpu-srv-32,cx7-nic3,400G,OSFP-2x400G-DR4,backend,,single,rail 3
+switch,be-leaf-02,E1/32/2,server,gpu-srv-32,cx7-nic4,400G,OSFP-2x400G-DR4,backend,,single,rail 4
+switch,be-leaf-03,E1/1/1,server,gpu-srv-01,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/1/2,server,gpu-srv-01,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/2/1,server,gpu-srv-02,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/2/2,server,gpu-srv-02,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/3/1,server,gpu-srv-03,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/3/2,server,gpu-srv-03,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/4/1,server,gpu-srv-04,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/4/2,server,gpu-srv-04,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/5/1,server,gpu-srv-05,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/5/2,server,gpu-srv-05,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/6/1,server,gpu-srv-06,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/6/2,server,gpu-srv-06,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/7/1,server,gpu-srv-07,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/7/2,server,gpu-srv-07,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/8/1,server,gpu-srv-08,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/8/2,server,gpu-srv-08,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/9/1,server,gpu-srv-09,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/9/2,server,gpu-srv-09,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/10/1,server,gpu-srv-10,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/10/2,server,gpu-srv-10,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/11/1,server,gpu-srv-11,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/11/2,server,gpu-srv-11,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/12/1,server,gpu-srv-12,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/12/2,server,gpu-srv-12,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/13/1,server,gpu-srv-13,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/13/2,server,gpu-srv-13,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/14/1,server,gpu-srv-14,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/14/2,server,gpu-srv-14,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/15/1,server,gpu-srv-15,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/15/2,server,gpu-srv-15,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/16/1,server,gpu-srv-16,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/16/2,server,gpu-srv-16,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/17/1,server,gpu-srv-17,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/17/2,server,gpu-srv-17,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/18/1,server,gpu-srv-18,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/18/2,server,gpu-srv-18,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/19/1,server,gpu-srv-19,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/19/2,server,gpu-srv-19,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/20/1,server,gpu-srv-20,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/20/2,server,gpu-srv-20,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/21/1,server,gpu-srv-21,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/21/2,server,gpu-srv-21,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/22/1,server,gpu-srv-22,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/22/2,server,gpu-srv-22,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/23/1,server,gpu-srv-23,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/23/2,server,gpu-srv-23,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/24/1,server,gpu-srv-24,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/24/2,server,gpu-srv-24,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/25/1,server,gpu-srv-25,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/25/2,server,gpu-srv-25,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/26/1,server,gpu-srv-26,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/26/2,server,gpu-srv-26,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/27/1,server,gpu-srv-27,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/27/2,server,gpu-srv-27,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/28/1,server,gpu-srv-28,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/28/2,server,gpu-srv-28,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/29/1,server,gpu-srv-29,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/29/2,server,gpu-srv-29,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/30/1,server,gpu-srv-30,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/30/2,server,gpu-srv-30,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/31/1,server,gpu-srv-31,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/31/2,server,gpu-srv-31,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-03,E1/32/1,server,gpu-srv-32,cx7-nic5,400G,OSFP-2x400G-DR4,backend,,single,rail 5
+switch,be-leaf-03,E1/32/2,server,gpu-srv-32,cx7-nic6,400G,OSFP-2x400G-DR4,backend,,single,rail 6
+switch,be-leaf-04,E1/1/1,server,gpu-srv-01,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/1/2,server,gpu-srv-01,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/2/1,server,gpu-srv-02,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/2/2,server,gpu-srv-02,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/3/1,server,gpu-srv-03,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/3/2,server,gpu-srv-03,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/4/1,server,gpu-srv-04,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/4/2,server,gpu-srv-04,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/5/1,server,gpu-srv-05,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/5/2,server,gpu-srv-05,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/6/1,server,gpu-srv-06,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/6/2,server,gpu-srv-06,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/7/1,server,gpu-srv-07,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/7/2,server,gpu-srv-07,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/8/1,server,gpu-srv-08,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/8/2,server,gpu-srv-08,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/9/1,server,gpu-srv-09,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/9/2,server,gpu-srv-09,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/10/1,server,gpu-srv-10,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/10/2,server,gpu-srv-10,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/11/1,server,gpu-srv-11,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/11/2,server,gpu-srv-11,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/12/1,server,gpu-srv-12,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/12/2,server,gpu-srv-12,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/13/1,server,gpu-srv-13,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/13/2,server,gpu-srv-13,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/14/1,server,gpu-srv-14,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/14/2,server,gpu-srv-14,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/15/1,server,gpu-srv-15,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/15/2,server,gpu-srv-15,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/16/1,server,gpu-srv-16,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/16/2,server,gpu-srv-16,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/17/1,server,gpu-srv-17,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/17/2,server,gpu-srv-17,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/18/1,server,gpu-srv-18,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/18/2,server,gpu-srv-18,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/19/1,server,gpu-srv-19,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/19/2,server,gpu-srv-19,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/20/1,server,gpu-srv-20,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/20/2,server,gpu-srv-20,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/21/1,server,gpu-srv-21,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/21/2,server,gpu-srv-21,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/22/1,server,gpu-srv-22,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/22/2,server,gpu-srv-22,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/23/1,server,gpu-srv-23,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/23/2,server,gpu-srv-23,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/24/1,server,gpu-srv-24,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/24/2,server,gpu-srv-24,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/25/1,server,gpu-srv-25,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/25/2,server,gpu-srv-25,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/26/1,server,gpu-srv-26,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/26/2,server,gpu-srv-26,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/27/1,server,gpu-srv-27,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/27/2,server,gpu-srv-27,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/28/1,server,gpu-srv-28,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/28/2,server,gpu-srv-28,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/29/1,server,gpu-srv-29,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/29/2,server,gpu-srv-29,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/30/1,server,gpu-srv-30,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/30/2,server,gpu-srv-30,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/31/1,server,gpu-srv-31,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/31/2,server,gpu-srv-31,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-04,E1/32/1,server,gpu-srv-32,cx7-nic7,400G,OSFP-2x400G-DR4,backend,,single,rail 7
+switch,be-leaf-04,E1/32/2,server,gpu-srv-32,cx7-nic8,400G,OSFP-2x400G-DR4,backend,,single,rail 8
+switch,be-leaf-01,E1/33/1,controller,hh-ctrl-be,cx7-p1,400G,OSFP-2x400G-DR4,backend,,single,BE controller link 1
+switch,be-leaf-02,E1/33/1,controller,hh-ctrl-be,cx7-p2,400G,OSFP-2x400G-DR4,backend,,single,BE controller link 2
+switch,fe-leaf-01,E1/1/1,server,gpu-srv-01,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/1/2,server,gpu-srv-02,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/1/3,server,gpu-srv-03,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/1/4,server,gpu-srv-04,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/3/1,server,gpu-srv-05,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/3/2,server,gpu-srv-06,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/3/3,server,gpu-srv-07,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/3/4,server,gpu-srv-08,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/5/1,server,gpu-srv-09,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/5/2,server,gpu-srv-10,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/5/3,server,gpu-srv-11,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/5/4,server,gpu-srv-12,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/7/1,server,gpu-srv-13,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/7/2,server,gpu-srv-14,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/7/3,server,gpu-srv-15,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/7/4,server,gpu-srv-16,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/9/1,server,gpu-srv-17,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/9/2,server,gpu-srv-18,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/9/3,server,gpu-srv-19,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/9/4,server,gpu-srv-20,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/11/1,server,gpu-srv-21,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/11/2,server,gpu-srv-22,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/11/3,server,gpu-srv-23,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/11/4,server,gpu-srv-24,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/13/1,server,gpu-srv-25,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/13/2,server,gpu-srv-26,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/13/3,server,gpu-srv-27,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/13/4,server,gpu-srv-28,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/15/1,server,gpu-srv-29,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/15/2,server,gpu-srv-30,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/15/3,server,gpu-srv-31,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/15/4,server,gpu-srv-32,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-01,E1/17/1,server,stor-srv-01,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/17/2,server,stor-srv-02,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/17/3,server,stor-srv-03,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/17/4,server,stor-srv-04,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/19/1,server,stor-srv-05,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/19/2,server,stor-srv-06,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/19/3,server,stor-srv-07,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/19/4,server,stor-srv-08,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/21/1,server,stor-srv-09,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/21/2,server,stor-srv-10,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-01,E1/21/3,server,meta-srv-01,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/21/4,server,meta-srv-02,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/23/1,server,meta-srv-03,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/23/2,server,meta-srv-04,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/23/3,server,meta-srv-05,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/23/4,server,meta-srv-06,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/25/1,server,meta-srv-07,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/25/2,server,meta-srv-08,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/25/3,server,meta-srv-09,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/25/4,server,meta-srv-10,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-01,E1/27/1,gateway,hh-gw-01,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,Hedgehog gateway
+switch,fe-leaf-01,E1/27/2,gateway,hh-gw-02,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,Hedgehog gateway
+switch,fe-leaf-01,E1/27/3,controller,hh-ctrl-fe,bf3-p1,200G,OSFP-4x200G-DR4,frontend,,single,FE controller
+switch,fe-leaf-02,E1/1/1,server,gpu-srv-01,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/1/2,server,gpu-srv-02,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/1/3,server,gpu-srv-03,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/1/4,server,gpu-srv-04,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/3/1,server,gpu-srv-05,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/3/2,server,gpu-srv-06,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/3/3,server,gpu-srv-07,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/3/4,server,gpu-srv-08,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/5/1,server,gpu-srv-09,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/5/2,server,gpu-srv-10,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/5/3,server,gpu-srv-11,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/5/4,server,gpu-srv-12,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/7/1,server,gpu-srv-13,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/7/2,server,gpu-srv-14,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/7/3,server,gpu-srv-15,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/7/4,server,gpu-srv-16,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/9/1,server,gpu-srv-17,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/9/2,server,gpu-srv-18,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/9/3,server,gpu-srv-19,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/9/4,server,gpu-srv-20,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/11/1,server,gpu-srv-21,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/11/2,server,gpu-srv-22,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/11/3,server,gpu-srv-23,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/11/4,server,gpu-srv-24,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/13/1,server,gpu-srv-25,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/13/2,server,gpu-srv-26,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/13/3,server,gpu-srv-27,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/13/4,server,gpu-srv-28,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/15/1,server,gpu-srv-29,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/15/2,server,gpu-srv-30,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/15/3,server,gpu-srv-31,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/15/4,server,gpu-srv-32,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,compute server
+switch,fe-leaf-02,E1/17/1,server,stor-srv-01,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/17/2,server,stor-srv-02,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/17/3,server,stor-srv-03,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/17/4,server,stor-srv-04,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/19/1,server,stor-srv-05,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/19/2,server,stor-srv-06,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/19/3,server,stor-srv-07,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/19/4,server,stor-srv-08,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/21/1,server,stor-srv-09,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/21/2,server,stor-srv-10,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,storage server
+switch,fe-leaf-02,E1/21/3,server,meta-srv-01,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/21/4,server,meta-srv-02,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/23/1,server,meta-srv-03,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/23/2,server,meta-srv-04,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/23/3,server,meta-srv-05,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/23/4,server,meta-srv-06,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/25/1,server,meta-srv-07,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/25/2,server,meta-srv-08,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/25/3,server,meta-srv-09,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/25/4,server,meta-srv-10,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,metadata server
+switch,fe-leaf-02,E1/27/1,gateway,hh-gw-01,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,Hedgehog gateway
+switch,fe-leaf-02,E1/27/2,gateway,hh-gw-02,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,Hedgehog gateway
+switch,fe-leaf-02,E1/27/3,controller,hh-ctrl-fe,bf3-p2,200G,OSFP-4x200G-DR4,frontend,,single,FE controller
+switch,fe-leaf-01,E1/33,switch,fe-spine-01,E1/1,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/34,switch,fe-spine-01,E1/2,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/35,switch,fe-spine-01,E1/3,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/36,switch,fe-spine-01,E1/4,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/37,switch,fe-spine-01,E1/5,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/38,switch,fe-spine-01,E1/6,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/39,switch,fe-spine-01,E1/7,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/40,switch,fe-spine-01,E1/8,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/41,switch,fe-spine-01,E1/9,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/42,switch,fe-spine-01,E1/10,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/43,switch,fe-spine-01,E1/11,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/44,switch,fe-spine-01,E1/12,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/45,switch,fe-spine-01,E1/13,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/46,switch,fe-spine-01,E1/14,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/47,switch,fe-spine-01,E1/15,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/48,switch,fe-spine-01,E1/16,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/49,switch,fe-spine-02,E1/1,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/50,switch,fe-spine-02,E1/2,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/51,switch,fe-spine-02,E1/3,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/52,switch,fe-spine-02,E1/4,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/53,switch,fe-spine-02,E1/5,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/54,switch,fe-spine-02,E1/6,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/55,switch,fe-spine-02,E1/7,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/56,switch,fe-spine-02,E1/8,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/57,switch,fe-spine-02,E1/9,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/58,switch,fe-spine-02,E1/10,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/59,switch,fe-spine-02,E1/11,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/60,switch,fe-spine-02,E1/12,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/61,switch,fe-spine-02,E1/13,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/62,switch,fe-spine-02,E1/14,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/63,switch,fe-spine-02,E1/15,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-01,E1/64,switch,fe-spine-02,E1/16,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/33,switch,fe-spine-01,E1/17,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/34,switch,fe-spine-01,E1/18,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/35,switch,fe-spine-01,E1/19,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/36,switch,fe-spine-01,E1/20,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/37,switch,fe-spine-01,E1/21,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/38,switch,fe-spine-01,E1/22,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/39,switch,fe-spine-01,E1/23,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/40,switch,fe-spine-01,E1/24,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/41,switch,fe-spine-01,E1/25,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/42,switch,fe-spine-01,E1/26,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/43,switch,fe-spine-01,E1/27,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/44,switch,fe-spine-01,E1/28,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/45,switch,fe-spine-01,E1/29,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/46,switch,fe-spine-01,E1/30,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/47,switch,fe-spine-01,E1/31,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/48,switch,fe-spine-01,E1/32,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/49,switch,fe-spine-02,E1/17,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/50,switch,fe-spine-02,E1/18,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/51,switch,fe-spine-02,E1/19,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/52,switch,fe-spine-02,E1/20,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/53,switch,fe-spine-02,E1/21,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/54,switch,fe-spine-02,E1/22,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/55,switch,fe-spine-02,E1/23,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/56,switch,fe-spine-02,E1/24,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/57,switch,fe-spine-02,E1/25,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/58,switch,fe-spine-02,E1/26,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/59,switch,fe-spine-02,E1/27,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/60,switch,fe-spine-02,E1/28,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/61,switch,fe-spine-02,E1/29,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/62,switch,fe-spine-02,E1/30,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/63,switch,fe-spine-02,E1/31,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+switch,fe-leaf-02,E1/64,switch,fe-spine-02,E1/32,800G,OSFP-2x400G-DR4,frontend,,single,FE leaf-spine uplink
+oob-switch,oob-sw-01,E1/1,server,gpu-srv-01,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/2,server,gpu-srv-02,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/3,server,gpu-srv-03,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/4,server,gpu-srv-04,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/5,server,gpu-srv-05,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/6,server,gpu-srv-06,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/7,server,gpu-srv-07,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/8,server,gpu-srv-08,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/9,server,gpu-srv-09,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/10,server,gpu-srv-10,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/11,server,gpu-srv-11,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/12,server,gpu-srv-12,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/13,server,gpu-srv-13,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/14,server,gpu-srv-14,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/15,server,gpu-srv-15,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/16,server,gpu-srv-16,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/17,server,gpu-srv-17,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/18,server,gpu-srv-18,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/19,server,gpu-srv-19,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/20,server,gpu-srv-20,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/21,server,gpu-srv-21,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/22,server,gpu-srv-22,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/23,server,gpu-srv-23,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/24,server,gpu-srv-24,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/25,server,gpu-srv-25,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/26,server,gpu-srv-26,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/27,server,gpu-srv-27,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/28,server,gpu-srv-28,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/29,server,gpu-srv-29,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/30,server,gpu-srv-30,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/31,server,gpu-srv-31,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/32,server,gpu-srv-32,bmc0,1G,Cat6a-1G-copper,oob,,single,compute BMC
+oob-switch,oob-sw-01,E1/33,server,stor-srv-01,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-01,E1/34,server,stor-srv-02,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-01,E1/35,server,stor-srv-03,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-01,E1/36,server,stor-srv-04,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-01,E1/37,server,stor-srv-05,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-01,E1/38,server,stor-srv-06,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-01,E1/39,server,stor-srv-07,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-01,E1/40,server,stor-srv-08,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-02,E1/1,server,stor-srv-09,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-02,E1/2,server,stor-srv-10,bmc0,1G,Cat6a-1G-copper,oob,,single,storage BMC
+oob-switch,oob-sw-02,E1/3,server,meta-srv-01,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/4,server,meta-srv-02,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/5,server,meta-srv-03,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/6,server,meta-srv-04,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/7,server,meta-srv-05,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/8,server,meta-srv-06,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/9,server,meta-srv-07,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/10,server,meta-srv-08,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/11,server,meta-srv-09,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/12,server,meta-srv-10,bmc0,1G,Cat6a-1G-copper,oob,,single,metadata BMC
+oob-switch,oob-sw-02,E1/13,gateway,hh-gw-01,bmc0,1G,Cat6a-1G-copper,oob,,single,gateway BMC
+oob-switch,oob-sw-02,E1/14,gateway,hh-gw-02,bmc0,1G,Cat6a-1G-copper,oob,,single,gateway BMC
+oob-switch,oob-sw-02,E1/15,controller,hh-ctrl-fe,bmc0,1G,Cat6a-1G-copper,oob,,single,FE controller BMC
+oob-switch,oob-sw-02,E1/16,controller,hh-ctrl-be,bmc0,1G,Cat6a-1G-copper,oob,,single,BE controller BMC
+oob-switch,oob-sw-02,E1/17,pdu,pdu-01,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/18,pdu,pdu-02,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/19,pdu,pdu-03,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/20,pdu,pdu-04,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/21,pdu,pdu-05,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/22,pdu,pdu-06,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/23,pdu,pdu-07,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/24,pdu,pdu-08,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/25,pdu,pdu-09,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/26,pdu,pdu-10,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/27,pdu,pdu-11,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/28,pdu,pdu-12,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/29,pdu,pdu-13,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/30,pdu,pdu-14,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/31,pdu,pdu-15,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/32,pdu,pdu-16,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/33,pdu,pdu-17,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/34,pdu,pdu-18,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/35,pdu,pdu-19,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/36,pdu,pdu-20,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/37,pdu,pdu-21,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/38,pdu,pdu-22,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/39,pdu,pdu-23,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-02,E1/40,pdu,pdu-24,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/1,pdu,pdu-25,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/2,pdu,pdu-26,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/3,pdu,pdu-27,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/4,pdu,pdu-28,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/5,pdu,pdu-29,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/6,pdu,pdu-30,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/7,pdu,pdu-31,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/8,pdu,pdu-32,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/9,pdu,pdu-33,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/10,pdu,pdu-34,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/11,pdu,pdu-35,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/12,pdu,pdu-36,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/13,pdu,pdu-37,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/14,pdu,pdu-38,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/15,pdu,pdu-39,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/16,pdu,pdu-40,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/17,pdu,pdu-41,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/18,pdu,pdu-42,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/19,pdu,pdu-43,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/20,pdu,pdu-44,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/21,pdu,pdu-45,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/22,pdu,pdu-46,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/23,pdu,pdu-47,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/24,pdu,pdu-48,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/25,pdu,pdu-49,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/26,pdu,pdu-50,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/27,pdu,pdu-51,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/28,pdu,pdu-52,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/29,pdu,pdu-53,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/30,pdu,pdu-54,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/31,pdu,pdu-55,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/32,pdu,pdu-56,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/33,pdu,pdu-57,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/34,pdu,pdu-58,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/35,pdu,pdu-59,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/36,pdu,pdu-60,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/37,pdu,pdu-61,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/38,pdu,pdu-62,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/39,pdu,pdu-63,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-03,E1/40,pdu,pdu-64,mgmt0,1G,Cat6a-1G-copper,oob,,single,PDU management
+oob-switch,oob-sw-01,E1/49,switch,fe-spine-01,E1/65,10G,SFP+-10G-LR,oob,,single,OOB uplink to FE spine
+oob-switch,oob-sw-01,E1/50,switch,fe-spine-02,E1/65,10G,SFP+-10G-LR,oob,,single,OOB uplink to FE spine
+oob-switch,oob-sw-02,E1/49,switch,fe-spine-01,E1/66,10G,SFP+-10G-LR,oob,,single,OOB uplink to FE spine
+oob-switch,oob-sw-02,E1/50,switch,fe-spine-02,E1/66,10G,SFP+-10G-LR,oob,,single,OOB uplink to FE spine
+oob-switch,oob-sw-03,E1/49,switch,fe-spine-01,E1/67,10G,SFP+-10G-LR,oob,,single,OOB uplink to FE spine
+oob-switch,oob-sw-03,E1/50,switch,fe-spine-02,E1/67,10G,SFP+-10G-LR,oob,,single,OOB uplink to FE spine

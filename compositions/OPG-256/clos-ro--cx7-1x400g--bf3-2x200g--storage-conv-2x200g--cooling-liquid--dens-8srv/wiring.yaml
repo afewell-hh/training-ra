@@ -1,0 +1,228 @@
+# OPG-256 Wiring Specification
+# Clos Rail-Optimized | CX7 1×400G | BF3 2×200G | Liquid-Cooled | 8 srv/rack
+# Generated: 2026-03-12
+
+composition: OPG-256
+variant: clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv
+cooling: liquid
+density: 8 servers per rack
+total_racks: 4
+
+# =============================================================================
+# RACK LAYOUT — Liquid-cooled: 4 racks × 8 GPU servers
+# =============================================================================
+rack_assignments:
+  rack-01:
+    gpu_servers:
+      - compute-01
+      - compute-02
+      - compute-03
+      - compute-04
+      - compute-05
+      - compute-06
+      - compute-07
+      - compute-08
+    switches:
+      - be-leaf-01
+      - be-spine-01
+      - fe-leaf-01
+    oob: oob-sw-01
+    pdus: [pdu-01, pdu-02, pdu-03, pdu-04]
+    cdus: [cdu-01]
+
+  rack-02:
+    gpu_servers:
+      - compute-09
+      - compute-10
+      - compute-11
+      - compute-12
+      - compute-13
+      - compute-14
+      - compute-15
+      - compute-16
+    switches:
+      - be-leaf-02
+      - be-spine-02
+      - fe-leaf-02
+    oob: oob-sw-02
+    pdus: [pdu-05, pdu-06, pdu-07, pdu-08]
+    cdus: [cdu-02]
+
+  rack-03:
+    gpu_servers:
+      - compute-17
+      - compute-18
+      - compute-19
+      - compute-20
+      - compute-21
+      - compute-22
+      - compute-23
+      - compute-24
+    switches:
+      - be-leaf-03
+      - be-spine-03
+      - fe-spine-01
+    infrastructure:
+      - storage-01 through storage-05
+      - metadata-01 through metadata-05
+      - gateway-01
+      - controller-fe
+    pdus: [pdu-09, pdu-10, pdu-11, pdu-12]
+    cdus: [cdu-03]
+
+  rack-04:
+    gpu_servers:
+      - compute-25
+      - compute-26
+      - compute-27
+      - compute-28
+      - compute-29
+      - compute-30
+      - compute-31
+      - compute-32
+    switches:
+      - be-leaf-04
+      - be-spine-04
+      - fe-spine-02
+    infrastructure:
+      - storage-06 through storage-10
+      - metadata-06 through metadata-10
+      - gateway-02
+      - controller-be
+    pdus: [pdu-13, pdu-14, pdu-15, pdu-16]
+    cdus: [cdu-04]
+
+# =============================================================================
+# BACKEND FABRIC — Rail-Optimized Clos
+# =============================================================================
+backend:
+  topology: two-stage Clos (leaf-spine), rail-optimized
+  leaves: 4    # DS5000
+  spines: 4    # DS5000
+
+  leaf_port_plan:
+    downlinks:
+      ports: E1/1 – E1/32
+      breakout: 2×400G per port
+      total_logical_ports: 64 per leaf
+      media: OSFP-2x400G-DR4
+      cable: OS2 single-mode fiber
+    uplinks:
+      ports: E1/33 – E1/64
+      speed: 800G native
+      total_per_leaf: 32
+      media: OSFP-800G-DR8
+      cable: OS2 single-mode fiber
+
+  spine_port_plan:
+    downlinks:
+      ports: E1/1 – E1/32
+      speed: 800G native
+      allocation: 8 ports per leaf × 4 leaves = 32
+      media: OSFP-800G-DR8
+      cable: OS2 single-mode fiber
+
+  rail_mapping:
+    be-leaf-01: [rail-1, rail-2]   # cx7-nic1, cx7-nic2
+    be-leaf-02: [rail-3, rail-4]   # cx7-nic3, cx7-nic4
+    be-leaf-03: [rail-5, rail-6]   # cx7-nic5, cx7-nic6
+    be-leaf-04: [rail-7, rail-8]   # cx7-nic7, cx7-nic8
+
+  server_wiring:
+    pattern: >
+      Each compute server has 8× CX7 NICs (cx7-nic1 through cx7-nic8).
+      NIC pair (1,2) connects to be-leaf-01, (3,4) to be-leaf-02,
+      (5,6) to be-leaf-03, (7,8) to be-leaf-04.
+      On each leaf, physical port N (1-32) with /1 and /2 breakout
+      serves compute-N's two NICs for that leaf.
+    speed_per_nic: 400G
+    total_be_links: 256
+
+  controller_wiring:
+    controller-be:
+      nic1: { switch: be-leaf-01, port: "E1/33/1", speed: 400G }
+      nic2: { switch: be-leaf-02, port: "E1/33/1", speed: 400G }
+
+# =============================================================================
+# FRONTEND FABRIC — Converged Clos
+# =============================================================================
+frontend:
+  topology: two-stage Clos (leaf-spine)
+  leaves: 2    # DS5000
+  spines: 2    # DS5000
+
+  leaf_port_plan:
+    downlinks:
+      ports: "E1/1, E1/3, E1/5, E1/7, E1/9, E1/11, E1/13, E1/15, E1/17, E1/19, E1/21, E1/23, E1/25, E1/27"
+      breakout: 4×200G per port (odd ports only)
+      total_physical_ports: 14 per leaf
+      total_logical_ports: 56 per leaf (55 used, 1 spare)
+      media: OSFP-4x200G-DR4
+      cable: OS2 single-mode fiber
+    uplinks:
+      ports: E1/33 – E1/64
+      speed: 800G native
+      total_per_leaf: 32
+      media: OSFP-800G-DR8
+      cable: OS2 single-mode fiber
+
+  spine_port_plan:
+    downlinks:
+      ports: E1/1 – E1/16
+      speed: 800G native
+      allocation: 16 ports per leaf × 2 leaves = 32
+      media: OSFP-800G-DR8
+      cable: OS2 single-mode fiber
+
+  endpoint_wiring:
+    multihoming: L3MH (ECMP) — bf3-p1 to fe-leaf-01, bf3-p2 to fe-leaf-02
+    endpoints:
+      - { type: compute,    count: 32, nics: "bf3-p1, bf3-p2", speed: 200G }
+      - { type: storage,    count: 10, nics: "bf3-p1, bf3-p2", speed: 200G }
+      - { type: metadata,   count: 10, nics: "bf3-p1, bf3-p2", speed: 200G }
+      - { type: gateway,    count:  2, nics: "bf3-p1, bf3-p2", speed: 200G }
+      - { type: controller, count:  1, nics: "bf3-p1, bf3-p2", speed: 200G, id: controller-fe }
+    total_endpoints: 55
+    total_fe_links: 110
+
+# =============================================================================
+# OUT-OF-BAND MANAGEMENT — Liquid-Cooled Variant
+# =============================================================================
+oob:
+  switches:
+    - id: oob-sw-01
+      model: Celestica DS1000-48
+      ports: 48× 1G RJ45 + SFP+ uplinks
+    - id: oob-sw-02
+      model: Celestica DS1000-48
+      ports: 48× 1G RJ45 + SFP+ uplinks
+
+  endpoints:
+    compute_bmc:    { count: 32, port: bmc0, speed: 1G, media: Cat6a }
+    storage_bmc:    { count: 10, port: bmc0, speed: 1G, media: Cat6a }
+    metadata_bmc:   { count: 10, port: bmc0, speed: 1G, media: Cat6a }
+    gateway_bmc:    { count:  2, port: bmc0, speed: 1G, media: Cat6a }
+    controller_bmc: { count:  2, port: bmc0, speed: 1G, media: Cat6a }
+    pdus:           { count: 16, port: mgmt0, speed: 1G, media: Cat6a, note: "4 racks × 4 PDUs/rack" }
+    cdus:           { count:  4, port: mgmt0, speed: 1G, media: Cat6a, note: "4 racks × 1 CDU/rack (optional)" }
+    total_devices: 76
+
+  inter_switch:
+    links: 2
+    ports: [E1/47, E1/48]
+    speed: 10G
+    media: SFP+10G-LR
+
+  uplinks:
+    per_switch: 1
+    port: E1/49
+    speed: 10G
+    media: SFP+10G-LR
+    destination: site management network
+
+  port_budget:
+    total_ports: 96    # 2 × 48
+    used_ports: 76
+    reserved_inter_switch: 4
+    reserved_uplinks: 2
+    spare_ports: 14

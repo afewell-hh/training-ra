@@ -1,0 +1,140 @@
+# OPG-256 VPC / Overlay Configuration
+# Clos Rail-Optimized | CX7 1×400G | BF3 2×200G | Liquid-Cooled | 8 srv/rack
+# Generated: 2026-03-12
+#
+# Network topology is IDENTICAL to the air-cooled variant.
+# Cooling modality does not affect network architecture.
+
+composition: OPG-256
+variant: clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv
+
+# =============================================================================
+# VPC / VXLAN OVERLAY — Backend Fabric
+# =============================================================================
+backend_vpcs:
+  - name: gpu-training
+    vni: 100001
+    description: GPU-to-GPU RDMA training traffic (all-reduce / all-gather)
+    members: compute-01 through compute-32 (all 256 CX7 NICs)
+    routing: ECMP across 4 BE leaves, 4 BE spines
+    mtu: 9216
+    protocol: RoCEv2 / RDMA
+    qos:
+      dscp: 48  # EF class for RDMA
+      pfc: enabled on priority 3
+      ecn: enabled
+
+  - name: gpu-storage-backend
+    vni: 100002
+    description: GPU-direct storage access over backend fabric
+    members: compute-01 through compute-32 (selected NICs)
+    routing: ECMP
+    mtu: 9216
+    protocol: GPUDirect Storage / NVMe-oF
+
+# =============================================================================
+# VPC / VXLAN OVERLAY — Frontend Fabric
+# =============================================================================
+frontend_vpcs:
+  - name: storage-data
+    vni: 200001
+    description: Storage data plane (NFS/NVMe-oF)
+    members:
+      - compute-01 through compute-32 (bf3-p1, bf3-p2)
+      - storage-01 through storage-10 (bf3-p1, bf3-p2)
+    routing: L3MH ECMP across 2 FE leaves
+    mtu: 9216
+    protocol: NVMe-oF / NFS
+
+  - name: metadata
+    vni: 200002
+    description: Metadata services (Lustre MDT, namespace ops)
+    members:
+      - compute-01 through compute-32 (bf3-p1, bf3-p2)
+      - metadata-01 through metadata-10 (bf3-p1, bf3-p2)
+    routing: L3MH ECMP across 2 FE leaves
+    mtu: 9216
+
+  - name: cluster-mgmt
+    vni: 200003
+    description: In-band cluster management, orchestration, health
+    members:
+      - compute-01 through compute-32 (bf3-p1, bf3-p2)
+      - storage-01 through storage-10 (bf3-p1, bf3-p2)
+      - metadata-01 through metadata-10 (bf3-p1, bf3-p2)
+      - gateway-01, gateway-02 (bf3-p1, bf3-p2)
+      - controller-fe (bf3-p1, bf3-p2)
+    routing: L3MH ECMP across 2 FE leaves
+    mtu: 1500
+
+  - name: external-gateway
+    vni: 200004
+    description: North-south traffic to campus / WAN / internet
+    members:
+      - gateway-01, gateway-02 (bf3-p1, bf3-p2)
+    routing: L3MH ECMP, default route via gateways
+    mtu: 1500
+    nat: source NAT at gateway
+
+# =============================================================================
+# UNDERLAY ROUTING
+# =============================================================================
+underlay:
+  protocol: eBGP
+  asn_scheme:
+    description: Unique ASN per leaf and spine; servers use host ASN
+    be_leaves:  [4200000001, 4200000002, 4200000003, 4200000004]
+    be_spines:  [4200000011, 4200000012, 4200000013, 4200000014]
+    fe_leaves:  [4200000021, 4200000022]
+    fe_spines:  [4200000031, 4200000032]
+    server_asn_range: "4200001001 – 4200001055"
+
+  address_families:
+    - ipv4_unicast
+    - ipv6_unicast
+    - l2vpn_evpn
+
+  bfd:
+    enabled: true
+    min_rx: 300ms
+    min_tx: 300ms
+    multiplier: 3
+
+# =============================================================================
+# OVERLAY ROUTING
+# =============================================================================
+overlay:
+  protocol: eBGP EVPN
+  type: symmetric IRB (VXLAN type-5 routes)
+  anycast_gateway: true
+  arp_suppression: true
+
+# =============================================================================
+# LOOPBACK ADDRESSING
+# =============================================================================
+loopbacks:
+  be_leaves:
+    - { id: be-leaf-01, lo0: 10.0.1.1/32 }
+    - { id: be-leaf-02, lo0: 10.0.1.2/32 }
+    - { id: be-leaf-03, lo0: 10.0.1.3/32 }
+    - { id: be-leaf-04, lo0: 10.0.1.4/32 }
+  be_spines:
+    - { id: be-spine-01, lo0: 10.0.2.1/32 }
+    - { id: be-spine-02, lo0: 10.0.2.2/32 }
+    - { id: be-spine-03, lo0: 10.0.2.3/32 }
+    - { id: be-spine-04, lo0: 10.0.2.4/32 }
+  fe_leaves:
+    - { id: fe-leaf-01, lo0: 10.0.3.1/32 }
+    - { id: fe-leaf-02, lo0: 10.0.3.2/32 }
+  fe_spines:
+    - { id: fe-spine-01, lo0: 10.0.4.1/32 }
+    - { id: fe-spine-02, lo0: 10.0.4.2/32 }
+
+# =============================================================================
+# NOTES
+# =============================================================================
+notes:
+  - Network topology, VPC definitions, and addressing are identical between air-cooled and liquid-cooled variants.
+  - Cooling modality affects only physical rack density and OOB peripheral counts.
+  - All VNI values are illustrative; production values should follow site allocation policy.
+  - Hedgehog Fabric manages the underlay and overlay declaratively via Fabric API.

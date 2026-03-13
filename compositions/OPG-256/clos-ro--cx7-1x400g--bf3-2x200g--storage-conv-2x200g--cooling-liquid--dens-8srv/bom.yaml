@@ -1,0 +1,151 @@
+# OPG-256 Bill of Materials
+# Clos Rail-Optimized | CX7 1×400G | BF3 2×200G | Liquid-Cooled | 8 srv/rack
+# Generated: 2026-03-12
+
+composition: OPG-256
+variant: clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv
+
+switches:
+  - model: Celestica DS5000
+    role: be-leaf
+    quantity: 4
+    description: Backend leaf switches (64-port OSFP)
+
+  - model: Celestica DS5000
+    role: be-spine
+    quantity: 4
+    description: Backend spine switches (64-port OSFP)
+
+  - model: Celestica DS5000
+    role: fe-leaf
+    quantity: 2
+    description: Frontend leaf switches (64-port OSFP)
+
+  - model: Celestica DS5000
+    role: fe-spine
+    quantity: 2
+    description: Frontend spine switches (64-port OSFP)
+
+  - model: Celestica DS1000-48
+    role: oob
+    quantity: 2
+    description: Out-of-band management switches (48×1G + SFP+ uplinks)
+
+  total_switches: 14
+
+optics:
+  # --- Backend leaf-spine ---
+  # 4 leaves × 32 uplinks each = 128 links; optic at EACH end = 256
+  - type: OSFP-800G-DR8
+    speed: 800G
+    usage: backend leaf-spine
+    quantity: 256
+    description: 128 links × 2 ends
+
+  # --- Backend server-leaf ---
+  # 256 server links: optic on switch side (breakout from 2×400G OSFP)
+  # Each OSFP-2x400G-DR4 serves 2 server links; 128 OSFPs on leaf side
+  # Server side: 256 CX7 NICs each with 1 optic = 256 optics
+  # But CX7 uses the same OSFP-2x400G-DR4 module — paired at leaf, individual at server
+  # Actually each CX7 NIC holds one 400G optic; the leaf breakout means one OSFP on the leaf
+  # side covers 2 server connections. So leaf side: 128 OSFP-2x400G-DR4.
+  # Server side: 256 × OSFP-400G (single-lane 400G from the CX7).
+  # For simplicity and standard BOM practice, count per-link optics:
+  - type: OSFP-2x400G-DR4
+    speed: 2×400G (breakout)
+    usage: backend leaf downlink (switch side)
+    quantity: 128
+    description: 32 physical ports per leaf × 4 leaves; each serves 2×400G breakout
+
+  - type: OSFP-400G-DR4
+    speed: 400G
+    usage: backend server NIC (server side)
+    quantity: 256
+    description: 32 servers × 8 CX7 NICs; one optic per NIC
+
+  # --- Backend controller ---
+  # 2 links; 1 optic each end = 4 total; same types as server-leaf
+  - type: OSFP-400G-DR4
+    speed: 400G
+    usage: backend controller NIC (controller side)
+    quantity: 2
+    description: controller-be × 2 NICs
+
+  - type: OSFP-2x400G-DR4
+    speed: 2×400G (breakout)
+    usage: backend leaf downlink for controller (switch side)
+    quantity: 2
+    description: 1 port on be-leaf-01 + 1 port on be-leaf-02 (only 1 breakout lane used each)
+
+  # --- Frontend leaf-spine ---
+  # 2 leaves × 32 uplinks each = 64 links; optic at EACH end = 128
+  - type: OSFP-800G-DR8
+    speed: 800G
+    usage: frontend leaf-spine
+    quantity: 128
+    description: 64 links × 2 ends
+
+  # --- Frontend server-leaf ---
+  # 110 endpoint links; leaf side: 4×200G breakout OSFP
+  # 14 physical ports per leaf × 2 leaves = 28 OSFPs on leaf side
+  # Endpoint side: 110 optics (BF3 ports)
+  - type: OSFP-4x200G-DR4
+    speed: 4×200G (breakout)
+    usage: frontend leaf downlink (switch side)
+    quantity: 28
+    description: 14 physical ports per leaf × 2 leaves
+
+  - type: OSFP-200G-DR4
+    speed: 200G
+    usage: frontend endpoint NIC (endpoint side)
+    quantity: 110
+    description: 55 endpoints × 2 BF3 ports
+
+  # --- OOB ---
+  - type: SFP+10G-LR
+    speed: 10G
+    usage: OOB inter-switch and uplinks
+    quantity: 8
+    description: 2 inter-switch links (4 optics) + 2 uplinks (4 optics)
+
+cables:
+  # Backend leaf-spine
+  - type: OS2 single-mode fiber
+    usage: backend leaf-spine
+    quantity: 128
+    description: 128 links between BE leaves and spines
+
+  # Backend server-leaf
+  - type: OS2 single-mode fiber
+    usage: backend server-leaf
+    quantity: 258
+    description: 256 server links + 2 controller links
+
+  # Frontend leaf-spine
+  - type: OS2 single-mode fiber
+    usage: frontend leaf-spine
+    quantity: 64
+    description: 64 links between FE leaves and spines
+
+  # Frontend server-leaf
+  - type: OS2 single-mode fiber
+    usage: frontend server-leaf
+    quantity: 110
+    description: 110 endpoint links
+
+  # OOB
+  - type: Cat6a copper
+    usage: OOB device management
+    quantity: 76
+    description: 56 BMC + 16 PDU + 4 CDU connections
+
+  - type: OS2 single-mode fiber (SFP+)
+    usage: OOB inter-switch and uplinks
+    quantity: 4
+    description: 2 inter-switch + 2 uplinks
+
+summary:
+  total_switches: 14
+  total_optics: 918
+  total_fiber_cables: 560
+  total_copper_cables: 76
