@@ -1,0 +1,64 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+✓ Created site: Xoc512 1X Dp Air (xoc512-1x-dp-air)
+
+Topology Plan: Training XOC-512 1x OPG-512 Dual Plane Air 2srv
+  ID: 41
+  Status: draft
+  Server Classes: 1
+  Switch Classes: 6
+
+✓ Recalculated switch quantities
+  - be-plane-a-leaf: calculated=8 override=None effective=8
+  - be-plane-b-leaf: calculated=8 override=None effective=8
+  - fe-leaf: calculated=2 override=None effective=2
+  - be-plane-a-spine: calculated=4 override=None effective=4
+  - be-plane-b-spine: calculated=4 override=None effective=4
+  - fe-spine: calculated=1 override=None effective=1
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 91
+  Interfaces: 2304
+  Cables: 1728
+
+  Site: Xoc512 1X Dp Air
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=41
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=41
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_1xopg512_dual_plane_air_2srv/netbox/plan_inventory.json
+  plan_id:    41
+  sha256:     73fecfe943546ca114efde8d53878c96c7da1eb1974aef180a57e7bf91ed08cc
+  bytes:      2733498
+  lines:      111601
+  devices:    91
+  modules:    576
+  interfaces: 4032
+  cables:     1728
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_1xopg512_dual_plane_air_2srv/netbox/interface_connections.csv
+  plan_id:    41
+  sha256:     e164722c6e6a93a8550283d6400619759751f095ad9e2a46d8a599c94d095f04
+  bytes:      145210
+  rows:       1728

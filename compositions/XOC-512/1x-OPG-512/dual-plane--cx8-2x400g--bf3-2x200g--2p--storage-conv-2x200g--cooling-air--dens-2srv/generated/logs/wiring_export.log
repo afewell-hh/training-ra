@@ -1,0 +1,23 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+Exporting wiring YAML for plan: Training XOC-512 1x OPG-512 Dual Plane Air 2srv (ID: 41)
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_1xopg512_dual_plane_air_2srv/wiring_tmp/wiring-backend-plane-a.yaml
+  plan_id:    41
+  fabric:     backend-plane-a
+  timestamp:  2026-03-13T20:56:22.040150+00:00
+  sha256:     d7725907ce4b8844a62acf977a032001cb090ddd5b65730fc913197765cb9a88
+  bytes:      208126
+  lines:      9360
+  documents:  622
+
+[OK] Export complete: /tmp/ra_pipeline/training_xoc512_1xopg512_dual_plane_air_2srv/wiring_tmp/wiring-backend-plane-b.yaml
+  plan_id:    41
+  fabric:     backend-plane-b
+  timestamp:  2026-03-13T20:56:56.977026+00:00
+  sha256:     8ea6fff0d99dab319fe9de1af856436a1c9aca22b1e99b5448cb80319376398a
+  bytes:      208126
+  lines:      9360
+  documents:  622
