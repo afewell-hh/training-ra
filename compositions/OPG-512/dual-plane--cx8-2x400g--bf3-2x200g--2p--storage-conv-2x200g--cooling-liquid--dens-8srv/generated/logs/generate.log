@@ -1,0 +1,64 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+✓ Created site: Opg512 Dp Liq (opg512-dp-liq)
+
+Topology Plan: Training OPG-512 Dual Plane Liquid 8srv
+  ID: 38
+  Status: draft
+  Server Classes: 1
+  Switch Classes: 6
+
+✓ Recalculated switch quantities
+  - be-plane-a-leaf: calculated=8 override=None effective=8
+  - be-plane-b-leaf: calculated=8 override=None effective=8
+  - fe-leaf: calculated=2 override=None effective=2
+  - be-plane-a-spine: calculated=4 override=None effective=4
+  - be-plane-b-spine: calculated=4 override=None effective=4
+  - fe-spine: calculated=1 override=None effective=1
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 91
+  Interfaces: 2304
+  Cables: 1728
+
+  Site: Opg512 Dp Liq
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=38
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=38
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_opg512_dual_plane_liquid_8srv/netbox/plan_inventory.json
+  plan_id:    38
+  sha256:     3dc2d1b2887fa54182e116398e4ed91138e001210545fff4de71dbf86a67b35e
+  bytes:      2731642
+  lines:      111601
+  devices:    91
+  modules:    576
+  interfaces: 4032
+  cables:     1728
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_opg512_dual_plane_liquid_8srv/netbox/interface_connections.csv
+  plan_id:    38
+  sha256:     54396dde85fcef05a5bf07cfbf927ab1be67963e8a90c23737689c2b7a24407b
+  bytes:      145210
+  rows:       1728
