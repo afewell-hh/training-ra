@@ -7,4 +7,3 @@ Attributes and assets
 - Assets: connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/ (to be generated)
 
 Plan
-- ../../../../../../docs/suggestions/active/ai-network-ref-arch/project/HNP_PLAN_XOC-1024_2x-OPG-512_clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv.md

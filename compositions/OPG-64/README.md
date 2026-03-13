@@ -28,7 +28,7 @@ Available variants
     - vpc.yaml — Hedgehog VPC CRDs
     - diagrams/ — labeled visuals
   - References
-    - HNP plan: see docs/suggestions/active/ai-network-ref-arch/project/HNP_PLAN_OPG-64_*.md
+    - Plan and validation notes will be published alongside assets.
 
 Notes
 - Full connection maps and BOMs live inside the variant folder.

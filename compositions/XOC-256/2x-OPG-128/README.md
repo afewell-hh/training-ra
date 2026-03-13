@@ -8,4 +8,3 @@ Variants (same as OPG‑128)
 
 Notes
 - See each variant folder for README and assets (to be generated).
-- HNP plans: ../../../../../docs/suggestions/active/ai-network-ref-arch/project/INDEX.md

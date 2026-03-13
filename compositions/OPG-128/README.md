@@ -20,7 +20,6 @@ Common attributes
 
 Notes
 - Full connectivity maps/BOMs live in each variant folder.
-- HNP plans drive generation: see ../../../../docs/suggestions/active/ai-network-ref-arch/project/INDEX.md
 
 Tokenized variants (canonical for asset generation)
 - clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/

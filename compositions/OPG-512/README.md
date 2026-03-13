@@ -15,4 +15,3 @@ Common attributes
 - Optics: OS2 single‑mode DR‑class (default)
 
 Notes
-- HNP plans drive generation: ../../../../docs/suggestions/active/ai-network-ref-arch/project/INDEX.md

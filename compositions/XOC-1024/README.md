@@ -6,4 +6,3 @@ Bundles
 - 2x-OPG-512/
 
 Notes
-- Plans and notes: ../../../../docs/suggestions/active/ai-network-ref-arch/project/INDEX.md
