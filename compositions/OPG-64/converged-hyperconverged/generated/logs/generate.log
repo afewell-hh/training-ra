@@ -1,0 +1,61 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+✓ Created site: Opg64 Hc (opg64-hc)
+
+Topology Plan: OPG-64 Hyperconverged DS5000
+  ID: 30
+  Status: draft
+  Server Classes: 5
+  Switch Classes: 3
+
+✓ Recalculated switch quantities
+  - conv_leaf: calculated=4 override=2 effective=2
+  - oob_leaf: calculated=1 override=2 effective=2
+  - conv_spine: calculated=1 override=2 effective=2
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 23
+  Interfaces: 251
+  Cables: 183
+
+  Site: Opg64 Hc
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=30
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=30
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/opg64_hyperconverged_ds5000/netbox/plan_inventory.json
+  plan_id:    30
+  sha256:     54bef67b398b8eeb233cbb0bcc63e7caa976b2f3fedbbb62190efb16ba38f850
+  bytes:      269642
+  lines:      11190
+  devices:    23
+  modules:    42
+  interfaces: 366
+  cables:     183
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/opg64_hyperconverged_ds5000/netbox/interface_connections.csv
+  plan_id:    30
+  sha256:     f4e0e416ccada4000b307f820789c0db91381184602ee7d2c229255cfdf7eb25
+  bytes:      13740
+  rows:       183
