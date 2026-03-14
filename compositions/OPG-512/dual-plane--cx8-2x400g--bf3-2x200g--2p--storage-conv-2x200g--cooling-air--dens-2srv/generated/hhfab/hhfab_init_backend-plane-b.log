@@ -1,5 +1,5 @@
-19:32:54 INF Hedgehog Fabricator version=v0.43.1
-19:32:54 INF Using custom registry config repo=m.l.hhdev.io:30000 prefix=githedgehog
-19:32:54 INF Generated initial config
-19:32:54 INF Adjust configs (incl. credentials, modes, subnets, etc.) file=fab.yaml
-19:32:54 INF Include wiring (fabric/gateway) files (.yaml) or adjust imported ones dir=include
+03:33:52 INF Hedgehog Fabricator version=v0.43.1
+03:33:52 INF Using custom registry config repo=m.l.hhdev.io:30000 prefix=githedgehog
+03:33:52 INF Generated initial config
+03:33:52 INF Adjust configs (incl. credentials, modes, subnets, etc.) file=fab.yaml
+03:33:52 INF Include wiring (fabric/gateway) files (.yaml) or adjust imported ones dir=include

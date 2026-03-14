@@ -2,13 +2,13 @@
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
-Exporting wiring YAML for plan: Training opg128 Clos SH Liquid 8srv (ID: 27)
+Exporting wiring YAML for plan: Training opg128 Clos SH Liquid 8srv (ID: 56)
 
 [OK] Export complete: /tmp/ra_pipeline/training_opg128_clos_sh_liquid_8srv/wiring_tmp/wiring-backend.yaml
-  plan_id:    27
+  plan_id:    56
   fabric:     backend
-  timestamp:  2026-03-13T17:32:16.308462+00:00
-  sha256:     39a865fcfa50b435e7d469a10d515eab27b63c99a9de09c6fcfb9f7beb698767
-  bytes:      47050
-  lines:      2301
+  timestamp:  2026-03-14T02:27:22.266168+00:00
+  sha256:     1103037cdb532e2eba2a691de6d6e8998b8dda64fe83b45805fb97984c793899
+  bytes:      47017
+  lines:      2298
   documents:  151

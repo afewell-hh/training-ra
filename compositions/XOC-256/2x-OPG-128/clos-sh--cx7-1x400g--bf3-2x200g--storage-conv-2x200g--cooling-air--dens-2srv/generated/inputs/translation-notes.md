@@ -3,8 +3,8 @@
 ## Pass-1 Status: complete-pass1
 
 ## Generation Summary
-- Plan ID at generation: 33
-- Site slug: xoc256-sh-air
+- Plan ID at generation: 65
+- Site slug: xoc256-2xopg128-clos-sh-air
 - Device count: 0
 
 ## Known Gaps

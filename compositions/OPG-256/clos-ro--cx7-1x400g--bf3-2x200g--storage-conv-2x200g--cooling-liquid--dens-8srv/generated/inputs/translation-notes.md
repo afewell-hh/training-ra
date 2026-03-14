@@ -3,8 +3,8 @@
 ## Pass-1 Status: complete-pass1
 
 ## Generation Summary
-- Plan ID at generation: 28
-- Site slug: opg256-ro-liq
+- Plan ID at generation: 57
+- Site slug: opg256-clos-ro-liquid
 - Device count: 0
 
 ## Known Gaps

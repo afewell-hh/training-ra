@@ -3,8 +3,8 @@
 ## Pass-1 Status: complete-pass1
 
 ## Generation Summary
-- Plan ID at generation: 43
-- Site slug: xoc512-4x-ro-air
+- Plan ID at generation: 72
+- Site slug: xoc512-4xopg128-clos-ro-air
 - Device count: 0
 
 ## Known Gaps

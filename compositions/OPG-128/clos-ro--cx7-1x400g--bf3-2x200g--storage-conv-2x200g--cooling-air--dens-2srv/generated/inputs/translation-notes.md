@@ -1,8 +1,30 @@
-# Translation Notes
+# Translation Notes: training_opg128_clos_ro_air_2srv
 
-- Pilot scope is compute-only. Storage, controller, gateway, border, and OOB counts are not asserted because the current RA source files do not state them explicitly.
-- Switch quantities are HNP-calculated from the topology plan. No README-estimated switch counts were copied into the plan.
-- Managed fabrics in this pilot are provisional `frontend` and `backend`.
-- Frontend redundancy metadata uses a temporary `mclag` shim solely to satisfy current DIET-side alternating-connection validation. The intended topology semantics are still unbundled L3 multi-homed links, not MCLAG bundles.
-- `hhfab validate` succeeds for the backend fabric and fails for the frontend fabric because the DS5000 Hedgehog profile currently rejects both ESLAG and MCLAG semantics. This is a known fast-follow issue for semantic-correct frontend export/validation.
-- Because frontend validation fails, only the backend Draw.io diagram is included in this pilot bundle.
+## Pass-1 Status: complete-pass1
+
+## Generation Summary
+- Plan ID at generation: 49
+- Site slug: opg128-clos-ro-air
+- Device count: 0
+
+## Known Gaps
+
+### Frontend Wiring Export
+Frontend wiring YAML export fails with:
+  "Switch references group 'fe-mclag' but no PlanMCLAGDomain exists"
+This is a pre-existing DIET gap affecting all DS5000 L3MH variants.
+Backend wiring exported and validated successfully.
+
+
+
+
+
+## SH Distribution Shim (if applicable)
+Single-homed backend variants use rail-optimized distribution (rails 0-7) as a
+structural shim. DIET has no per-server SH distribution; this approximates the
+intent. Document deviation in RA notes.
+
+## XOC Composition Note (if applicable)
+XOC variants are modeled as a single scaled DIET plan with the combined server
+count. Per-OPG-unit composition semantics are not modeled in DIET pass-1.
+

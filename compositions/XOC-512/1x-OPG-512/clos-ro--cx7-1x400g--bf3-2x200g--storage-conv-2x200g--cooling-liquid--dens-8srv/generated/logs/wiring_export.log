@@ -2,13 +2,13 @@
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
-Exporting wiring YAML for plan: Training XOC-512 1x OPG-512 Clos RO Liquid 8srv (ID: 40)
+Exporting wiring YAML for plan: Training XOC-512 1x OPG-512 Clos RO Liquid 8srv (ID: 70)
 
 [OK] Export complete: /tmp/ra_pipeline/training_xoc512_1xopg512_clos_ro_liquid_8srv/wiring_tmp/wiring-backend.yaml
-  plan_id:    40
+  plan_id:    70
   fabric:     backend
-  timestamp:  2026-03-13T20:33:37.610683+00:00
-  sha256:     c63fb8ae670bd9ee9bb63aaacc468288f60ee25c69883c80359f8b9590a2d77a
-  bytes:      197734
-  lines:      9360
+  timestamp:  2026-03-14T05:55:25.436014+00:00
+  sha256:     5f31c957d9b4ab70759530fa95c30ce1a9391d14e05e0fe1553bd1d6a81e5f60
+  bytes:      197602
+  lines:      9348
   documents:  622

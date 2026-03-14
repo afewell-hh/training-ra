@@ -3,8 +3,8 @@
 ## Pass-1 Status: complete-pass1
 
 ## Generation Summary
-- Plan ID at generation: 40
-- Site slug: xoc512-1x-ro-liq
+- Plan ID at generation: 70
+- Site slug: xoc512-1xopg512-clos-ro-liquid
 - Device count: 0
 
 ## Known Gaps

@@ -2,10 +2,10 @@
 🧬 loaded config '/etc/netbox/config/extra.py'
 🧬 loaded config '/etc/netbox/config/logging.py'
 🧬 loaded config '/etc/netbox/config/plugins.py'
-✓ Created site: Opg128 Ro Liq (opg128-ro-liq)
+✓ Created site: Opg128 Clos Ro Liquid (opg128-clos-ro-liquid)
 
 Topology Plan: Training opg128 Clos RO Liquid 8srv
-  ID: 26
+  ID: 55
   Status: draft
   Server Classes: 1
   Switch Classes: 4
@@ -25,16 +25,16 @@ Created:
   Interfaces: 416
   Cables: 288
 
-  Site: Opg128 Ro Liq
+  Site: Opg128 Clos Ro Liquid
   Status: planned
 
   Tagged with: hedgehog-generated
-  Custom field: hedgehog_plan_id=26
+  Custom field: hedgehog_plan_id=55
 
 💡 Next steps:
   - View devices in NetBox UI
   - Filter by tag: hedgehog-generated
-  - Or custom field: hedgehog_plan_id=26
+  - Or custom field: hedgehog_plan_id=55
   - Check cable connections
 🧬 loaded config '/etc/netbox/config/configuration.py'
 🧬 loaded config '/etc/netbox/config/extra.py'
@@ -42,9 +42,9 @@ Created:
 🧬 loaded config '/etc/netbox/config/plugins.py'
 
 [OK] Export complete: /tmp/ra_pipeline/training_opg128_clos_ro_liquid_8srv/netbox/plan_inventory.json
-  plan_id:    26
-  sha256:     2a5a6177a84ee3b8bbac2122f892075e79d359f1781b2cd417f5e6a7fa16ecc5
-  bytes:      473918
+  plan_id:    55
+  sha256:     45297f19d109224647df710ba690ff96d10b607385f0b62c59c517152d46bce2
+  bytes:      476132
   lines:      19757
   devices:    22
   modules:    144
@@ -56,7 +56,7 @@ Created:
 🧬 loaded config '/etc/netbox/config/plugins.py'
 
 [OK] Export complete: /tmp/ra_pipeline/training_opg128_clos_ro_liquid_8srv/netbox/interface_connections.csv
-  plan_id:    26
-  sha256:     9fccf61fb1a70579e1bf067f109905eefda2db0e0b87593ed65bf993c3dc3974
-  bytes:      21245
+  plan_id:    55
+  sha256:     fc8e86efc37d43e8fc71706144877eec191de8bd574ca38d2c2efcc36a3cbc20
+  bytes:      21533
   rows:       288

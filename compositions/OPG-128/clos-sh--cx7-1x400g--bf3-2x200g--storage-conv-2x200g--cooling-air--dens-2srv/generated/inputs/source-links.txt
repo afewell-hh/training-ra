@@ -1,4 +1,0 @@
-RA source files for training-opg128-clos-sh-air-2srv:
-
-- https://github.com/afewell-hh/training-ra/tree/main/compositions/OPG-128/README.md
-- https://github.com/afewell-hh/training-ra/tree/main/compositions/OPG-128/clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md

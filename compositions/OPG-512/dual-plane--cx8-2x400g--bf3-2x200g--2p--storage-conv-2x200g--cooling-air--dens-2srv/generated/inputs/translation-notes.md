@@ -3,8 +3,8 @@
 ## Pass-1 Status: complete-pass1
 
 ## Generation Summary
-- Plan ID at generation: 37
-- Site slug: opg512-dp-air
+- Plan ID at generation: 61
+- Site slug: opg512-dual-plane-air
 - Device count: 0
 
 ## Known Gaps

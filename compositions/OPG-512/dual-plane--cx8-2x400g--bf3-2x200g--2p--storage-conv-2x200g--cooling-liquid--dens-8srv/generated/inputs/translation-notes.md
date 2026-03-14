@@ -3,8 +3,8 @@
 ## Pass-1 Status: complete-pass1
 
 ## Generation Summary
-- Plan ID at generation: 38
-- Site slug: opg512-dp-liq
+- Plan ID at generation: 63
+- Site slug: opg512-dual-plane-liquid
 - Device count: 0
 
 ## Known Gaps

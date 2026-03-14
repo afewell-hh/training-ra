@@ -93,7 +93,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -170,7 +169,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -247,7 +245,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -324,7 +321,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -401,7 +397,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -478,7 +473,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -555,7 +549,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -632,7 +625,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -709,7 +701,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -786,7 +777,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -863,7 +853,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Switch
@@ -940,7 +929,6 @@ spec:
     E1/62: 1x800G
     E1/63: 1x800G
     E1/64: 1x800G
-  ecmp: {}
 ---
 apiVersion: wiring.githedgehog.com/v1beta1
 kind: Server

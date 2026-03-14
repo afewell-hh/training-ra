@@ -1,0 +1,63 @@
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+Topology Plan: Training OPG-256 Dual Plane Air 2srv
+  ID: 52
+  Status: draft
+  Server Classes: 1
+  Switch Classes: 6
+
+✓ Recalculated switch quantities
+  - be-plane-a-leaf: calculated=4 override=None effective=4
+  - be-plane-b-leaf: calculated=4 override=None effective=4
+  - fe-leaf: calculated=2 override=None effective=2
+  - be-plane-a-spine: calculated=2 override=None effective=2
+  - be-plane-b-spine: calculated=2 override=None effective=2
+  - fe-spine: calculated=1 override=None effective=1
+
+=== GENERATING OBJECTS ===
+
+✓ Generation complete!
+
+Created:
+  Devices: 47
+  Interfaces: 1216
+  Cables: 896
+
+  Site: Opg256 Dual Plane Air
+  Status: planned
+
+  Tagged with: hedgehog-generated
+  Custom field: hedgehog_plan_id=52
+
+💡 Next steps:
+  - View devices in NetBox UI
+  - Filter by tag: hedgehog-generated
+  - Or custom field: hedgehog_plan_id=52
+  - Check cable connections
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_opg256_dual_plane_air_2srv/netbox/plan_inventory.json
+  plan_id:    52
+  sha256:     2e0d6e757c6e35380b2b9341ef9c602dd6625588c1f2c0e00eae7fa0a40d37a1
+  bytes:      1421569
+  lines:      58049
+  devices:    47
+  modules:    288
+  interfaces: 2112
+  cables:     896
+🧬 loaded config '/etc/netbox/config/configuration.py'
+🧬 loaded config '/etc/netbox/config/extra.py'
+🧬 loaded config '/etc/netbox/config/logging.py'
+🧬 loaded config '/etc/netbox/config/plugins.py'
+
+[OK] Export complete: /tmp/ra_pipeline/training_opg256_dual_plane_air_2srv/netbox/interface_connections.csv
+  plan_id:    52
+  sha256:     db3d8cf0437909f28c5e4950485544310ee27a933286e17800fdfd6a3190e1fc
+  bytes:      74798
+  rows:       896
