@@ -19,7 +19,7 @@ Common attributes
 - Optics: OS2 single‑mode DR‑class (default); distance‑friendly baseline.
 
 Notes
-- Full connectivity maps/BOMs live in each variant folder.
+- Each variant folder contains: `connectivity-map.csv`, `topology-map.yaml`, `wiring/`, `diagrams/`, `netbox_inventory.json`.
 
 Tokenized variants (canonical for asset generation)
 - clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
@@ -31,6 +31,4 @@ Tokenized variants (canonical for asset generation)
 - clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/
   - Single‑homed backend; liquid‑cooled, ~8 servers/rack.
 
-Legacy note: The two folders above are legacy, kept for discoverability; see canonical tokenized variants below for asset generation.
-- Legacy folder names (clos-single-homed/clos-rail-optimized) are maintained with pointers to the canonical tokenized folders.
-  We highlight DS5000 here; HH supports 26T designs if desired.
+Legacy note: The `clos-single-homed/` and `clos-rail-optimized/` folders are kept for discoverability; see the canonical tokenized variants above for assets.

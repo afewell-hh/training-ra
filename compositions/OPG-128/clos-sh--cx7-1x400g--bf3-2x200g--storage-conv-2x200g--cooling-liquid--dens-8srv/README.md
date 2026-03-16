@@ -10,7 +10,13 @@ Attributes
 - Cooling/Density: liquid‑cooled; ~8 servers/rack (placeholder)
 - Optics and zoning as per DS5000 guidance
 
-Assets (placeholders; to be populated)
-- connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/
+Assets
+- `connectivity-map.csv` — end-to-end cabling and port mapping
+- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `wiring/` — Hedgehog Wiring CRDs
+  - `wiring-backend.yaml` — backend fabric wiring
+- `diagrams/` — visual diagrams
+  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `netbox_inventory.json` — NetBox inventory export
 
-Related plans/notes
+Notes
