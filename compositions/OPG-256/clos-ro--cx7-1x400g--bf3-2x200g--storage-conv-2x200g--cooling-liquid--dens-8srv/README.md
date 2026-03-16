@@ -6,13 +6,13 @@ This is the liquid-cooled variant at 8 servers per rack (4 racks total). The net
 
 ## Assets
 
-| File | Description |
-|------|-------------|
-| `connectivity-map.csv` | Every physical link in the cluster (640 rows): backend, frontend, and OOB |
-| `bom.yaml` | Bill of materials: 14 switches, optics (counted at both ends), cables |
-| `wiring.yaml` | Rack assignments, port plans, rail mapping, cable types |
-| `vpc.yaml` | VPC/VXLAN overlay definitions, underlay eBGP, loopback addressing |
-| `diagrams/` | Topology diagrams |
+- `connectivity-map.csv` — end-to-end cabling and port mapping
+- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `wiring/` — Hedgehog Wiring CRDs
+  - `wiring-backend.yaml` — backend fabric wiring
+- `diagrams/` — visual diagrams
+  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `netbox_inventory.json` — NetBox inventory export
 
 ## Attributes
 

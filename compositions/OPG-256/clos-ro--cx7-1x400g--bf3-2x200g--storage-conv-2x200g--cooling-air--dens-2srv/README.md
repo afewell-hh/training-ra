@@ -6,13 +6,13 @@ The rail-optimized wiring maps each pair of rails to a dedicated backend leaf sw
 
 ## Assets
 
-| File | Description |
-|------|-------------|
-| [connectivity-map.csv](connectivity-map.csv) | Complete port-level wiring for backend, frontend, and OOB fabrics (684 links) |
-| [bom.yaml](bom.yaml) | Bill of materials — switches, optics, cables, servers, gateways, controllers |
-| [wiring.yaml](wiring.yaml) | Hedgehog Wiring CRDs (Switch, Server, Connection) for fabric automation |
-| [vpc.yaml](vpc.yaml) | Hedgehog VPC CRDs (VPC, VPCAttachment) for frontend network segmentation |
-| [diagrams/topology-overview.md](diagrams/topology-overview.md) | Text-based topology diagram showing all three fabric tiers |
+- `connectivity-map.csv` — end-to-end cabling and port mapping
+- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `wiring/` — Hedgehog Wiring CRDs
+  - `wiring-backend.yaml` — backend fabric wiring
+- `diagrams/` — visual diagrams
+  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `netbox_inventory.json` — NetBox inventory export
 
 ## Attributes
 

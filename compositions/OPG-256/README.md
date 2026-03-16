@@ -33,5 +33,5 @@ Two independent backend fabrics (Plane A and Plane B) for increased bandwidth an
 
 ## Notes
 
-- Full connectivity maps, BOMs, and Hedgehog CRDs live in each variant folder.
+- Each variant folder contains: `connectivity-map.csv`, `topology-map.yaml`, `wiring/`, `diagrams/`, `netbox_inventory.json`.
 - NVIDIA B200/B300 and BF3/CX7/CX8 are used as concrete examples; the network design is vendor-neutral for equivalent speeds and link counts.
