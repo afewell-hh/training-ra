@@ -2,11 +2,18 @@
 
 Rail‑optimized backend with converged frontend. Domain‑local placement keeps most collectives leaf‑local, reducing spine traffic across the composition.
 
-Attributes and assets
+Attributes
 - Backend: rail‑optimized; CX7 1×400G per GPU
 - Frontend: BF3 2×200G (L3MH); storage converged
-- Cooling/Density: air; ~2 servers/rack (placeholder)
-- Assets: connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/ (placeholders; to be populated)
+- Cooling/Density: air; ~2 servers/rack
 
-Plan
-- To be published with assets.
+Assets
+- `connectivity-map.csv` — end-to-end cabling and port mapping
+- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `wiring/` — Hedgehog Wiring CRDs
+  - `wiring-backend.yaml` — backend fabric wiring
+- `diagrams/` — visual diagrams
+  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `netbox_inventory.json` — NetBox inventory export
+
+Notes

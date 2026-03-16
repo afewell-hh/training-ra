@@ -2,10 +2,18 @@
 
 Rail‑optimized across OPGs; when jobs are placed within first‑hop rail domains, collective traffic remains mostly leaf‑local, materially reducing spine utilization.
 
-Attributes and assets
+Attributes
 - Backend: rail‑optimized; CX7 1×400G per GPU (per OPG)
 - Frontend: BF3 2×200G (L3MH); storage converged per OPG
-- Cooling/Density: air; ~2 servers/rack (placeholder)
-- Assets: connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/ (placeholders; to be populated)
+- Cooling/Density: air; ~2 servers/rack
 
-Plan
+Assets
+- `connectivity-map.csv` — end-to-end cabling and port mapping
+- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `wiring/` — Hedgehog Wiring CRDs
+  - `wiring-backend.yaml` — backend fabric wiring
+- `diagrams/` — visual diagrams
+  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `netbox_inventory.json` — NetBox inventory export
+
+Notes

@@ -5,7 +5,17 @@ Two backend planes; CX8 2×400G per GPU.
 Attributes
 - Backend: dual plane (2p); CX8 2×400G per GPU
 - Frontend: BF3 2×200G (L3MH)
-- Cooling/Density: air; ~2 servers/rack (placeholder)
-- Assets: connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/ (to be generated)
+- Cooling/Density: air; ~2 servers/rack
 
-Plan
+Assets
+- `connectivity-map.csv` — end-to-end cabling and port mapping
+- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `wiring/` — Hedgehog Wiring CRDs
+  - `wiring-backend-plane-a.yaml` — backend Plane A fabric wiring
+  - `wiring-backend-plane-b.yaml` — backend Plane B fabric wiring
+- `diagrams/` — visual diagrams
+  - `hhfab/backend-plane-a.drawio` — backend Plane A topology (draw.io)
+  - `hhfab/backend-plane-b.drawio` — backend Plane B topology (draw.io)
+- `netbox_inventory.json` — NetBox inventory export
+
+Notes
