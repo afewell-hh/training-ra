@@ -16,3 +16,7 @@ Assets
 - `netbox_inventory.json` — NetBox inventory export
 
 Notes
+ 
+See also
+- Tier overview: ../../README.md
+- Compositions overview: ../../../README.md

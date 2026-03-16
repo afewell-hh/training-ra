@@ -33,3 +33,7 @@ Related plans and notes
 References
 - OPG‑M System Architecture (2026‑01‑14): https://www.opencompute.org/documents/opg-m-system-architecture-final-14-january-2026-pdf
 - XOC‑N System Architecture (2026‑01‑14): https://www.opencompute.org/documents/xoc-n-system-architecture-final-14-january-2026-pdf
+
+See also
+- Size overview: ../README.md
+- Compositions overview: ../../README.md

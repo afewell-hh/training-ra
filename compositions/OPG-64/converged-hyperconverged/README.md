@@ -32,3 +32,7 @@ Assets
 
 Notes
 - 4×200G breakouts on odd ports only; 2×400G unrestricted; 32×800G uplinks reserved per leaf.
+
+See also
+- Size overview: ../README.md
+- Compositions overview: ../../README.md

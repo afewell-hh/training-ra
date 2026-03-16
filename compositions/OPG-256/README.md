@@ -1,6 +1,6 @@
 # OPG-256 — Variants Overview
 
-This folder groups assets for the 256-xPU training composition (32 servers × 8 xPUs). Two backend topology patterns are provided, each with air-cooled and liquid-cooled density variants.
+Welcome. OPG-256 is a practical 256‑xPU building block (32 servers × 8 xPUs). It keeps the OPG concept approachable while offering two backend patterns operators commonly choose: rail‑optimized (simplicity + spine relief) and dual‑plane (isolation + bandwidth headroom). Each comes in air‑ and liquid‑cooled densities.
 
 ## Variants
 
@@ -35,3 +35,6 @@ Two independent backend fabrics (Plane A and Plane B) for increased bandwidth an
 
 - Each variant folder contains: `connectivity-map.csv`, `topology-map.yaml`, `wiring/`, `diagrams/`, `netbox_inventory.json`.
 - NVIDIA B200/B300 and BF3/CX7/CX8 are used as concrete examples; the network design is vendor-neutral for equivalent speeds and link counts.
+
+See also
+- Compositions overview: ../README.md

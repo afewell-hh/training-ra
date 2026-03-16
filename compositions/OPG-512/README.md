@@ -1,6 +1,9 @@
 # OPG‑512 — Variants Overview
 
-This folder groups assets for the 512‑xPU training composition. We publish two backend patterns — rail‑optimized (CX7 1×400G) and dual‑plane (CX8 2×400G) — each in air‑ and liquid‑cooled densities.
+Welcome. OPG‑512 scales the pod‑sized building block to 512 xPUs. Operators typically choose between:
+- Rail‑optimized (CX7 1×400G): simpler wiring and better spine relief with rail‑local placement.
+- Dual‑plane (CX8 2×400G): higher isolation and bandwidth headroom.
+Each pattern includes air‑ and liquid‑cooled densities.
 
 Variants
 - clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
@@ -15,3 +18,4 @@ Common attributes
 - Optics: OS2 single‑mode DR‑class (default)
 
 Notes
+- Compositions overview: ../README.md

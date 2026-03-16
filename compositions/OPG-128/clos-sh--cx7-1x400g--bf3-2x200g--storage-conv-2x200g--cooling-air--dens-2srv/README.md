@@ -26,3 +26,7 @@ Assets
 How to use
 - Import `netbox_inventory.json` (optional), review diagrams, then apply wiring with Hedgehog.
 - Expect more leaf‑spine load than rail‑optimized when tenants span many hosts; plan scheduling accordingly.
+
+See also
+- Size overview: ../README.md
+- Compositions overview: ../../README.md

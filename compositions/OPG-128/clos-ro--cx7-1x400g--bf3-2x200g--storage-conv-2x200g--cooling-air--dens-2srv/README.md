@@ -28,6 +28,10 @@ Assets
   - `hhfab/backend.drawio` — backend topology diagram (draw.io)
 - `netbox_inventory.json` — NetBox inventory export
 
+See also
+- Size overview: ../README.md
+- Compositions overview: ../../README.md
+
 How to use
 - Import `netbox_inventory.json` (optional), review diagrams, then apply wiring with Hedgehog.
 - For best results, pack tenants inside a single first-hop rail domain per run.
