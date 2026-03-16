@@ -39,7 +39,7 @@ reference_data:
       manufacturer: generic
       model: OCP-Compliant xPU Server
       slug: ocp-compliant-xpu-server
-      u_height: 2
+      u_height: 4
       is_full_depth: true
     - id: srv_storage_generic_dt
       manufacturer: generic
