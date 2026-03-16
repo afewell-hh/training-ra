@@ -1,6 +1,10 @@
 # XOC‑512 / 4× OPG‑128 — Rail‑Optimized Clos (Air)
 
-Rail‑optimized across OPGs; when jobs are placed within first‑hop rail domains, collective traffic remains mostly leaf‑local, materially reducing spine utilization.
+Overview
+- Four OPG‑128 building blocks under an XOC spine layer. Rail‑optimized backend across OPGs.
+
+Why choose it
+- Reduce spine utilization at larger scale by keeping collectives leaf‑local when jobs are placed within first‑hop rail domains.
 
 Attributes
 - Backend: rail‑optimized; CX7 1×400G per GPU (per OPG)
@@ -8,12 +12,10 @@ Attributes
 - Cooling/Density: air; ~2 servers/rack
 
 Assets
-- `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — topology authoring plan (DS5000-based)
-- `wiring/` — Hedgehog Wiring CRDs
-  - `wiring-backend.yaml` — backend fabric wiring
-- `diagrams/` — visual diagrams
-  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `connectivity-map.csv` — end‑to‑end cabling and port mapping
+- `topology-map.yaml` — topology authoring plan (DS5000‑based)
+- `wiring/` — Hedgehog Wiring CRDs (per fabric)
+- `diagrams/` — visuals (per fabric)
 - `netbox_inventory.json` — NetBox inventory export
 
 Notes
