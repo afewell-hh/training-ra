@@ -15,9 +15,9 @@ Open Systems for AI (OSAI) — why it matters
 - OSAI is an OCP strategic initiative focused on practical, interoperable building blocks for AI infrastructure. The vision: make it easier to plan, scale, and operate AI clusters with open designs and shared language. Benefits for operators include clearer choices, lower integration risk, and the ability to evolve hardware without rewriting the architecture.
 
 Open Cluster Designs — OPGs and XOCs in plain terms
-- OPG (per OCP’s OPG‑M paper): Think “pod‑sized building block.” It groups a set of xPU servers, storage, and services with the leaf switches they connect to. If you deploy one OPG, you have a small, self‑contained training fabric.
-- XOC (per OCP’s XOC‑N paper): Think “one or more OPGs bundled together.” Like clicking LEGO bricks side by side, then adding the pieces needed to link them. XOCs describe how multiple OPGs are interconnected and operated as a larger cluster.
-- Why you should care: OPGs make sizing and growth predictable. XOCs let you scale from one OPG to many using the same patterns.
+- OPG (per OCP’s OPG‑M paper): A pod‑sized building block that groups xPU servers, storage/metadata, and the leaf switches they attach to. An OPG by itself does not include the spine/aggregation resources or external connectivity; those are provided at the XOC layer.
+- XOC (per OCP’s XOC‑N paper): Composes one or more OPGs together with the necessary spine/aggregation and head‑end resources. Like clicking LEGO bricks side by side, then adding the pieces on top to interconnect them cleanly. All north–south connectivity is handled at this layer.
+- Why you should care: OPGs make sizing and growth predictable. XOCs provide the interconnect and head‑end needed to operate OPGs as a functional cluster.
 
 What’s in this repo
 - Composition assets you can browse and reuse:

@@ -3,13 +3,13 @@
 Welcome. This folder contains the compositions for the Open Cluster Designs aligned AI Training Fabric Reference Architecture.
 
 What is an OPG?
-- In OCP’s language, an OPG is a pod‑sized building block: a set of xPU servers, storage/metadata services, and the leaf switches they attach to. If you deploy one OPG, you have a complete small training fabric.
+- In OCP’s language, an OPG is a pod‑sized building block: a set of xPU servers, storage/metadata services, and the leaf switches they attach to. An OPG does not include the spine/aggregation layer or external connectivity; those are provided by the XOC.
 
 What is an XOC?
-- An XOC composes one or more OPGs into a larger cluster, adding the interconnect needed to tie them together. If OPGs are adjacent LEGO bricks, an XOC is how you click them together and add the pieces on top to connect them cleanly.
+- An XOC composes one or more OPGs into a functional cluster by adding the necessary spine/aggregation and head‑end resources. If OPGs are adjacent LEGO bricks, an XOC is how you click them together and add the pieces on top to connect them cleanly.
 
 Why it matters
-- OPGs make it easy to size, deploy, and iterate. XOCs let you scale from one OPG to many using the same patterns, with clear trade‑offs.
+- OPGs make it easier to size and plan. XOCs provide the interconnect and external connectivity required to operate OPGs as a cluster, with clear trade‑offs by variant.
 
 How this folder is organized
 - OPG sizes: `OPG-64`, `OPG-128`, `OPG-256`, `OPG-512`
@@ -43,4 +43,3 @@ A note on completeness
 References
 - OPG‑M System Architecture (2026‑01‑14): https://www.opencompute.org/documents/opg-m-system-architecture-final-14-january-2026-pdf
 - XOC‑N System Architecture (2026‑01‑14): https://www.opencompute.org/documents/xoc-n-system-architecture-final-14-january-2026-pdf
-
