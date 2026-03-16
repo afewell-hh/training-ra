@@ -1,6 +1,6 @@
 # OPG‑64 — Rail‑Optimized Clos (CX7 1×400G, BF3 2×200G, Converged Storage, Air, 2 srv/rack)
 
-This variant applies a rail‑optimized Clos to a 64‑xPU training cluster. Scale‑out traffic uses CX7 1×400G per GPU (RoCE); frontend and storage use BF3 2×200G per server with L3 multi‑homing across two leaves. Storage is converged into the frontend network for simplicity at this tier.
+This variant applies a rail‑optimized Clos to a 64‑xPU training cluster. Scale‑out traffic uses CX7 1×400G per GPU (RoCE); frontend and storage use BF3 2×200G per server with L3 multihoming across two leaves. Storage is converged into the frontend network for simplicity at this tier.
 
 Why choose it
 - Dramatically reduces spine traffic when tenants are scheduled within a common first‑hop rail domain (rail‑n NICs on the same leaf), cutting the uplink congestion that drives most AI network performance issues.
@@ -16,12 +16,14 @@ Attributes
 - Optics: OS2 single‑mode DR‑class (default)
 - DS5000 zoning: 4×200G breakouts on odd ports; 2×400G unrestricted; reserve 32×800G uplinks per leaf
 
-Assets (placeholders; to be populated)
-- connectivity-map.csv — end‑to‑end cabling and port mapping
-- bom.yaml — bill of materials (switches, optics, cables, gateways)
-- wiring.yaml — Hedgehog Wiring CRDs (Switch, Server, Connection)
-- vpc.yaml — Hedgehog VPC CRDs (VPC, VPCAttachment, External)
-- diagrams/ — labeled visuals matching connectivity IDs
+Assets
+- `connectivity-map.csv` — end‑to‑end cabling and port mapping
+- `topology-map.yaml` — topology authoring plan (DS5000‑based)
+- `wiring/` — Hedgehog Wiring CRDs
+  - `wiring-backend.yaml` — backend fabric wiring
+- `diagrams/` — visual diagrams
+  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `netbox_inventory.json` — NetBox inventory export
 
 Scheduling note
 - Prefer placing multi‑node jobs within the same first‑hop rail domain. Spreading nodes across domains forces scale‑out via the spine; packed placement keeps most collectives leaf‑local.

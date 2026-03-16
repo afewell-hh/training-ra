@@ -1,6 +1,7 @@
-# XOC‑256 / 1× OPG‑128 — Rail‑Optimized Clos (Air)
+# XOC‑256 / 2× OPG‑128 — Rail‑Optimized Clos (Air)
 
-Composes one OPG‑128 with a spine layer (XOC structure), using a rail‑optimized backend and converged frontend. With domain‑local placement, most scale‑out remains leaf‑local, materially reducing spine traffic.
+Overview
+- Bundles two OPG‑128 building blocks with an XOC spine layer. Rail‑optimized backend plus converged frontend. With domain‑local placement, most scale‑out stays leaf‑local, materially reducing spine traffic.
 
 Attributes
 - Backend: rail‑optimized; CX7 1×400G per GPU
@@ -8,12 +9,10 @@ Attributes
 - Cooling/Density: air; ~2 servers/rack
 
 Assets
-- `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
-- `wiring/` — Hedgehog Wiring CRDs
-  - `wiring-backend.yaml` — backend fabric wiring
-- `diagrams/` — visual diagrams
-  - `hhfab/backend.drawio` — backend topology diagram (draw.io)
+- `connectivity-map.csv` — end‑to‑end cabling and port mapping
+- `topology-map.yaml` — topology authoring plan (DS5000‑based)
+- `wiring/` — Hedgehog Wiring CRDs (per fabric)
+- `diagrams/` — visuals (per fabric)
 - `netbox_inventory.json` — NetBox inventory export
 
 Notes

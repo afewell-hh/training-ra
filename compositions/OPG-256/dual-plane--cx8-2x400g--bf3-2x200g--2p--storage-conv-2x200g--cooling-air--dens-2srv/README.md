@@ -2,6 +2,10 @@
 
 Two independent backend fabrics (Plane A/B) with CX8 2×400G per GPU — one port to each plane. Improves bandwidth and allows plane‑level maintenance windows.
 
+Why choose it
+- Higher failure isolation: each plane can be maintained independently.
+- More bandwidth headroom for large collectives and busy clusters.
+
 Attributes
 - Backend: dual plane (2p); CX8 2×400G per GPU (RoCE)
 - Frontend: BF3 2×200G per server (L3MH)
@@ -20,4 +24,5 @@ Assets
   - `hhfab/backend-plane-b.drawio` — backend Plane B topology (draw.io)
 - `netbox_inventory.json` — NetBox inventory export
 
-Notes
+Considerations
+- Dual‑plane adds parts and operational complexity; use when steady‑state utilization is high or isolation is a priority.

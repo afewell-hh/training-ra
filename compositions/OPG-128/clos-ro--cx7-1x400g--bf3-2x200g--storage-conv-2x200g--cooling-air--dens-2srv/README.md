@@ -21,11 +21,13 @@ Scheduling note
 
 Assets
 - `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - `wiring/` — Hedgehog Wiring CRDs
   - `wiring-backend.yaml` — backend fabric wiring
 - `diagrams/` — visual diagrams
   - `hhfab/backend.drawio` — backend topology diagram (draw.io)
 - `netbox_inventory.json` — NetBox inventory export
 
-Notes
+How to use
+- Import `netbox_inventory.json` (optional), review diagrams, then apply wiring with Hedgehog.
+- For best results, pack tenants inside a single first-hop rail domain per run.
