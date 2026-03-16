@@ -1,57 +1,47 @@
-# AI Training Reference Architecture — Assets Repository (Preview Layout)
+# Open Cluster Designs Aligned AI Training Fabric Reference Architecture
 
-![OCP](https://img.shields.io/badge/OCP-aligned-blue)
-![EVPN/VXLAN](https://img.shields.io/badge/Overlay-EVPN%2FVXLAN-green)
-![SONiC](https://img.shields.io/badge/NOS-SONiC-lightgrey)
-![Rail‑Optimized](https://img.shields.io/badge/Topology-Rail%E2%80%91Optimized-orange)
+Badges
+- OCP aligned
+- EVPN/VXLAN overlay
+- SONiC underlay
+- Rail‑optimized topology option
 
-Welcome! This repository hosts the open assets that accompany the AI Training Reference Architecture (RA). It’s designed to be easy to browse in the GitHub UI and practical to use in real deployments.
+Welcome. This repository hosts the open assets for the AI Training Fabric Reference Architecture jointly submitted to the Open Compute Project by Hedgehog and Celestica. Our goal is to make OCP’s Open Cluster Designs approachable and useful to busy operators, architects, and leaders.
 
-Highlights
-- Practical assets per variant: connectivity maps (CSV), BOMs (YAML), Hedgehog CRDs (wiring.yaml, vpc.yaml), and diagrams (SVG/PNG).
-- Tokenized variant naming for quick grep/scripting across sizes and options.
-- Rail‑optimized guidance to dramatically reduce spine traffic via placement in first‑hop rail domains.
-- Clear XOC composition mapping (e.g., XOC‑256 = 2× OPG‑128; XOC‑512 = 4× OPG‑128 or 1× OPG‑512), with folders aligned to bundles.
-- Vendor‑neutral, OCP‑aligned wording intended to be directly actionable.
+About the Open Compute Project (OCP)
+- OCP is an industry community that publishes open designs and best practices for data center hardware and infrastructure. Contributions are reviewed in the open and built to be vendor‑neutral and reusable.
 
-Why this matters
-- These assets are intended to be directly useful: you can study the topology, adapt the BOM, and apply CRDs with Hedgehog to realize the described networks. We aim for helpful, educational, OSS‑appropriate guidance rather than product pitch.
+Open Systems for AI (OSAI) — why it matters
+- OSAI is an OCP strategic initiative focused on practical, interoperable building blocks for AI infrastructure. The vision: make it easier to plan, scale, and operate AI clusters with open designs and shared language. Benefits for operators include clearer choices, lower integration risk, and the ability to evolve hardware without rewriting the architecture.
 
-Quick navigation
-- Catalog index: see `../../docs/catalog.md`
-- OPG-64 — see `compositions/OPG-64/README.md`
-- OPG-128 — see `compositions/OPG-128/README.md`
-- OPG-256 — see `compositions/OPG-256/README.md`
-- OPG-512 — see `compositions/OPG-512/README.md`
-- XOC-256 — see `compositions/XOC-256/README.md`
-- XOC-512 — see `compositions/XOC-512/README.md`
-- XOC-1024 — see `compositions/XOC-1024/README.md`
+Open Cluster Designs — OPGs and XOCs in plain terms
+- OPG (per OCP’s OPG‑M paper): Think “pod‑sized building block.” It groups a set of xPU servers, storage, and services with the leaf switches they connect to. If you deploy one OPG, you have a small, self‑contained training fabric.
+- XOC (per OCP’s XOC‑N paper): Think “one or more OPGs bundled together.” Like clicking LEGO bricks side by side, then adding the pieces needed to link them. XOCs describe how multiple OPGs are interconnected and operated as a larger cluster.
+- Why you should care: OPGs make sizing and growth predictable. XOCs let you scale from one OPG to many using the same patterns.
 
-What’s inside (diagram)
-- See `compositions/OPG-128/diagrams/README.md` for how diagrams map to CSV IDs. A top‑level overview diagram will be added in a future update.
+What’s in this repo
+- Composition assets you can browse and reuse:
+  - connectivity-map.csv — end‑to‑end device/port mapping
+  - topology-map.yaml — authoring plan used to generate inventories and wiring
+  - wiring/ — one wiring‑<fabric>.yaml per Hedgehog‑managed fabric (no OoB files)
+  - diagrams/ — draw.io files per fabric
+  - netbox_inventory.json — importable inventory for NetBox
+- Compositions are organized by size:
+  - OPG‑64, OPG‑128, OPG‑256, OPG‑512 (single building blocks)
+  - XOC‑256, XOC‑512, XOC‑1024 (bundles of OPGs)
 
-Status
-- This is a modeled structure; assets are placeholders and will be populated. Variant folders include README overviews and placeholder notes until CSV/BOM/CRD/diagrams are added.
+How to navigate
+- Start in `compositions/` for a friendly overview and links to each size.
+- Inside a size folder, pick a variant (e.g., rail‑optimized vs single‑homed) and open its README.
+- Each variant folder contains the assets listed above. Some larger XOCs may be partially populated where scale pushes against current port budgets; those READMEs call out what’s pending.
 
-Quick start
-- Pick a size above and open the composition README.
-- Choose a variant (folder) and read its README for attributes and notes.
-- Use the assets inside the variant folder:
-  - connectivity-map.csv — end‑to‑end cabling and ports
-  - bom.yaml — bill of materials (switches, optics, cables)
-  - wiring.yaml — Hedgehog Wiring CRDs (Switch, Server, Connection)
-  - vpc.yaml — Hedgehog VPC CRDs (VPC, VPCAttachment, External)
-- Apply CRDs in a test lab to validate: `kubectl apply -f wiring.yaml && kubectl apply -f vpc.yaml`
-- Adapt CSV/BOM to your constraints; keep token naming for traceability.
+Who is this for
+- Practitioners who want realistic topologies and inventories.
+- Technical leaders who want the “what/why” without wading through dense specs.
 
 References
 - OPG‑M System Architecture (2026‑01‑14): https://www.opencompute.org/documents/opg-m-system-architecture-final-14-january-2026-pdf
 - XOC‑N System Architecture (2026‑01‑14): https://www.opencompute.org/documents/xoc-n-system-architecture-final-14-january-2026-pdf
 
-Rail‑Optimized Benefits (Guidance)
-- What it is: A wiring allocation that keeps all NICs of a given rail index on the same leaf (or contiguous leaves at larger scale). It does not change switch counts or oversubscription vs standard Clos.
-- Why it matters: When tenants are scheduled within a common first‑hop rail domain, most scale‑out traffic remains leaf‑local, dramatically reducing spine traffic. Since uplink/spine congestion drives most AI network performance issues, this materially improves tail latency and overall job throughput at any scale.
-- Scheduling and tenancy: Treat each “first‑hop rail domain” (servers whose rail‑n NICs land on a common leaf) as a preferred placement unit. Packing tenants inside a domain minimizes cross‑spine flows; spreading a tenant across domains forces 100% of scale‑out through the spine.
-- Example (composition): In a service built from XOC‑256 as 4× OPG‑64, a 4‑node tenant placed inside a single first‑hop rail domain contributes little spine traffic; the same tenant spread one node per domain across the four OPG‑64s forces all scale‑out via the spine shared by the full composition.
-- Leaf radix example (DS5000 51T): 128×400G ports per leaf; with ~50% reserved for uplinks, 64 downlinks remain. With 1×400G per xPU (common for B200/MI300X), up to 64 hosts (512 xPUs) can have their rail‑n NICs terminate on common leaves, enabling substantial spine bypass when scheduling aligns.
-- Playbook: Prefer rail‑optimized for training clusters; align tenancy to first‑hop rail domains; use QoS/ECN/PFC to protect remaining FE and control traffic. This is a complementary path alongside protocol and scheduler advances and delivers immediate, durable benefits.
+Notes on rail‑optimized option
+- Rail‑optimized wiring keeps each NIC “rail” localized to a leaf, reducing spine traffic for common training patterns. It complements standard Clos designs and can improve tail latency and throughput when scheduling aligns with rail domains.
