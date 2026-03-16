@@ -1,4 +1,4 @@
-# XOC‑256 / 1× OPG‑128 — Single‑Homed Clos (Liquid)
+# XOC‑256 / 2× OPG‑128 — Single‑Homed Clos (Liquid)
 
 Liquid‑cooled, higher density version of the single‑homed backend.
 
@@ -9,7 +9,7 @@ Attributes
 
 Assets
 - `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - `wiring/` — Hedgehog Wiring CRDs
   - `wiring-backend.yaml` — backend fabric wiring
 - `diagrams/` — visual diagrams

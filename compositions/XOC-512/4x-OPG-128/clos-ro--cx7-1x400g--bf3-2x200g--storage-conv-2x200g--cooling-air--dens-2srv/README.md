@@ -1,4 +1,4 @@
-# XOC‑512 / 2× OPG‑128 — Rail‑Optimized Clos (Air)
+# XOC‑512 / 4× OPG‑128 — Rail‑Optimized Clos (Air)
 
 Rail‑optimized across OPGs; when jobs are placed within first‑hop rail domains, collective traffic remains mostly leaf‑local, materially reducing spine utilization.
 
@@ -9,7 +9,7 @@ Attributes
 
 Assets
 - `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - `wiring/` — Hedgehog Wiring CRDs
   - `wiring-backend.yaml` — backend fabric wiring
 - `diagrams/` — visual diagrams

@@ -1,4 +1,4 @@
-# XOC‑512 / 2× OPG‑128 — Rail‑Optimized Clos (Liquid)
+# XOC‑512 / 4× OPG‑128 — Rail‑Optimized Clos (Liquid)
 
 Higher density via liquid cooling.
 
@@ -9,7 +9,7 @@ Attributes
 
 Assets
 - `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - `wiring/` — Hedgehog Wiring CRDs
   - `wiring-backend.yaml` — backend fabric wiring
 - `diagrams/` — visual diagrams

@@ -2,6 +2,9 @@
 
 Two backend planes with CX8 2×400G per GPU (one port per plane) to increase bandwidth and allow plane‑level maintenance.
 
+Why choose it
+- Plane‑level isolation for maintenance and failures; more bandwidth headroom for busy clusters.
+
 Attributes
 - Backend: dual plane (2p); CX8 2×400G per GPU
 - Frontend: BF3 2×200G per server (L3MH)
@@ -10,7 +13,7 @@ Attributes
 
 Assets
 - `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - `wiring/` — Hedgehog Wiring CRDs
   - `wiring-backend-plane-a.yaml` — backend Plane A fabric wiring
   - `wiring-backend-plane-b.yaml` — backend Plane B fabric wiring

@@ -8,8 +8,11 @@ Attributes
 - Cooling/Density: air; ~2 servers/rack
 
 Assets (partial — generation incomplete; needs fast-follow)
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - Pending: `connectivity-map.csv`, `wiring/`, `diagrams/`, `netbox_inventory.json`
 
 Notes
-- Wiring and NetBox export blocked by port-exhaustion gap at XOC-1024 scale; see generate.log.
+- Wiring and NetBox export blocked by port-exhaustion gap at XOC‑1024 scale; see generate.log.
+
+What to expect next
+- We will publish connectivity maps, wiring, diagrams, and NetBox inventory once port budgeting is finalized for this tier.

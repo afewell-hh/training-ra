@@ -1,6 +1,10 @@
-# XOC‑256 / 1× OPG‑128 — Single‑Homed Clos (Air)
+# XOC‑256 / 2× OPG‑128 — Single‑Homed Clos (Air)
 
-Single‑homed backend as per OPG‑M exemplar; converged frontend.
+Overview
+- Two OPG‑128 building blocks with a single‑homed backend per OPG and a converged frontend.
+
+Why choose it
+- Simpler host semantics at XOC scale; good for staged adoption when rail constraints are not desired.
 
 Attributes
 - Backend: single‑homed; CX7 1×400G per GPU
@@ -9,7 +13,7 @@ Attributes
 
 Assets
 - `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - `wiring/` — Hedgehog Wiring CRDs
   - `wiring-backend.yaml` — backend fabric wiring
 - `diagrams/` — visual diagrams

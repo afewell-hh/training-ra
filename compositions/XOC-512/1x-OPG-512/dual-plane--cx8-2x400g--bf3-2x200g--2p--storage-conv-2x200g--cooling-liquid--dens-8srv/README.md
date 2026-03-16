@@ -9,7 +9,7 @@ Attributes
 
 Assets
 - `connectivity-map.csv` — end-to-end cabling and port mapping
-- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- `topology-map.yaml` — topology authoring plan (DS5000-based)
 - `wiring/` — Hedgehog Wiring CRDs
   - `wiring-backend-plane-a.yaml` — backend Plane A fabric wiring
   - `wiring-backend-plane-b.yaml` — backend Plane B fabric wiring
