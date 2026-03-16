@@ -3,7 +3,11 @@
 Attributes
 - Backend: dual plane (2p); CX8 2×400G per GPU
 - Frontend: BF3 2×200G (L3MH); storage converged
-- Cooling/Density: air; ~2 servers/rack (placeholder)
-- Assets: connectivity-map.csv, bom.yaml, wiring.yaml, vpc.yaml, diagrams/ (to be generated)
+- Cooling/Density: air; ~2 servers/rack
 
-Plan
+Assets (partial — generation incomplete; needs fast-follow)
+- `topology-map.yaml` — HNP topology plan input (DS5000-based)
+- Pending: `connectivity-map.csv`, `wiring/`, `diagrams/`, `netbox_inventory.json`
+
+Notes
+- Wiring and NetBox export blocked by port-exhaustion gap at XOC-1024 scale; see generate.log.
