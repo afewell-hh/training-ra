@@ -1,15 +1,3 @@
-hhfab validate — frontend fabric
-Status: SKIPPED (export prerequisite not met)
-
-The frontend wiring export was attempted by export_wiring_yaml --split-by-fabric
-but no wiring-frontend.yaml was produced. This is a known pre-existing gap:
-  "Switch references group 'fe-mclag' but no PlanMCLAGDomain exists"
-
-Root cause: DS5000 L3MH (frontend fabric) requires an MCLAG domain object in DIET,
-which is not yet modeled. This is tracked as a pre-existing DIET gap.
-
-The hh-netbox-plugin pipeline (PR #327) no longer deletes this artifact if it
-were to be produced. The absence is due to the export failure, not pipeline suppression.
-
-Resolution: blocked on DIET modeling of frontend MCLAG domains.
-Regenerate this variant once that gap is closed.
+03:56:00 INF Hedgehog Fabricator version=v0.43.1
+03:56:00 INF Wiring hydrated successfully mode=if-not-present
+03:56:00 INF Fabricator config and wiring are valid
