@@ -1,13 +1,15 @@
 meta:
-  case_id: opg64_hyperconverged_ds5000
-  name: OPG-64 Hyperconverged DS5000
-  description: Reference-architecture intake case for OPG-64 hyperconverged training topology
+  case_id: opg64_mesh_conv_sh_air_2srv
+  name: OPG-64 Mesh Converged SH Air 2srv
+  description: Reference-architecture intake case for OPG-64 mesh-converged training topology with single-homed scale-out
   version: 1
   managed_by: yaml
   tags:
     - reference-architecture
     - opg64
-    - hyperconverged
+    - mesh
+    - converged
+    - single-homed
     - training
 
 reference_data:
@@ -27,10 +29,10 @@ reference_data:
       manufacturer: celestica
       model: Celestica DS5000 Leaf
       slug: celestica-ds5000-leaf
-    - id: sw_ds5000_spine_dt
+    - id: sw_ds2000_inb_dt
       manufacturer: celestica
-      model: Celestica DS5000 Spine
-      slug: celestica-ds5000-spine
+      model: Celestica DS2000
+      slug: celestica-ds2000
     - id: sw_ds1000_oob_dt
       manufacturer: celestica
       model: Celestica DS1000
@@ -67,7 +69,7 @@ reference_data:
       is_full_depth: false
 
   device_type_extensions:
-    - id: sw_ds5000_leaf_ext
+    - id: sw_ds5000_scale_out_ext
       device_type: sw_ds5000_leaf_dt
       mclag_capable: false
       hedgehog_roles: [server-leaf]
@@ -75,25 +77,34 @@ reference_data:
       native_speed: 800
       uplink_ports: 32
       hedgehog_profile_name: celestica-ds5000
-      notes: Converged collapsed leaf pair. redundancy_type is an HNP validation shim only; RA intent is L3MH.
-    - id: sw_ds5000_spine_ext
-      device_type: sw_ds5000_spine_dt
+      notes: Scale-out mesh leaf pair for the OPG-64 mesh-converged topology.
+    - id: sw_ds5000_soc_storage_ext
+      device_type: sw_ds5000_leaf_dt
       mclag_capable: false
-      hedgehog_roles: [spine]
-      supported_breakouts: [1x800g, 1x10g]
+      hedgehog_roles: [server-leaf]
+      supported_breakouts: [1x800g, 2x400g, 4x200g, 8x100g]
       native_speed: 800
-      uplink_ports: 0
+      uplink_ports: 32
       hedgehog_profile_name: celestica-ds5000
-      notes: Placeholder growth-path spine pair retained in plan for manual post-generation handling.
+      notes: SoC and storage mesh leaf pair for the OPG-64 mesh-converged topology.
+    - id: sw_ds2000_inb_ext
+      device_type: sw_ds2000_inb_dt
+      mclag_capable: false
+      hedgehog_roles: [server-leaf]
+      supported_breakouts: []
+      native_speed: 25
+      uplink_ports: 8
+      hedgehog_profile_name: celestica-ds2000
+      notes: DS2000 in-band management fabric.
     - id: sw_ds1000_oob_ext
       device_type: sw_ds1000_oob_dt
       mclag_capable: false
       hedgehog_roles: [server-leaf]
-      supported_breakouts: [1x1g, 1x10g]
+      supported_breakouts: []
       native_speed: 1
-      uplink_ports: 2
+      uplink_ports: 8
       hedgehog_profile_name: celestica-ds1000
-      notes: Unmanaged OOB management switch pair.
+      notes: DS1000 OOB management switch pair.
 
   breakout_options:
     - id: b_1x800
@@ -114,47 +125,35 @@ reference_data:
       logical_ports: 4
       logical_speed: 200
       optic_type: OSFP-800G-4x200G-DR4
-    - id: b_1x1g
-      breakout_id: 1x1g
-      from_speed: 1
-      logical_ports: 1
-      logical_speed: 1
-      optic_type: RJ45
-    - id: brk_1x10_sfpplus
-      breakout_id: 1x10g
-      from_speed: 10
-      logical_ports: 1
-      logical_speed: 10
-      optic_type: SFP+-10G-LR-OS2
 
   module_types:
-    - id: nic_xpu_be_8x400
+    - id: nic_xpu_scale_out_8x400
       manufacturer: nvidia
-      model: Generic xPU Backend 8x400G NIC
+      model: Generic xPU Scale-Out 8x400G NIC
       interface_templates:
-        - name: be0
+        - name: so0
           type: other
-        - name: be1
+        - name: so1
           type: other
-        - name: be2
+        - name: so2
           type: other
-        - name: be3
+        - name: so3
           type: other
-        - name: be4
+        - name: so4
           type: other
-        - name: be5
+        - name: so5
           type: other
-        - name: be6
+        - name: so6
           type: other
-        - name: be7
+        - name: so7
           type: other
-    - id: nic_xpu_fe_2x200
+    - id: nic_xpu_soc_storage_2x200
       manufacturer: nvidia
-      model: Generic xPU Frontend 2x200G NIC
+      model: Generic xPU SoC/Storage 2x200G NIC
       interface_templates:
-        - name: fe0
+        - name: ss0
           type: other
-        - name: fe1
+        - name: ss1
           type: other
     - id: nic_dual_200g
       manufacturer: generic
@@ -164,6 +163,14 @@ reference_data:
           type: other
         - name: port1
           type: other
+    - id: nic_dual_25g
+      manufacturer: generic
+      model: Generic Dual-Port 25GbE NIC
+      interface_templates:
+        - name: mgmt0
+          type: other
+        - name: mgmt1
+          type: other
     - id: bmc_module
       manufacturer: generic
       model: BMC Management Port
@@ -172,29 +179,42 @@ reference_data:
           type: other
 
 plan:
-  name: OPG-64 Hyperconverged DS5000
+  name: OPG-64 Mesh Converged SH Air 2srv
   status: draft
-  description: Small-site hyperconverged training topology with converged fabric, unmanaged OOB, and placeholder spine growth path. Post-generation collapsed-fabric edits are manual.
+  description: >
+    OPG-64 training building block. `scale-out` and `soc-storage` are explicit
+    two-leaf mesh fabrics. In-band management uses a DS2000 pair and a generic
+    2x25GbE NIC on every server class; only one port from that NIC is
+    connected. OOB uses a DS1000 pair. Intended grouped single-homed behavior
+    depends on hh-netbox-plugin issue #322.
 
 switch_classes:
-  - switch_class_id: conv_leaf
-    fabric_name: converged
+  - switch_class_id: scale_out_leaf
+    fabric_name: scale-out
     fabric_class: managed
     hedgehog_role: server-leaf
-    device_type_extension: sw_ds5000_leaf_ext
+    device_type_extension: sw_ds5000_scale_out_ext
+    topology_mode: mesh
     override_quantity: 2
     uplink_ports_per_switch: 32
     mclag_pair: false
-    redundancy_type: eslag
-    redundancy_group: conv-leaf-hnp-shim
-    notes: HNP validation shim only. RA intent is L3MH with alternating distribution, not MLAG/ESLAG semantics.
-  - switch_class_id: conv_spine
-    fabric_name: converged
+    notes: Intended grouped-per-leaf single-homed semantics depend on hh-netbox-plugin issue #322.
+  - switch_class_id: soc_storage_leaf
+    fabric_name: soc-storage
     fabric_class: managed
-    hedgehog_role: spine
-    device_type_extension: sw_ds5000_spine_ext
+    hedgehog_role: server-leaf
+    device_type_extension: sw_ds5000_soc_storage_ext
+    topology_mode: mesh
     override_quantity: 2
-    uplink_ports_per_switch: 0
+    uplink_ports_per_switch: 32
+    mclag_pair: false
+  - switch_class_id: inb_mgmt_leaf
+    fabric_name: inb-mgmt
+    fabric_class: managed
+    hedgehog_role: server-leaf
+    device_type_extension: sw_ds2000_inb_ext
+    override_quantity: 2
+    uplink_ports_per_switch: 8
     mclag_pair: false
   - switch_class_id: oob_leaf
     fabric_name: oob-mgmt
@@ -202,60 +222,70 @@ switch_classes:
     hedgehog_role: server-leaf
     device_type_extension: sw_ds1000_oob_ext
     override_quantity: 2
-    uplink_ports_per_switch: 2
+    uplink_ports_per_switch: 8
     mclag_pair: false
 
 switch_port_zones:
-  - switch_class: conv_leaf
-    zone_name: uplink_800
+  - switch_class: scale_out_leaf
+    zone_name: scale_out_uplink_800
     zone_type: uplink
     port_spec: 26,28,30,32,34,36,38-63
     breakout_option: b_1x800
     allocation_strategy: sequential
     priority: 10
-  - switch_class: conv_leaf
-    zone_name: server_be_2x400
+  - switch_class: scale_out_leaf
+    zone_name: scale_out_server_2x400
     zone_type: server
     port_spec: 1-16
     breakout_option: brk_2x400_osfp
     allocation_strategy: sequential
     priority: 20
-  - switch_class: conv_leaf
-    zone_name: server_conv_4x200
+  - switch_class: scale_out_leaf
+    zone_name: scale_out_mesh_800
+    zone_type: mesh
+    port_spec: 26,28
+    breakout_option: b_1x800
+    allocation_strategy: sequential
+    priority: 30
+  - switch_class: soc_storage_leaf
+    zone_name: soc_storage_uplink_800
+    zone_type: uplink
+    port_spec: 26,28,30,32,34,36,38-63
+    breakout_option: b_1x800
+    allocation_strategy: sequential
+    priority: 10
+  - switch_class: soc_storage_leaf
+    zone_name: soc_storage_server_4x200
     zone_type: server
     port_spec: 27,29,31,33,35,37
     breakout_option: brk_4x200_osfp
     allocation_strategy: sequential
-    priority: 30
-  - switch_class: conv_spine
-    zone_name: spine_uplink_800
-    zone_type: fabric
-    port_spec: 1-64
+    priority: 20
+  - switch_class: soc_storage_leaf
+    zone_name: soc_storage_mesh_800
+    zone_type: mesh
+    port_spec: 26,28
     breakout_option: b_1x800
     allocation_strategy: sequential
-    priority: 10
-  - switch_class: conv_spine
-    zone_name: spine_oob_10g
-    zone_type: oob
-    port_spec: 65-66
-    breakout_option: brk_1x10_sfpplus
+    priority: 30
+  - switch_class: inb_mgmt_leaf
+    zone_name: inb_mgmt_server_25g
+    zone_type: server
+    port_spec: 1-24
     allocation_strategy: sequential
-    priority: 20
+    priority: 10
   - switch_class: oob_leaf
     zone_name: oob_server_1g
     zone_type: oob
-    port_spec: 1-32
-    breakout_option: b_1x1g
+    port_spec: 1-48
     allocation_strategy: sequential
     priority: 10
   - switch_class: oob_leaf
     zone_name: oob_uplink_10g
     zone_type: oob
-    port_spec: 49-50
-    breakout_option: brk_1x10_sfpplus
+    port_spec: 49-56
     allocation_strategy: sequential
     priority: 20
-    peer_zone: conv_spine/spine_oob_10g
 
 server_classes:
   - server_class_id: compute_xpu
@@ -283,7 +313,7 @@ server_classes:
     gpus_per_server: 0
     server_device_type: srv_hh_gateway_dt
   - server_class_id: hh_controller
-    description: Hedgehog converged controller node
+    description: Hedgehog controller node
     category: infrastructure
     quantity: 1
     gpus_per_server: 0
@@ -291,65 +321,85 @@ server_classes:
 
 server_nics:
   - server_class: compute_xpu
-    nic_id: be
-    module_type: nic_xpu_be_8x400
+    nic_id: scale-out
+    module_type: nic_xpu_scale_out_8x400
   - server_class: compute_xpu
-    nic_id: fe
-    module_type: nic_xpu_fe_2x200
+    nic_id: soc-storage
+    module_type: nic_xpu_soc_storage_2x200
+  - server_class: compute_xpu
+    nic_id: inb-mgmt
+    module_type: nic_dual_25g
   - server_class: compute_xpu
     nic_id: bmc
     module_type: bmc_module
   - server_class: storage_srv
-    nic_id: fe
+    nic_id: soc-storage
     module_type: nic_dual_200g
+  - server_class: storage_srv
+    nic_id: inb-mgmt
+    module_type: nic_dual_25g
   - server_class: storage_srv
     nic_id: bmc
     module_type: bmc_module
   - server_class: metadata_srv
-    nic_id: fe
+    nic_id: soc-storage
     module_type: nic_dual_200g
+  - server_class: metadata_srv
+    nic_id: inb-mgmt
+    module_type: nic_dual_25g
   - server_class: metadata_srv
     nic_id: bmc
     module_type: bmc_module
   - server_class: hh_gateway
-    nic_id: fe
-    module_type: nic_dual_200g
+    nic_id: inb-mgmt
+    module_type: nic_dual_25g
   - server_class: hh_gateway
     nic_id: bmc
     module_type: bmc_module
   - server_class: hh_controller
-    nic_id: fe
-    module_type: nic_dual_200g
+    nic_id: inb-mgmt
+    module_type: nic_dual_25g
   - server_class: hh_controller
     nic_id: bmc
     module_type: bmc_module
 
 server_connections:
   - server_class: compute_xpu
-    connection_id: be
-    connection_name: converged-backend
-    nic: be
+    connection_id: scale-out
+    connection_name: scale-out
+    nic: scale-out
     port_index: 0
     ports_per_connection: 8
     hedgehog_conn_type: unbundled
-    distribution: alternating
-    target_zone: conv_leaf/server_be_2x400
+    distribution: same-switch
+    target_zone: scale_out_leaf/scale_out_server_2x400
     speed: 400
     port_type: data
   - server_class: compute_xpu
-    connection_id: fe
-    connection_name: converged-frontend
-    nic: fe
+    connection_id: soc-storage
+    connection_name: soc-storage
+    nic: soc-storage
     port_index: 0
     ports_per_connection: 2
     hedgehog_conn_type: unbundled
     distribution: alternating
-    target_zone: conv_leaf/server_conv_4x200
+    target_zone: soc_storage_leaf/soc_storage_server_4x200
     speed: 200
     port_type: data
   - server_class: compute_xpu
-    connection_id: bmc
-    connection_name: bmc-oob
+    connection_id: inb-mgmt
+    connection_name: inb-mgmt
+    nic: inb-mgmt
+    port_index: 0
+    ports_per_connection: 1
+    hedgehog_conn_type: unbundled
+    distribution: alternating
+    target_zone: inb_mgmt_leaf/inb_mgmt_server_25g
+    speed: 25
+    port_type: data
+  - server_class: compute_xpu
+    connection_id: oob-mgmt
+    connection_name: oob-mgmt
     nic: bmc
     port_index: 0
     ports_per_connection: 1
@@ -359,19 +409,30 @@ server_connections:
     speed: 1
     port_type: ipmi
   - server_class: storage_srv
-    connection_id: fe
-    connection_name: converged-storage
-    nic: fe
+    connection_id: soc-storage
+    connection_name: soc-storage
+    nic: soc-storage
     port_index: 0
     ports_per_connection: 2
     hedgehog_conn_type: unbundled
     distribution: alternating
-    target_zone: conv_leaf/server_conv_4x200
+    target_zone: soc_storage_leaf/soc_storage_server_4x200
     speed: 200
     port_type: data
   - server_class: storage_srv
-    connection_id: bmc
-    connection_name: bmc-oob
+    connection_id: inb-mgmt
+    connection_name: inb-mgmt
+    nic: inb-mgmt
+    port_index: 0
+    ports_per_connection: 1
+    hedgehog_conn_type: unbundled
+    distribution: alternating
+    target_zone: inb_mgmt_leaf/inb_mgmt_server_25g
+    speed: 25
+    port_type: data
+  - server_class: storage_srv
+    connection_id: oob-mgmt
+    connection_name: oob-mgmt
     nic: bmc
     port_index: 0
     ports_per_connection: 1
@@ -381,19 +442,30 @@ server_connections:
     speed: 1
     port_type: ipmi
   - server_class: metadata_srv
-    connection_id: fe
-    connection_name: converged-metadata
-    nic: fe
+    connection_id: soc-storage
+    connection_name: soc-storage
+    nic: soc-storage
     port_index: 0
     ports_per_connection: 2
     hedgehog_conn_type: unbundled
     distribution: alternating
-    target_zone: conv_leaf/server_conv_4x200
+    target_zone: soc_storage_leaf/soc_storage_server_4x200
     speed: 200
     port_type: data
   - server_class: metadata_srv
-    connection_id: bmc
-    connection_name: bmc-oob
+    connection_id: inb-mgmt
+    connection_name: inb-mgmt
+    nic: inb-mgmt
+    port_index: 0
+    ports_per_connection: 1
+    hedgehog_conn_type: unbundled
+    distribution: alternating
+    target_zone: inb_mgmt_leaf/inb_mgmt_server_25g
+    speed: 25
+    port_type: data
+  - server_class: metadata_srv
+    connection_id: oob-mgmt
+    connection_name: oob-mgmt
     nic: bmc
     port_index: 0
     ports_per_connection: 1
@@ -403,19 +475,19 @@ server_connections:
     speed: 1
     port_type: ipmi
   - server_class: hh_gateway
-    connection_id: fe
-    connection_name: converged-gateway
-    nic: fe
+    connection_id: inb-mgmt
+    connection_name: inb-mgmt
+    nic: inb-mgmt
     port_index: 0
-    ports_per_connection: 2
+    ports_per_connection: 1
     hedgehog_conn_type: unbundled
     distribution: alternating
-    target_zone: conv_leaf/server_conv_4x200
-    speed: 200
+    target_zone: inb_mgmt_leaf/inb_mgmt_server_25g
+    speed: 25
     port_type: data
   - server_class: hh_gateway
-    connection_id: bmc
-    connection_name: bmc-oob
+    connection_id: oob-mgmt
+    connection_name: oob-mgmt
     nic: bmc
     port_index: 0
     ports_per_connection: 1
@@ -425,19 +497,19 @@ server_connections:
     speed: 1
     port_type: ipmi
   - server_class: hh_controller
-    connection_id: fe
-    connection_name: converged-controller
-    nic: fe
+    connection_id: inb-mgmt
+    connection_name: inb-mgmt
+    nic: inb-mgmt
     port_index: 0
-    ports_per_connection: 2
+    ports_per_connection: 1
     hedgehog_conn_type: unbundled
     distribution: alternating
-    target_zone: conv_leaf/server_conv_4x200
-    speed: 200
+    target_zone: inb_mgmt_leaf/inb_mgmt_server_25g
+    speed: 25
     port_type: data
   - server_class: hh_controller
-    connection_id: bmc
-    connection_name: bmc-oob
+    connection_id: oob-mgmt
+    connection_name: oob-mgmt
     nic: bmc
     port_index: 0
     ports_per_connection: 1
@@ -450,5 +522,5 @@ server_connections:
 expected:
   counts:
     server_classes: 5
-    switch_classes: 3
-    connections: 11
+    switch_classes: 4
+    connections: 14
