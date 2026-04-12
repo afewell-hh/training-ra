@@ -52,3 +52,108 @@ Tasks
 
 Acceptance Criteria
 - Naming taxonomy is accepted and applied to new folders/variants; guidance added to RA_REPOS/CONTRIBUTING.md.
+
+---
+
+## README Content Contract by Layer
+
+This section defines what each README layer in the OPG/XOC composition hierarchy is
+responsible for. It supplements the naming-token guidance above. Authors adding new OPG
+or XOC variants should follow both the naming convention above and the content contract
+for their layer.
+
+### Layer definitions and content contracts
+
+**Layer 1 — `compositions/README.md` (top-level index)**
+
+Required: OPG/XOC definitions; folder organization; navigation guidance.
+
+Key framing: OPGs are *incomplete building blocks* — they include servers and leaf
+switches but do not include a spine or external connectivity. XOCs are *composed
+solutions* that add spine/aggregation and external connectivity over one or more OPGs.
+
+---
+
+**Layer 2 — `OPG-*/README.md` (size overview)**
+
+Required: Variant list with building-block summaries; common attributes including
+uplink budget; pointer to variant READMEs.
+
+Prohibited: Deployment instructions; "why choose it" framed as a deployment decision;
+scheduling guidance for deployed clusters.
+
+---
+
+**Layer 3 — `OPG-*/<variant>/README.md` (building-block spec)**
+
+Required:
+- What this OPG provides: topology pattern, fabrics (backend/frontend/OoB), hardware
+- Port budget: server downlink zones and uplink zone with port count, speed
+- Uplink reservation: explicitly state "N×Y uplinks are reserved per leaf for XOC
+  spine connectivity" — this is the interface exposed to the composer
+- What a composer must supply: list the XOC spine switches, uplink cabling, and any
+  external connectivity that this OPG does not include
+- Assumptions and constraints: port zoning rules and topology-specific constraints
+- Assets list
+
+Optional: Reference to example XOC compositions using this variant, labeled as
+illustrative only (not prescriptive).
+
+Prohibited:
+- "How to use" deployment steps (import netbox_inventory.json, apply wiring CRDs,
+  use Hedgehog in a lab)
+- "Ideal for pilots/edge/first deployments" framing
+- Scheduling guidance for deployed clusters (tenant placement, rail-domain locality)
+- "composition/cluster" as the framing noun for the OPG itself
+- Prescribing how the OPG must be composed
+
+---
+
+**Layer 4 — `XOC-*/README.md` (tier overview)**
+
+Required: What this XOC tier composes (total xPU scale); available bundles; operator
+benefits; brief mention of what the spine/aggregation layer adds.
+
+---
+
+**Layer 5a — `XOC-*/<bundle>/README.md` (bundle)**
+
+Required: What the bundle composes (N× OPG-X under spine); what the XOC spine
+adds at this bundle scale; variant list with one-line descriptions; links to variant READMEs.
+
+Prohibited: Content-free bare variant lists with no explanation.
+
+---
+
+**Layer 5b — `XOC-*/<bundle>/<variant>/README.md` (composed-solution guide)**
+
+Required:
+- Composed topology: which OPGs, how they connect to the spine, total cluster scale
+- Spine/aggregation layer description: switch model, role, how OPG uplinks connect
+- Composition-level attributes (full cluster scale, cross-OPG traffic characteristics)
+- Why this composition exists: what it achieves that an OPG alone cannot; tradeoffs
+  vs alternatives at the same tier
+- Brief OPG summary (1-2 sentences) with pointer to OPG docs for building-block detail
+- Deployment guidance ("How to use") — this belongs here, not in OPG READMEs
+- Assets list
+
+Prohibited: Re-describing OPG building-block detail at length (defer to OPG docs).
+
+---
+
+### Cross-reference rules
+
+- OPG READMEs may reference example XOC compositions — labeled as illustrative only,
+  never as the defining purpose of the OPG.
+- XOC READMEs must briefly summarize constituent OPGs and point to OPG docs for
+  building-block detail.
+- "How to use" / deployment steps and scheduling guidance belong exclusively in
+  Layer 5b (XOC variant READMEs).
+
+### Sub-bundle navigation stubs
+
+If a bundle directory contains a sub-bundle directory (e.g.,
+`XOC-512/4x-OPG-128/2x-OPG-128/`), its README is a *navigation stub*: 1-2 sentences
+describing what the sub-grouping represents, plus a variant list. Full Layer 5a content
+is not required until the folder structure is confirmed as intentional.
+
