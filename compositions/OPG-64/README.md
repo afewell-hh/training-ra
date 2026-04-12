@@ -1,35 +1,35 @@
 # OPG‑64 — Variants Overview
 
-This folder groups assets for 64‑xPU training clusters. At this size, we focus on a single variant optimized for small/edge sites where simplicity and growth paths matter.
+OPG‑64 is a 64‑xPU training building block: 8 compute servers (8 xPUs each) plus the leaf
+switches and supporting infrastructure they attach to. It does not include a spine or
+external connectivity; those are provided by the XOC when this OPG is composed into a
+larger cluster.
 
-Available variants
-- converged-hyperconverged/
-  - What it is: Two DS5000 switches form a collapsed leaf pair that carries both the scale‑out (RDMA) and the converged frontend (SO‑C/Storage/In‑band). Servers are multi‑homed with L3 multi‑homing (ECMP); OoB uses a DS1000.
-  - Why choose it: Minimal switch count, strong day‑2 ergonomics, easy growth path. Start collapsed, then add a spine and repurpose uplink ports when expanding.
-  - Attributes
-    - Multihoming: 8×400G (RDMA) and 2×200G (frontend) per server, alternated across leaves
-    - DS5000 port zoning: 4×200G breakouts on odd ports only; exactly 32×800G uplinks reserved per leaf
-    - Optics: OS2 single‑mode DR‑class (default), distance‑friendly
-  - Considerations
-    - Border/ISP features may require a DS3000 pair
-    - If the in‑band network needs to be separate (PXE/boot constraints), add a DS2000
+## Variants
 
-- clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-  - What it is: Rail‑optimized Clos with CX7 1×400G per GPU (RDMA) and BF3 2×200G for converged frontend. Keeps intra‑rail collectives local to a leaf; aligns with DS5000 port zoning.
-  - Why choose it: Smooth path to larger OPG tiers using the same wiring rules; clearer separation between backend and frontend while staying compact.
-  - Attributes
-    - Multihoming: L3MH across two leaves (frontend); single‑plane backend
-    - Port zoning: 4×200G breakouts on odd ports; 2×400G unrestricted; reserve uplink budget
-    - Cooling/Density: air‑cooled, ~2 servers/rack (placeholder)
-  - Assets (pending; placeholders to be populated)
-    - connectivity-map.csv — end‑to‑end cabling map
-    - bom.yaml — bill of materials
-    - wiring.yaml — Hedgehog Wiring CRDs
-    - vpc.yaml — Hedgehog VPC CRDs
-    - diagrams/ — labeled visuals
-  - References
-    - Plan and validation notes will be published alongside assets.
+### collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
 
-Notes
-- Full connection maps and BOMs live inside the variant folder.
-- Keep tenant placement local when you later compose OPGs into XOCs — it reduces spine traffic.
+A single converged DS5000 leaf pair carries both backend (RDMA) and frontend
+(storage/in‑band) traffic. No spine is active in this building block; 32×800G uplinks
+per leaf are reserved for XOC connectivity or standalone growth. OoB via DS1000.
+
+See [`collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md`](collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
+for the full building‑block spec including port budget and composer requirements.
+
+### clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
+
+Rail‑optimized Clos with a separate backend fabric (DS5000 leaf per rail) and a converged
+frontend fabric. Each backend rail leaf has 32×800G uplinks reserved for XOC spine
+connectivity. Rail‑optimized wiring constrains each CX7 NIC to one rail leaf, producing
+predictable switch locality per rail domain.
+
+See [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
+for the full building‑block spec.
+
+## Common attributes
+
+- Switch family: DS5000 (800/400/200G) + DS1000 (OoB)
+- Port zoning: 4×200G breakouts on odd ports only; 2×400G unrestricted
+- Uplink budget: 32×800G per leaf, reserved for XOC spine connectivity
+- Frontend multihoming: L3MH/ECMP across two leaves
+- Optics: OS2 SMF DR‑class (default)

@@ -1,34 +1,53 @@
 # OPG‑128 — Variants Overview
 
-This folder groups assets for the 128‑xPU training composition. We provide two network variants to align with OPG‑M exemplars and common operator preferences.
+OPG‑128 is a 128‑xPU training building block: 16 compute servers (8 xPUs each) plus
+dedicated backend and frontend leaf‑spine fabrics. It does not include an XOC spine or
+external connectivity; those are supplied when this OPG is composed into an XOC cluster.
 
-Variants
-- clos-single-homed/
-  - What it is: Matches the OPG‑M exemplar where 16 servers are single‑homed on the back‑end — 8 servers to Leaf A, 8 to Leaf B. Frontend is converged and multi‑homed.
-  - Why choose it: Clear failure isolation for maintenance (an outage on one leaf impacts only its attached 8 servers); aligns tightly with the OCP paper.
-  - Considerations: Cross‑leaf traffic traverses the spine, which can add congestion under load depending on scheduling.
+## Variants
 
-- clos-rail-optimized/
-  - What it is: Multi‑homed back‑end (L3MH) with 4×400G per leaf per server to reduce cross‑rail traffic; frontend is identical to the single‑homed variant.
-  - Why choose it: All hosts remain available at ~50% capacity during a leaf failure; when tenants are placed within a common first‑hop rail domain, most scale‑out exchanges remain leaf‑local, dramatically reducing spine traffic and associated congestion.
-  - Considerations: Benefits are strongest when scheduling keeps tenants inside an OPG.
+### Rail‑optimized backend
 
-Common attributes
-- DS5000 for 800/400/200G networks; DS3000 optional for border/ISP; DS2000 for in‑band (often single); DS1000 for OoB.
-- Port zoning: 4×200G on odd ports; 2×400G unrestricted; 32×800G uplinks per leaf reserved.
-- Optics: OS2 single‑mode DR‑class (default); distance‑friendly baseline.
+Each GPU's CX7 1×400G NIC connects to a dedicated backend rail leaf (one NIC per rail).
+The wiring pattern constrains NIC‑to‑leaf assignment by rail number, keeping intra‑rail
+connections on a single leaf. Each backend rail leaf reserves 32×800G uplinks (ports
+33–64) for XOC spine connectivity.
 
-Notes
-- Each variant folder contains: `connectivity-map.csv`, `topology-map.yaml`, `wiring/`, `diagrams/`, `netbox_inventory.json`.
+- **[clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)**
+  Air‑cooled; ~2 servers/rack
+- **[clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)**
+  Liquid‑cooled; ~8 servers/rack
 
-Tokenized variants (canonical for asset generation)
-- clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-  - Rail‑optimized Clos, CX7 1×400G per GPU, BF3 2×200G frontend, converged storage, air‑cooled; density ~2 servers/rack.
-- clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/
-  - Same topology with liquid‑cooled higher density (~8 servers/rack).
-- clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-  - Single‑homed Clos backend; air‑cooled, ~2 servers/rack.
-- clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/
-  - Single‑homed backend; liquid‑cooled, ~8 servers/rack.
+See each variant README for port budget, constraints, and composer requirements.
 
-Legacy note: The `clos-single-homed/` and `clos-rail-optimized/` folders are kept for discoverability; see the canonical tokenized variants above for assets.
+### Single‑homed backend
+
+Each server's backend NICs terminate on a single leaf (8 servers per leaf). Backend leaves
+reserve the same 32×800G uplink budget as rail‑optimized.
+
+- **[clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)**
+  Air‑cooled; ~2 servers/rack
+- **[clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)**
+  Liquid‑cooled; ~8 servers/rack
+
+### Comparing building‑block patterns
+
+| | Rail‑optimized | Single‑homed |
+|--|---------------|--------------|
+| NIC‑to‑leaf assignment | By rail number (predictable per GPU) | By server (each server on one leaf) |
+| Intra‑rail locality | All GPUs on rail N share a leaf | Varies by server assignment |
+| Backend leaf count | One per rail (8 leaves for 8 rails) | One per server group (2 leaves for 16 servers) |
+| Uplink budget | 32×800G per rail leaf | 32×800G per backend leaf |
+
+## Common attributes
+
+- Backend switches: DS5000 leaf + DS5000 spine (per fabric)
+- Frontend: DS5000 leaf pair (L3MH/ECMP) + DS5000 spine; converged storage/in‑band
+- OoB: DS1000
+- Port zoning: 4×200G on odd ports; 2×400G unrestricted; 32×800G uplinks per leaf reserved
+- Optics: OS2 SMF DR‑class (default)
+
+## Legacy folders
+
+`clos-rail-optimized/` and `clos-single-homed/` are kept for discoverability. Use the
+tokenized canonical variants above for all assets and generation.
