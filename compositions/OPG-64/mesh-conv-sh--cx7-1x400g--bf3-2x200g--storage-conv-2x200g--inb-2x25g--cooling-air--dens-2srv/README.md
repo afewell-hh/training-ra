@@ -22,7 +22,6 @@ Assets
 - `topology-map.yaml` -- topology authoring plan
 
 Notes
-- Replaces the legacy `converged-hyperconverged` naming anti-pattern.
 - Intended grouped-per-leaf `same-switch` realization depends on
   `hh-netbox-plugin` issue `#322`.
 

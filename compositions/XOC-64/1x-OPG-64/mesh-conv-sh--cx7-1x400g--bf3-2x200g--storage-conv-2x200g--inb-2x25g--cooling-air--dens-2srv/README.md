@@ -21,7 +21,6 @@ Assets
 - `netbox_inventory.json` -- NetBox inventory export
 
 Notes
-- Derived from `OPG-64/converged-hyperconverged`, but normalized to the tokenized variant naming convention.
 - `scale-out` and `soc-storage` are authored with explicit mesh semantics in the topology map.
 - Intended grouped-per-leaf single-homed generation depends on `hh-netbox-plugin` issue `#322`; current generator logic still alternates by server modulo for `same-switch`.
 
