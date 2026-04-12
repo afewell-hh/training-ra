@@ -22,7 +22,6 @@ Assets
 - `topology-map.yaml` -- topology authoring plan
 
 Notes
-- Replaces the legacy `converged-hyperconverged` naming anti-pattern.
 - Connection IDs align with fabric names where practical.
 
 See also

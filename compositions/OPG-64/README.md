@@ -55,5 +55,3 @@ for the full building‑block spec.
 ## Notes
 
 - Full connection maps and BOMs live inside each variant folder when available.
-- The legacy `converged-hyperconverged` path has been replaced by the canonical
-  tokenized `collapsed-conv` and `mesh-conv-*` variants.
