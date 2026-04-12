@@ -1,8 +1,8 @@
-# OPG-256 — Clos Rail-Optimized (CX7 1x400G; BF3 2x200G; Liquid-Cooled; 8 srv/rack)
+# OPG-256 — Rail-Optimized Clos Building Block (CX7 1×400G; BF3 2×200G; Liquid-Cooled; 8 srv/rack)
 
-This composition defines a 256-xPU training cluster (OPG-256) using a rail-optimized two-stage Clos backend fabric and a converged two-stage Clos frontend fabric. Thirty-two GPU servers, each equipped with 8 NVIDIA B200 GPUs and 8 CX7 single-port 400G NICs, are interconnected through 4 backend leaf switches and 4 backend spine switches (all Celestica DS5000). The frontend fabric serves 55 endpoints (32 compute, 10 storage, 10 metadata, 2 gateways, 1 controller) via 2 DS5000 leaf and 2 DS5000 spine switches. Out-of-band management uses 2 Celestica DS1000-48 switches.
+This building block provides a 256-xPU rail-optimized Clos network for 32 eight-GPU servers in a liquid-cooled configuration (8 servers per rack, 4 racks). Thirty-two GPU servers, each equipped with 8 NVIDIA B200 GPUs and 8 CX7 single-port 400G NICs, are interconnected through backend leaf switches and backend spine switches (all Celestica DS5000). The frontend fabric serves endpoints via DS5000 leaf and spine switches. Out-of-band management uses Celestica DS1000-48 switches.
 
-This is the liquid-cooled variant at 8 servers per rack (4 racks total). The network topology is identical to the air-cooled variant; only rack density and OOB peripherals (16 PDUs, 4 CDUs) differ. Choose this variant when deploying in a facility with direct liquid cooling (DLC) infrastructure and higher per-rack power density.
+The network topology is identical to the air-cooled variant; only rack density and OOB peripherals (16 PDUs, 4 CDUs) differ. This OPG does not include an XOC spine; uplink ports are reserved on each leaf for XOC connectivity.
 
 ## Assets
 
@@ -16,7 +16,7 @@ This is the liquid-cooled variant at 8 servers per rack (4 racks total). The net
 
 ## Attributes
 
-- **Composition:** OPG-256 (32 servers x 8 xPUs = 256 xPUs)
+- **Scale:** OPG-256 (32 servers × 8 xPUs = 256 xPUs)
 - **Backend:** Rail-optimized Clos; 4 DS5000 leaves, 4 DS5000 spines
 - **Frontend:** Converged Clos; 2 DS5000 leaves, 2 DS5000 spines
 - **OOB:** 2x DS1000-48 (96 ports >= 76 endpoints)
@@ -33,6 +33,16 @@ This is the liquid-cooled variant at 8 servers per rack (4 racks total). The net
 - NVIDIA B200/BF3/CX7 used as example xPU/DPU/NIC; the network design is vendor-neutral
 - Rail-optimized wiring constrains NIC-to-leaf assignment but uses the same switch count as standard Clos
 - All overlay/VPC definitions are identical between air and liquid variants
+
+## Composer requirements
+
+To form a functional XOC cluster using this OPG, the composer must supply:
+
+1. **XOC backend spine switches** (DS5000): cable to the 32×800G reserved uplinks on each
+   backend rail leaf (ports 33–64 per switch)
+2. **XOC frontend spine switches** (DS5000): cable to the 32×800G reserved uplinks on each
+   frontend leaf (even ports 2–64 per switch)
+3. **External/border connectivity** (DS3000 or equivalent) for WAN/ISP uplinks if required
 
 ## References
 

@@ -1,44 +1,59 @@
-# OPG-64 -- Variants Overview
+# OPG-64 — Variants Overview
 
-This folder groups assets for 64-xPU training clusters. At this size we keep the
-catalog split between compact mesh-converged options and the existing rail-
-optimized Clos variant.
+OPG‑64 is a 64‑xPU training building block: 8 compute servers (8 xPUs each) plus the leaf
+switches and supporting infrastructure they attach to. It does not include a spine or
+external connectivity; those are provided by the XOC when this OPG is composed into a
+larger cluster.
 
-Available variants
-- mesh-conv-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/
-  - What it is: Compact OPG-64 mesh-converged building block with rail-optimized
-    scale-out on a DS5000 leaf pair, plus separate `soc-storage`, `inb-mgmt`,
-    and `oob-mgmt` fabrics.
-  - Why choose it: Minimal switch count while preserving rail-aware scale-out
-    semantics and explicit management-fabric separation.
-  - Attributes
-    - Scale-out: CX7 1x400G per GPU, `rail-optimized`
-    - SoC/Storage: BF3 2x200G and storage-facing 2x200G on a two-leaf mesh
-    - In-band management: DS2000 with generic 2x25GbE NIC on every server class;
-      one port connected
-    - OOB management: DS1000 with management/BMC on every device
+## Variants
 
-- mesh-conv-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/
-  - What it is: Same mesh-converged OPG-64 building block, but with single-homed
-    `same-switch` scale-out instead of rail-optimized scale-out.
-  - Why choose it: Operationally simpler scale-out attachment model while keeping
-    the remaining fabrics identical to the rail-optimized sibling.
-  - Attributes
-    - Scale-out: CX7 1x400G per GPU, `same-switch`
-    - SoC/Storage: BF3 2x200G and storage-facing 2x200G on a two-leaf mesh
-    - In-band management: DS2000 with generic 2x25GbE NIC on every server class;
-      one port connected
-    - OOB management: DS1000 with management/BMC on every device
-  - Consideration
-    - Final grouped-per-leaf `same-switch` realization depends on
-      `hh-netbox-plugin` issue `#322`
+### collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
 
-- clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-  - What it is: Rail-optimized Clos with CX7 1x400G per GPU (RDMA) and BF3
-    2x200G for converged frontend.
-  - Why choose it: Smooth path to larger OPG tiers using the same wiring rules.
+A single converged DS5000 leaf pair carries both backend (RDMA) and frontend
+(storage/in‑band) traffic. No spine is active in this building block; 32×800G uplinks
+per leaf are reserved for XOC connectivity or standalone growth. OoB via DS1000.
 
-Notes
-- Full connection maps and BOMs live inside the relevant variant folder when available.
+See [`collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md`](collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
+for the full building‑block spec including port budget and composer requirements.
+
+### clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
+
+Rail‑optimized Clos with a separate backend fabric (DS5000 leaf per rail) and a converged
+frontend fabric. Each backend rail leaf has 32×800G uplinks reserved for XOC spine
+connectivity. Rail‑optimized wiring constrains each CX7 NIC to one rail leaf, producing
+predictable switch locality per rail domain.
+
+See [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
+for the full building‑block spec.
+
+### mesh-conv-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/
+
+Mesh‑converged building block with rail‑optimized scale‑out on a DS5000 leaf pair.
+Explicit fabrics for scale‑out, soc‑storage, in‑band management (DS2000, 2×25G per server),
+and OoB management (DS1000). Minimal switch count for this OPG‑64 footprint.
+
+See [`mesh-conv-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/README.md`](mesh-conv-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/README.md)
+for the full building‑block spec.
+
+### mesh-conv-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/
+
+Same mesh‑converged topology as the rail‑optimized variant, but with single‑homed
+(same‑switch) scale‑out instead. Simpler NIC‑to‑leaf assignment; remaining fabrics
+(soc‑storage, inb‑mgmt, oob‑mgmt) are identical to the rail‑optimized sibling.
+
+See [`mesh-conv-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/README.md`](mesh-conv-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/README.md)
+for the full building‑block spec.
+
+## Common attributes
+
+- Switch family: DS5000 (800/400/200G) + DS1000 (OoB)
+- Port zoning: 4×200G breakouts on odd ports only; 2×400G unrestricted
+- Uplink budget: 32×800G per leaf, reserved for XOC spine connectivity
+- Frontend multihoming: L3MH/ECMP across two leaves (Clos variants)
+- Optics: OS2 SMF DR‑class (default)
+
+## Notes
+
+- Full connection maps and BOMs live inside each variant folder when available.
 - The legacy `converged-hyperconverged` path has been replaced by the canonical
-  tokenized `mesh-conv-*` variants.
+  tokenized `collapsed-conv` and `mesh-conv-*` variants.
