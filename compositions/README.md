@@ -29,7 +29,7 @@ Picking a starting point
 - Prefer rail‑optimized variants for training workloads when possible; it can reduce spine traffic and improve job throughput.
 
 Reading the variant names (quick key)
-- Topology: `clos-sh` (single‑homed), `clos-ro` (rail‑optimized), `dual-plane` (two independent planes)
+- Topology: `clos-sh` (single‑homed), `clos-ro` (rail‑optimized), `dual-plane` (two independent planes), `collapsed-conv` (collapsed converged leaf pair)
 - Scale‑out NICs: `cx7-1x400g`, `cx8-2x400g`, `cx9-1x800g`
 - Frontend NICs: `bf3-2x200g` (or vendor‑neutral `fe-2x200g`)
 - Planes: `1p` or `2p`
