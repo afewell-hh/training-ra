@@ -5,16 +5,14 @@ form a 512‑xPU cluster. The XOC spine (DS5000) terminates the 32×800G uplinks
 OPG's backend rail‑leaf and frontend leaf switches, providing cross‑OPG ECMP and external
 egress.
 
-## Variants
+The compositions in this repository are designed to work with air or liquid cooling at any
+density. Cooling medium and rack density are physical deployment choices that do not affect
+the network topology.
 
-- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
-  Rail‑optimized backend; air‑cooled; ~2 servers/rack
-- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)
-  Rail‑optimized backend; liquid‑cooled; ~8 servers/rack
-- [`clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/`](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
-  Single‑homed backend; air‑cooled; ~2 servers/rack
-- [`clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/`](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)
-  Single‑homed backend; liquid‑cooled; ~8 servers/rack
+## Topology variants
+
+- **clos-ro** — Rail‑optimized backend (CX7 1×400G)
+- **clos-sh** — Single‑homed backend (CX7 1×400G)
 
 For the sub‑bundle structure see [`2x-OPG-128/`](2x-OPG-128/README.md).
 

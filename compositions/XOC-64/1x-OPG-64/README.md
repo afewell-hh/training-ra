@@ -1,11 +1,8 @@
 # XOC-64 / 1x OPG-64 -- Variants
 
-Variants
-- mesh-conv-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/
-- mesh-conv-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g--cooling-air--dens-2srv/
-
 Notes
 - This bundle wraps a single OPG-64 building block in the XOC composition layout.
-- Both variants are derived from the legacy OPG-64 converged topology but renamed into canonical tokenized form.
-- The only intended topology difference between them is the scale-out distribution mode: rail-optimized vs single-homed.
+- Variants are derived from the OPG-64 mesh-converged topology in canonical tokenized form.
+- The topology variants differ by scale-out distribution mode: rail-optimized (mesh-conv-ro) vs single-homed (mesh-conv-sh).
+- The compositions in this repository are designed to work with air or liquid cooling at any density.
 - See each variant folder for README and assets.

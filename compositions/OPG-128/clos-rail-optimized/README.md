@@ -1,9 +1,7 @@
 # OPG‑128 — Clos Rail‑Optimized (Legacy Path)
 
-This folder is kept for discoverability. Use the tokenized canonical variants for generation and assets:
+This folder is kept for discoverability. Tokenized canonical variant folders for
+rail‑optimized OPG‑128 will be added here as they are published.
 
-- ../../clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-- ../../clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/
-
-Notes
-- The canonical folders follow the ratified token naming and include placeholders for CSV/BOM/CRDs/diagrams to be populated with final assets.
+Reference
+- OPG‑M (2026‑01‑14): https://www.opencompute.org/documents/opg-m-system-architecture-final-14-january-2026-pdf
