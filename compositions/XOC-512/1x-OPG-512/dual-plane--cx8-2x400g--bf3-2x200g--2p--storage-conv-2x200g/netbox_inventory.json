@@ -104682,7 +104682,7 @@
     },
     "generated_at": "2026-03-14T05:33:59.311552+00:00",
     "plan_id": 69,
-    "plan_name": "Training XOC-512 1x OPG-512 Dual Plane Air 2srv"
+    "plan_name": "Training XOC-512 1x OPG-512 Dual Plane"
   },
   "modules": [
     {

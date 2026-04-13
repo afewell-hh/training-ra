@@ -31554,7 +31554,7 @@
     },
     "generated_at": "2026-03-14T04:38:32.241341+00:00",
     "plan_id": 65,
-    "plan_name": "Training XOC-256 2x OPG-128 Clos SH Air 2srv"
+    "plan_name": "Training XOC-256 2x OPG-128 Clos SH"
   },
   "modules": [
     {

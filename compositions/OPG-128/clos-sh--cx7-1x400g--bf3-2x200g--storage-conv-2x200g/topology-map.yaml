@@ -1,5 +1,5 @@
 meta:
-  case_id: training_opg128_clos_sh_air_2srv
+  case_id: training_opg128_clos_sh
   name: Training OPG-128 Clos SH
   description: Compute-only DIET translation for the OPG-128 single-homed training RA
   version: 1

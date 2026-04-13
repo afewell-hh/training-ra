@@ -1,5 +1,5 @@
 meta:
-  case_id: training_xoc512_4xopg128_clos_ro_air_2srv
+  case_id: training_xoc512_4xopg128_clos_ro
   name: Training XOC-512 4x OPG-128 Clos RO
   description: Compute-only DIET translation for the OPG-512 rail-optimized training RA
   version: 1

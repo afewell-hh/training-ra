@@ -1,5 +1,5 @@
 meta:
-  case_id: training_xoc256_2xopg128_clos_ro_air_2srv
+  case_id: training_xoc256_2xopg128_clos_ro
   name: Training XOC-256 2x OPG-128 Clos RO
   description: Compute-only DIET translation for the XOC-256 (2x OPG-128) rail-optimized training RA
   version: 1

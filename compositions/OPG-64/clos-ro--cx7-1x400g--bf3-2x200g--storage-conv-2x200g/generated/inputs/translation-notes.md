@@ -1,4 +1,4 @@
-# Translation Notes: training_opg64_clos_ro_air_2srv
+# Translation Notes: training_opg64_clos_ro
 
 ## Pass-1 Status: complete-pass1
 

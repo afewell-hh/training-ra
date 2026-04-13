@@ -12,7 +12,7 @@ Inputs/Constraints
 Deliverable
 - A short RFC (1–2 pages) with recommended patterns, examples, and mapping rules.
 
-Proposal v1.1 (adds density and storage flags)
+Proposal v1.1 (adds storage flags)
 - Goals: concise, human‑parsable, future‑proof; compatible with folder names; aligns with OCP terms.
 - Folder token format (ordered):
   <topo>--<so>--<fe>[--<planes>][--<storage>]
@@ -24,7 +24,7 @@ Proposal v1.1 (adds density and storage flags)
     - Examples: storage-conv-2x200g (frontend converged SO‑C/Storage 2×200G)
                storage-ded-2x100g (dedicated storage fabric 2×100G)
 
-Note on cooling and density
+Note on cooling
 - The compositions in this repository are designed to work with air or liquid cooling at any density. Cooling medium and rack density are physical deployment choices that do not affect the network topology and are not encoded in variant names.
 
 Examples
