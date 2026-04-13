@@ -1,4 +1,4 @@
-# Translation Notes: training_xoc64_1xopg64_mesh_conv_ro_air_2srv
+# Translation Notes: training_xoc64_1xopg64_mesh_conv_ro
 
 ## Pass-1 Status: complete-pass1
 

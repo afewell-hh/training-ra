@@ -1,6 +1,6 @@
 meta:
-  case_id: training_xoc64_1xopg64_mesh_conv_ro_air_2srv
-  name: Training XOC-64 1x OPG-64 Mesh Converged RO Air 2srv
+  case_id: training_xoc64_1xopg64_mesh_conv_ro
+  name: Training XOC-64 1x OPG-64 Mesh Converged RO
   description: XOC-64 composition built from one OPG-64 mesh-converged training building block with rail-optimized scale-out
   version: 1
   managed_by: yaml
@@ -431,7 +431,7 @@ reference_data:
       model: OSFP-200G-DR4
 
 plan:
-  name: Training XOC-64 1x OPG-64 Mesh Converged RO Air 2srv
+  name: Training XOC-64 1x OPG-64 Mesh Converged RO
   status: draft
   description: >
     XOC-64 composition of one OPG-64 training building block. Scale-out and

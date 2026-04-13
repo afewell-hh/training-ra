@@ -1,5 +1,5 @@
 meta:
-  case_id: training_opg256_dual_plane_air_2srv
+  case_id: training_opg256_dual_plane
   name: Training OPG-256 Dual Plane
   description: Compute-only DIET translation for the OPG-256 dual-plane training RA
   version: 1

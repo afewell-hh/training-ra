@@ -9561,7 +9561,7 @@
     },
     "generated_at": "2026-04-12T23:51:10.993249+00:00",
     "plan_id": 157,
-    "plan_name": "Training XOC-64 1x OPG-64 Mesh Converged SH Air 2srv"
+    "plan_name": "Training XOC-64 1x OPG-64 Mesh Converged SH"
   },
   "modules": [
     {

@@ -1,5 +1,5 @@
 meta:
-  case_id: opg64_mesh_conv_ro_air_2srv
+  case_id: opg64_mesh_conv_ro
   name: OPG-64 Mesh Converged RO
   description: Reference-architecture intake case for OPG-64 mesh-converged training topology with rail-optimized scale-out on a shared SoC/storage/scale-out DS5000 mesh pair
   version: 1

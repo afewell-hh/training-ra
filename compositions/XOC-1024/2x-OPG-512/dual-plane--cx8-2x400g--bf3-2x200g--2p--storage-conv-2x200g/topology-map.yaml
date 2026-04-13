@@ -1,5 +1,5 @@
 meta:
-  case_id: training_xoc1024_2xopg512_dual_plane_air_2srv
+  case_id: training_xoc1024_2xopg512_dual_plane
   name: Training XOC-1024 2x OPG-512 Dual Plane
   description: Compute-only DIET translation for the XOC-1024 (2x OPG-512) dual-plane training RA
   version: 1

@@ -173,7 +173,6 @@ Odd ports with 4x200G breakout, endpoints assigned sequentially:
   │ 4xPDU│   │ 4xPDU│   │ 4xPDU│       │ 4xPDU│
   └──────┘   └──────┘   └──────┘       └──────┘
 
-  2 servers per rack = 16 racks for 32 compute servers
   4 PDUs per rack = 64 PDUs total (managed via OOB)
 
   Additional racks for switches, storage, metadata, gateways,

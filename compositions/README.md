@@ -35,7 +35,7 @@ Reading the variant names (quick key)
 - Planes: `1p` or `2p`
 - Storage links: `storage-conv-<links>x<speed>` or `storage-ded-<links>x<speed>`
 
-Cooling and density
+Cooling
 - The compositions in this repository are designed to work with air or liquid cooling at any density. Cooling medium and rack density are physical deployment choices that do not affect the network topology.
 
 A note on completeness

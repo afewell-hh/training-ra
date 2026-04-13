@@ -1,5 +1,5 @@
 meta:
-  case_id: training_xoc1024_2xopg512_clos_ro_air_2srv
+  case_id: training_xoc1024_2xopg512_clos_ro
   name: Training XOC-1024 2x OPG-512 Clos RO
   description: Compute-only DIET translation for the XOC-1024 (2x OPG-512) rail-optimized training RA
   version: 1

@@ -1,5 +1,5 @@
 meta:
-  case_id: training_opg64_collapsed_conv_air_2srv
+  case_id: training_opg64_collapsed_conv
   name: Training OPG-64 Collapsed Converged
   description: Reference-architecture intake case for the OPG-64 collapsed-converged training topology
   version: 1

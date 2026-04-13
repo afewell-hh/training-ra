@@ -1,5 +1,5 @@
 meta:
-  case_id: training_xoc64_1xopg64_mesh_conv_ro_air_2srv
+  case_id: training_xoc64_1xopg64_mesh_conv_ro
   name: Training XOC-64 1x OPG-64 Mesh Converged RO
   description: XOC-64 composition built from one OPG-64 mesh-converged training building block with rail-optimized scale-out
   version: 1
