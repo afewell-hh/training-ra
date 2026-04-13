@@ -5,6 +5,10 @@ This bundle composes two OPG‑128 units under a shared DS5000 spine layer to fo
 rail‑leaf switches (backend fabric) and frontend leaf switches (frontend fabric) into a
 single converged cluster.
 
+The compositions in this repository are designed to work with air or liquid cooling at any
+density. Cooling medium and rack density are physical deployment choices that do not affect
+the network topology.
+
 ## What the XOC spine adds
 
 Each OPG‑128 backend rail‑leaf reserves 32×800G uplinks per switch for XOC connectivity.
@@ -16,19 +20,13 @@ Without the XOC spine, each OPG‑128 operates as an isolated 128‑xPU cluster.
 is what allows cross‑OPG traffic and enables the cluster to appear as a single 256‑xPU
 fabric to schedulers and storage.
 
-## Variants
+## Topology variants
 
 All variants use the same OPG‑128 backend and frontend topology; they differ by backend
-wiring pattern (rail‑optimized vs single‑homed) and cooling/density:
+wiring pattern: rail‑optimized or single‑homed.
 
-- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
-  Rail‑optimized backend; air‑cooled; ~2 servers/rack
-- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)
-  Rail‑optimized backend; liquid‑cooled; ~8 servers/rack
-- [`clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/`](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)
-  Single‑homed backend; air‑cooled; ~2 servers/rack
-- [`clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/`](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)
-  Single‑homed backend; liquid‑cooled; ~8 servers/rack
+- **clos-ro** — Rail‑optimized backend
+- **clos-sh** — Single‑homed backend
 
 See each variant folder for the full composed‑solution guide including spine topology,
 tradeoffs, and deployment guidance.

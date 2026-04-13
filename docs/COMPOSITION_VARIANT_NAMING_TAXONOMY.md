@@ -15,31 +15,32 @@ Deliverable
 Proposal v1.1 (adds density and storage flags)
 - Goals: concise, human‑parsable, future‑proof; compatible with folder names; aligns with OCP terms.
 - Folder token format (ordered):
-  <topo>--<so>--<fe>[--<planes>][--<storage>][--<cooling>][--<density>]
-  - topo: clos-sh (Clos single-homed), clos-ro (Clos rail-optimized), dual-plane (for scale-out)
+  <topo>--<so>--<fe>[--<planes>][--<storage>]
+  - topo: clos-sh (Clos single-homed), clos-ro (Clos rail-optimized), dual-plane (for scale-out), mesh-conv (mesh converged)
   - so (scale-out NICs): cx7-1x400g, cx8-2x400g, cx9-1x800g (pattern: <model>-<ports>x<speed>)
   - fe (frontend NICs): bf3-2x200g (or fe-2x200g for vendor-neutral)
   - planes: 1p or 2p (defaults: clos-sh/ro = 1p; dual-plane = 2p)
   - storage: storage-conv-<links>x<speed> or storage-ded-<links>x<speed>
     - Examples: storage-conv-2x200g (frontend converged SO‑C/Storage 2×200G)
                storage-ded-2x100g (dedicated storage fabric 2×100G)
-  - cooling: cooling-air or cooling-liquid (cooling type; orthogonal to density)
-  - density: dens-<n>srv (servers per rack, e.g., dens-2srv, dens-4srv, dens-8srv)
+
+Note on cooling and density
+- The compositions in this repository are designed to work with air or liquid cooling at any density. Cooling medium and rack density are physical deployment choices that do not affect the network topology and are not encoded in variant names.
 
 Examples
-- OPG-128/clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-- OPG-128/clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/
-- OPG-256/dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g--cooling-air--dens-2srv/
+- OPG-128/clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/
+- OPG-128/clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/
+- OPG-256/dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g/
 - Future dedicated storage example:
-  OPG-128/clos-ro--cx7-1x400g--bf3-2x200g--storage-ded-2x100g--cooling-air--dens-4srv/
+  OPG-128/clos-ro--cx7-1x400g--bf3-2x200g--storage-ded-2x100g/
 
 Display name pattern for READMEs
-- “Clos Single‑Homed (CX7 1×400G scale‑out; BF3 2×200G frontend; Storage: Converged 2×200G; Cooling: Air; Density: 2 srv/rack)”
+- “Clos Single‑Homed (CX7 1×400G scale‑out; BF3 2×200G frontend; Storage: Converged 2×200G)”
 
 XOC variant names
 - XOC folders mirror the underlying OPG variant tokens for traceability, prefixed by the composition count:
-  - XOC-256/1x-OPG-128-clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-  - XOC-512/2x-OPG-128-clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/
+  - XOC-256/2x-OPG-128/clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/
+  - XOC-512/4x-OPG-128/clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/
 
 Tasks
 - Validate with OCP reviewers; adjust tokens if they prefer alternative abbreviations.

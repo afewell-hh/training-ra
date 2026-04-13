@@ -4,7 +4,11 @@ OPG‑128 is a 128‑xPU training building block: 16 compute servers (8 xPUs eac
 dedicated backend and frontend leaf‑spine fabrics. It does not include an XOC spine or
 external connectivity; those are supplied when this OPG is composed into an XOC cluster.
 
-## Variants
+The compositions in this repository are designed to work with air or liquid cooling at any
+density. Cooling medium and rack density are physical deployment choices that do not affect
+the network topology.
+
+## Topology variants
 
 ### Rail‑optimized backend
 
@@ -13,22 +17,10 @@ The wiring pattern constrains NIC‑to‑leaf assignment by rail number, keeping
 connections on a single leaf. Each backend rail leaf reserves 32×800G uplinks (ports
 33–64) for XOC spine connectivity.
 
-- **[clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)**
-  Air‑cooled; ~2 servers/rack
-- **[clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)**
-  Liquid‑cooled; ~8 servers/rack
-
-See each variant README for port budget, constraints, and composer requirements.
-
 ### Single‑homed backend
 
 Each server's backend NICs terminate on a single leaf (8 servers per leaf). Backend leaves
 reserve the same 32×800G uplink budget as rail‑optimized.
-
-- **[clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/README.md)**
-  Air‑cooled; ~2 servers/rack
-- **[clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/README.md)**
-  Liquid‑cooled; ~8 servers/rack
 
 ### Comparing building‑block patterns
 
@@ -49,5 +41,4 @@ reserve the same 32×800G uplink budget as rail‑optimized.
 
 ## Legacy folders
 
-`clos-rail-optimized/` and `clos-single-homed/` are kept for discoverability. Use the
-tokenized canonical variants above for all assets and generation.
+`clos-rail-optimized/` and `clos-single-homed/` are kept for discoverability.

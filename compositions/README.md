@@ -29,13 +29,14 @@ Picking a starting point
 - Prefer rail‑optimized variants for training workloads when possible; it can reduce spine traffic and improve job throughput.
 
 Reading the variant names (quick key)
-- Topology: `clos-sh` (single‑homed), `clos-ro` (rail‑optimized), `dual-plane` (two independent planes), `collapsed-conv` (collapsed converged leaf pair)
+- Topology: `clos-sh` (single‑homed), `clos-ro` (rail‑optimized), `dual-plane` (two independent planes), `collapsed-conv` (collapsed converged leaf pair), `mesh-conv` (mesh converged)
 - Scale‑out NICs: `cx7-1x400g`, `cx8-2x400g`, `cx9-1x800g`
 - Frontend NICs: `bf3-2x200g` (or vendor‑neutral `fe-2x200g`)
 - Planes: `1p` or `2p`
 - Storage links: `storage-conv-<links>x<speed>` or `storage-ded-<links>x<speed>`
-- Cooling: `cooling-air` or `cooling-liquid`
-- Density: `dens-<n>srv` (servers per rack)
+
+Cooling and density
+- The compositions in this repository are designed to work with air or liquid cooling at any density. Cooling medium and rack density are physical deployment choices that do not affect the network topology.
 
 A note on completeness
 - Some large XOC tiers may list partial assets (e.g., topology map only) where scale pushes against current port budgets. Those READMEs call out what’s pending so you can track follow‑ups.

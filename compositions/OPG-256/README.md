@@ -1,28 +1,23 @@
 # OPG-256 — Variants Overview
 
-Welcome. OPG-256 is a practical 256‑xPU building block (32 servers × 8 xPUs). It keeps the OPG concept approachable while offering two backend patterns operators commonly choose: rail‑optimized (simplicity + spine relief) and dual‑plane (isolation + bandwidth headroom). Each comes in air‑ and liquid‑cooled densities.
+Welcome. OPG-256 is a practical 256‑xPU building block (32 servers × 8 xPUs). It keeps the OPG concept approachable while offering two backend patterns operators commonly choose: rail‑optimized (simplicity + spine relief) and dual‑plane (isolation + bandwidth headroom).
 
-## Variants
+The compositions in this repository are designed to work with air or liquid cooling at any
+density. Cooling medium and rack density are physical deployment choices that do not affect
+the network topology.
+
+## Topology variants
 
 ### Rail-Optimized — B200 Generation (BF3 + CX7 1×400G)
 
-- **clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/**
-  Rail-optimized backend with 4 DS5000 leaves (2 rails per leaf). Air-cooled density: 2 servers/rack, 16 racks, 64 PDUs.
-
-- **clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/**
-  Same network topology as above. Liquid-cooled density: 8 servers/rack, 4 racks, 16 PDUs + optional CDUs.
+Rail-optimized backend with 4 DS5000 leaves (2 rails per leaf). Each backend rail leaf
+reserves 32×800G uplinks for XOC spine connectivity.
 
 **When to choose rail-optimized:** Intra-rail collective traffic (all-reduce, all-gather) stays within a single leaf, reducing spine utilization. At OPG-256, each leaf serves two rails; scheduling jobs aligned to rail pairs further improves locality.
 
 ### Dual-Plane — B300 Generation (BF3 + CX8 2×400G)
 
 Two independent backend fabrics (Plane A and Plane B) for increased bandwidth and plane-level serviceability. CX8 NICs provide 2×400G per GPU: port-1 to Plane A, port-2 to Plane B.
-
-- **dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g--cooling-air--dens-2srv/**
-  Dual-plane backend with air-cooled density: 2 servers/rack (placeholder). L3MH on frontend as in rail-optimized variant.
-
-- **dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g--cooling-liquid--dens-8srv/**
-  Same topology; liquid-cooled higher density: 8 servers/rack (placeholder).
 
 ## Common Attributes
 

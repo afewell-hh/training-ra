@@ -3,13 +3,10 @@
 Welcome. OPG‑512 scales the pod‑sized building block to 512 xPUs. Operators typically choose between:
 - Rail‑optimized (CX7 1×400G): simpler wiring and better spine relief with rail‑local placement.
 - Dual‑plane (CX8 2×400G): higher isolation and bandwidth headroom.
-Each pattern includes air‑ and liquid‑cooled densities.
 
-Variants
-- clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-air--dens-2srv/
-- clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--cooling-liquid--dens-8srv/
-- dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g--cooling-air--dens-2srv/
-- dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g--cooling-liquid--dens-8srv/
+The compositions in this repository are designed to work with air or liquid cooling at any
+density. Cooling medium and rack density are physical deployment choices that do not affect
+the network topology.
 
 Common attributes
 - Frontend: BF3 2×200G per server (L3MH); storage converged at this tier
