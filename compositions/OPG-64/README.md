@@ -9,32 +9,19 @@ The compositions in this repository are designed to work with air or liquid cool
 density. Cooling medium and rack density are physical deployment choices that do not affect
 the network topology.
 
-## Topology variants
+## Variants
 
-### collapsed-conv
+- [`collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](collapsed-conv--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Collapsed converged — single DS5000 leaf pair carries backend and frontend traffic. No active spine; 32×800G uplinks reserved for XOC connectivity. OoB via DS1000.
 
-A single converged DS5000 leaf pair carries both backend (RDMA) and frontend
-(storage/in‑band) traffic. No spine is active in this building block; 32×800G uplinks
-per leaf are reserved for XOC connectivity or standalone growth. OoB via DS1000.
+- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Rail‑optimized Clos — separate backend fabric (DS5000 leaf per rail) and converged frontend fabric. Each CX7 NIC is constrained to one rail leaf, producing predictable switch locality per rail domain.
 
-### clos-ro (rail‑optimized)
+- [`mesh-conv-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g/`](mesh-conv-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g/README.md)
+  Mesh‑converged, rail‑optimized — DS5000 leaf pair with explicit fabrics for scale‑out, soc‑storage, in‑band management (DS2000, 2×25G per server), and OoB management (DS1000).
 
-Rail‑optimized Clos with a separate backend fabric (DS5000 leaf per rail) and a converged
-frontend fabric. Each backend rail leaf has 32×800G uplinks reserved for XOC spine
-connectivity. Rail‑optimized wiring constrains each CX7 NIC to one rail leaf, producing
-predictable switch locality per rail domain.
-
-### mesh-conv-ro (mesh converged, rail‑optimized)
-
-Mesh‑converged building block with rail‑optimized scale‑out on a DS5000 leaf pair.
-Explicit fabrics for scale‑out, soc‑storage, in‑band management (DS2000, 2×25G per server),
-and OoB management (DS1000). Minimal switch count for this OPG‑64 footprint.
-
-### mesh-conv-sh (mesh converged, single‑homed)
-
-Same mesh‑converged topology as the rail‑optimized variant, but with single‑homed
-(same‑switch) scale‑out instead. Simpler NIC‑to‑leaf assignment; remaining fabrics
-(soc‑storage, inb‑mgmt, oob‑mgmt) are identical to the rail‑optimized sibling.
+- [`mesh-conv-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g/`](mesh-conv-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g--inb-2x25g/README.md)
+  Mesh‑converged, single‑homed — same topology as mesh-conv-ro but with same‑switch scale‑out distribution. Simpler NIC‑to‑leaf assignment; remaining fabrics are identical to the rail‑optimized sibling.
 
 ## Common attributes
 

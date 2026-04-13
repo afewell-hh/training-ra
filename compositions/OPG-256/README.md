@@ -6,18 +6,13 @@ The compositions in this repository are designed to work with air or liquid cool
 density. Cooling medium and rack density are physical deployment choices that do not affect
 the network topology.
 
-## Topology variants
+## Variants
 
-### Rail-Optimized — B200 Generation (BF3 + CX7 1×400G)
+- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Rail-optimized backend — 4 DS5000 leaves (2 rails per leaf); each leaf reserves 32×800G uplinks for XOC spine connectivity. Intra-rail collective traffic stays within a single leaf.
 
-Rail-optimized backend with 4 DS5000 leaves (2 rails per leaf). Each backend rail leaf
-reserves 32×800G uplinks for XOC spine connectivity.
-
-**When to choose rail-optimized:** Intra-rail collective traffic (all-reduce, all-gather) stays within a single leaf, reducing spine utilization. At OPG-256, each leaf serves two rails; scheduling jobs aligned to rail pairs further improves locality.
-
-### Dual-Plane — B300 Generation (BF3 + CX8 2×400G)
-
-Two independent backend fabrics (Plane A and Plane B) for increased bandwidth and plane-level serviceability. CX8 NICs provide 2×400G per GPU: port-1 to Plane A, port-2 to Plane B.
+- [`dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g/`](dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g/README.md)
+  Dual-plane backend — two independent backend fabrics (Plane A and Plane B). CX8 NICs provide 2×400G per GPU: port-1 to Plane A, port-2 to Plane B. Higher bandwidth and plane-level serviceability.
 
 ## Common Attributes
 
