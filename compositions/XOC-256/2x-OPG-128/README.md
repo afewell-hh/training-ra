@@ -20,13 +20,15 @@ Without the XOC spine, each OPG‑128 operates as an isolated 128‑xPU cluster.
 is what allows cross‑OPG traffic and enables the cluster to appear as a single 256‑xPU
 fabric to schedulers and storage.
 
-## Topology variants
+## Variants
 
 All variants use the same OPG‑128 backend and frontend topology; they differ by backend
 wiring pattern: rail‑optimized or single‑homed.
 
-- **clos-ro** — Rail‑optimized backend
-- **clos-sh** — Single‑homed backend
+- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Rail‑optimized backend
+- [`clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Single‑homed backend
 
 See each variant folder for the full composed‑solution guide including spine topology,
 tradeoffs, and deployment guidance.

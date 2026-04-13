@@ -8,19 +8,15 @@ The compositions in this repository are designed to work with air or liquid cool
 density. Cooling medium and rack density are physical deployment choices that do not affect
 the network topology.
 
-## Topology variants
+## Variants
 
-### Rail‑optimized backend
+- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Rail‑optimized backend — each GPU's CX7 NIC connects to a dedicated rail leaf. NIC‑to‑leaf assignment is constrained by rail number; each leaf reserves 32×800G uplinks for XOC spine connectivity.
 
-Each GPU's CX7 1×400G NIC connects to a dedicated backend rail leaf (one NIC per rail).
-The wiring pattern constrains NIC‑to‑leaf assignment by rail number, keeping intra‑rail
-connections on a single leaf. Each backend rail leaf reserves 32×800G uplinks (ports
-33–64) for XOC spine connectivity.
+- [`clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-sh--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Single‑homed backend — each server's backend NICs terminate on a single leaf (8 servers per leaf). Backend leaves reserve the same 32×800G uplink budget as rail‑optimized.
 
-### Single‑homed backend
-
-Each server's backend NICs terminate on a single leaf (8 servers per leaf). Backend leaves
-reserve the same 32×800G uplink budget as rail‑optimized.
+### Comparing building‑block patterns
 
 ### Comparing building‑block patterns
 

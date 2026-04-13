@@ -9,10 +9,12 @@ The compositions in this repository are designed to work with air or liquid cool
 density. Cooling medium and rack density are physical deployment choices that do not affect
 the network topology.
 
-## Topology variants
+## Variants
 
-- **clos-ro** — Rail‑optimized backend (CX7 1×400G)
-- **dual-plane** — Dual‑plane backend (CX8 2×400G)
+- [`clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/`](clos-ro--cx7-1x400g--bf3-2x200g--storage-conv-2x200g/README.md)
+  Rail‑optimized backend (CX7 1×400G)
+- [`dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g/`](dual-plane--cx8-2x400g--bf3-2x200g--2p--storage-conv-2x200g/README.md)
+  Dual‑plane backend (CX8 2×400G)
 
 See each variant folder for the full composed‑solution guide.
 
