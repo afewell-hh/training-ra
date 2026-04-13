@@ -356,6 +356,21 @@ reference_data:
       logical_ports: 4
       logical_speed: 200
       optic_type: OSFP-800G-4x200G-DR4
+    - id: b_1x25
+      breakout_id: 1x25g
+      from_speed: 25
+      logical_ports: 1
+      logical_speed: 25
+    - id: b_1x10
+      breakout_id: 1x10g
+      from_speed: 10
+      logical_ports: 1
+      logical_speed: 10
+    - id: b_1x1
+      breakout_id: 1x1g
+      from_speed: 1
+      logical_ports: 1
+      logical_speed: 1
 
   module_types:
     - id: nic_xpu_scale_out_8x400
@@ -408,6 +423,12 @@ reference_data:
       interface_templates:
         - name: bmc0
           type: other
+    - id: osfp_400g_dr4
+      manufacturer: generic
+      model: OSFP-400G-DR4
+    - id: osfp_200g_dr4
+      manufacturer: generic
+      model: OSFP-200G-DR4
 
 plan:
   name: Training XOC-64 1x OPG-64 Mesh Converged SH Air 2srv
@@ -504,18 +525,21 @@ switch_port_zones:
     zone_name: inb_mgmt_server_25g
     zone_type: server
     port_spec: 1-24
+    breakout_option: b_1x25
     allocation_strategy: sequential
     priority: 10
   - switch_class: oob_leaf
     zone_name: oob_server_1g
     zone_type: oob
     port_spec: 1-48
+    breakout_option: b_1x1
     allocation_strategy: sequential
     priority: 10
   - switch_class: oob_leaf
     zone_name: oob_uplink_10g
     zone_type: oob
     port_spec: 49-56
+    breakout_option: b_1x10
     allocation_strategy: sequential
     priority: 20
 
@@ -607,6 +631,7 @@ server_connections:
     target_zone: scale_out_leaf/scale_out_server_2x400
     speed: 400
     port_type: data
+    transceiver_module_type: osfp_400g_dr4
   - server_class: compute_xpu
     connection_id: soc-storage
     connection_name: soc-storage
@@ -618,6 +643,7 @@ server_connections:
     target_zone: soc_storage_leaf/soc_storage_server_4x200
     speed: 200
     port_type: data
+    transceiver_module_type: osfp_200g_dr4
   - server_class: compute_xpu
     connection_id: inb-mgmt
     connection_name: inb-mgmt
@@ -651,6 +677,7 @@ server_connections:
     target_zone: soc_storage_leaf/soc_storage_server_4x200
     speed: 200
     port_type: data
+    transceiver_module_type: osfp_200g_dr4
   - server_class: storage_srv
     connection_id: inb-mgmt
     connection_name: inb-mgmt
@@ -684,6 +711,7 @@ server_connections:
     target_zone: soc_storage_leaf/soc_storage_server_4x200
     speed: 200
     port_type: data
+    transceiver_module_type: osfp_200g_dr4
   - server_class: metadata_srv
     connection_id: inb-mgmt
     connection_name: inb-mgmt
